@@ -58,8 +58,8 @@ export default function InquiryForm() {
         <p className="mt-3 text-sm text-mute">
           We&apos;ll come back to you within two working days, usually sooner.
           Urgent? Mail us at{" "}
-          <a href={`mailto:${site.contact.partnerships}`} className="text-volt underline">
-            {site.contact.partnerships}
+          <a href={`mailto:${site.contact.email}`} className="text-volt underline">
+            {site.contact.email}
           </a>
           .
         </p>
@@ -133,8 +133,8 @@ export default function InquiryForm() {
         </button>
         <p className="text-xs text-mute">
           Or email{" "}
-          <a href={`mailto:${site.contact.partnerships}`} className="text-volt">
-            {site.contact.partnerships}
+          <a href={`mailto:${site.contact.email}`} className="text-volt">
+            {site.contact.email}
           </a>
         </p>
       </div>

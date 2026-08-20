@@ -11,29 +11,29 @@ import { Eyebrow } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to 45one. Sponsorships and partnerships, guest requests, press or feedback on the 451 podcast.",
+    "Talk to 45one. Sponsorship enquiries, guest requests, press or feedback on the 451 podcast.",
 };
 
 const routes = [
   {
     tag: "Brands & agencies",
-    title: "Sponsorship and partnerships",
+    title: "Sponsorship and brand work",
     body: "Episode sponsorships, branded segments and social campaigns. Send a brief and we will come back with the media kit, current audience numbers and rates.",
-    email: site.contact.partnerships,
+    email: site.contact.email,
     link: { href: "/partner", label: "See what we offer" },
   },
   {
     tag: "Guests & press",
     title: "Come on the show",
     body: "Players, coaches, analysts and anyone with something worth saying about the game. Tell us who you are and what you want to talk about.",
-    email: site.contact.general,
+    email: site.contact.email,
     link: { href: "/podcast", label: "Watch an episode first" },
   },
   {
     tag: "Everyone else",
     title: "Just want to talk football",
     body: "A take you need us to hear, a correction, or something you want covered on the pod. The quickest way to reach us is a DM.",
-    email: site.contact.general,
+    email: site.contact.email,
     link: { href: "/blog", label: "Read the blog" },
   },
 ];

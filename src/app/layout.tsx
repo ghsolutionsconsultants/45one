@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  icons: { icon: "/brand/logo-dark.png" },
 };
 
 export default function RootLayout({

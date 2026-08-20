@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     .map(([k, v]) => `${k}: ${v}`)
     .join("\n");
 
-  const to = body.interest ? site.contact.partnerships : site.contact.general;
+  const to = site.contact.email;
 
   // Delivery via Resend when configured; otherwise logged for the dev server.
   const key = process.env.RESEND_API_KEY?.trim();

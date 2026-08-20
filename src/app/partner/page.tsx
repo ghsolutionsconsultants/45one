@@ -251,7 +251,7 @@ export default async function PartnerPage() {
               Go to the contact page
             </Link>
             <a
-              href={`mailto:${site.contact.partnerships}`}
+              href={`mailto:${site.contact.email}`}
               className="rounded-full border border-line px-8 py-4 text-sm font-bold transition hover:border-volt hover:text-volt"
             >
               Email us directly

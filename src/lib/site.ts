@@ -57,8 +57,7 @@ export const site = {
   },
 
   contact: {
-    general: "hello@45one.co.za",
-    partnerships: "partnerships@45one.co.za",
+    email: "hello@45one.co.za",
   },
 
   release: {

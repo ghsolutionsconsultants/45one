@@ -45,10 +45,10 @@ export default function SiteFooter() {
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-mute">Follow</p>
             <SocialRow size="sm" showLabels />
             <a
-              href={`mailto:${site.contact.partnerships}`}
+              href={`mailto:${site.contact.email}`}
               className="mt-4 text-sm text-bone/80 hover:text-volt"
             >
-              {site.contact.partnerships}
+              {site.contact.email}
             </a>
           </div>
         </div>
