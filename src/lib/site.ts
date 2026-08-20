@@ -80,6 +80,8 @@ export const site = {
 export const navLinks = [
   { href: "/podcast", label: "Podcast" },
   { href: "/watch", label: "Watch" },
+  { href: "/tactics", label: "Tactics" },
+  { href: "/quiz", label: "Quiz" },
   { href: "/fpl", label: "FPL" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },

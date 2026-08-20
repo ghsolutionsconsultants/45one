@@ -59,6 +59,21 @@ handle + profile link. The page never shows a zero or a broken number.
 Worth a glance every few months: if a card shows your handle instead of a
 count, that platform stopped answering.
 
+## Football IQ leaderboard
+
+`/quiz` records a name, score and time after each round. Storage is pluggable:
+
+- **No store connected (current state):** scores save to the visitor's own
+  device and the board is labelled "Your scores / This device".
+- **With a KV store:** the board becomes shared across everyone. In the Vercel
+  dashboard go to Storage, create a KV store and connect it to this project.
+  Vercel injects `KV_REST_API_URL` and `KV_REST_API_TOKEN` automatically and
+  the shared board switches on with no code change. Upstash Redis works too.
+
+Submissions are validated server-side: a score cannot exceed the number of
+questions, names are capped at 24 characters, and impossible times are
+rejected, so the board cannot be stuffed with fake perfect runs from the API.
+
 ## The things to fill in
 
 Copy `.env.example` to `.env.local`, then:

@@ -50,7 +50,7 @@ export default function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
           {navLinks.map((l) => {
             const active = pathname === l.href || pathname.startsWith(`${l.href}/`);
             return (

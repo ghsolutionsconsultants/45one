@@ -1,14 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { quizzes, type Quiz } from "@/lib/quizzes";
+import { saveLocal } from "./Leaderboard";
 
-export default function FootballIQ() {
+export default function FootballIQ({
+  onSubmitted,
+  showEntry = false,
+}: {
+  /** Called after a score is added to the board, so the table can refresh. */
+  onSubmitted?: () => void;
+  /** Offer to put the score on the leaderboard when the round finishes. */
+  showEntry?: boolean;
+}) {
   const [quiz, setQuiz] = useState<Quiz | null>(null);
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+
+  const startedAt = useRef<number>(0);
+  const [attempt, setAttempt] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [name, setName] = useState("");
+  const [entryState, setEntryState] = useState<
+    "idle" | "saving" | "saved" | "error"
+  >("idle");
 
   function start(q: Quiz) {
     setQuiz(q);
@@ -16,7 +33,16 @@ export default function FootballIQ() {
     setPicked(null);
     setScore(0);
     setDone(false);
+    setEntryState("idle");
+    setName("");
+    setAttempt((n) => n + 1);
   }
+
+  // Clock starts when a round is loaded, not while rendering.
+  useEffect(() => {
+    if (!quiz) return;
+    startedAt.current = Date.now();
+  }, [quiz, attempt]);
 
   function reset() {
     setQuiz(null);
@@ -71,11 +97,44 @@ export default function FootballIQ() {
 
   function next() {
     if (i === quiz!.questions.length - 1) {
+      setSeconds(Math.round((Date.now() - startedAt.current) / 1000));
       setDone(true);
       return;
     }
     setI((v) => v + 1);
     setPicked(null);
+  }
+
+  async function submitScore(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!quiz || !name.trim()) return;
+    setEntryState("saving");
+
+    const entry = {
+      name: name.trim().slice(0, 24),
+      quiz: quiz.name,
+      score,
+      total: quiz.questions.length,
+      seconds,
+      at: new Date().toISOString(),
+    };
+
+    try {
+      const res = await fetch("/api/leaderboard", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry),
+      });
+      const json = (await res.json()) as { configured?: boolean };
+      // No shared store yet, so keep it on this device instead of losing it.
+      if (json.configured === false) saveLocal(entry);
+      setEntryState("saved");
+      onSubmitted?.();
+    } catch {
+      saveLocal(entry);
+      setEntryState("error");
+      onSubmitted?.();
+    }
   }
 
   /* ---------------- result ---------------- */
@@ -104,6 +163,52 @@ export default function FootballIQ() {
           <p className="mx-auto mt-5 max-w-md font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl">
             {verdict}
           </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.2em] text-mute">
+            Finished in {Math.floor(seconds / 60)}m{" "}
+            {String(seconds % 60).padStart(2, "0")}s
+          </p>
+
+          {showEntry && (
+            <div className="mx-auto mt-8 max-w-md">
+              {entryState === "saved" ? (
+                <p className="rounded-xl border border-volt/40 bg-volt/5 px-4 py-3 text-sm text-volt">
+                  You are on the board. Scroll down to find yourself.
+                </p>
+              ) : (
+                <form onSubmit={submitScore} className="flex flex-col gap-2.5 sm:flex-row">
+                  <input
+                    value={name}
+                    onChange={(ev) => setName(ev.target.value)}
+                    required
+                    maxLength={24}
+                    placeholder="Your name or handle"
+                    aria-label="Your name for the leaderboard"
+                    className="w-full rounded-xl border border-line bg-ink px-4 py-3 text-base text-bone outline-none transition placeholder:text-mute focus:border-volt sm:text-sm"
+                  />
+                  <input
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden
+                  />
+                  <button
+                    type="submit"
+                    disabled={entryState === "saving"}
+                    className="shrink-0 rounded-xl bg-volt px-6 py-3 text-sm font-bold text-black transition hover:brightness-110 disabled:opacity-60"
+                  >
+                    {entryState === "saving" ? "Saving…" : "Add to board"}
+                  </button>
+                </form>
+              )}
+              {entryState === "error" && (
+                <p className="mt-2 text-xs text-mute">
+                  Saved on this device. We could not reach the shared board.
+                </p>
+              )}
+            </div>
+          )}
+
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <button
               onClick={() => start(quiz)}

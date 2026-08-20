@@ -171,6 +171,7 @@ export default async function Home() {
               eyebrow="Interactive"
               title="The tactics board."
               sub="Switch the shape, tap any player, and see the job they are actually being asked to do. The same breakdowns we do on the podcast, laid out on grass."
+              action={{ href: "/tactics", label: "Full board" }}
             />
           </Reveal>
           <Reveal delay={80}>
@@ -185,7 +186,8 @@ export default async function Home() {
           <SectionHeading
             eyebrow="Test yourself"
             title="Football IQ."
-            sub="Five questions on the things that actually decide matches. Every answer comes with the reasoning behind it."
+            sub="Five rounds on the things that actually decide matches. Every answer comes with the reasoning behind it."
+            action={{ href: "/quiz", label: "Quiz & leaderboard" }}
           />
           <FootballIQ />
         </Reveal>
