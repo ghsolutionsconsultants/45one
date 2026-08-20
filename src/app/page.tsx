@@ -41,24 +41,6 @@ export default async function Home() {
         ]}
       />
 
-      {/* ================= LIVE AUDIENCE ================= */}
-      <section className="mx-auto max-w-7xl px-5 pt-12 md:px-8 md:pt-28">
-        <Reveal>
-          <div className="mb-9 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <Eyebrow>The audience</Eyebrow>
-              <h2 className="mt-4 font-display text-4xl leading-none tracking-tight md:text-6xl">
-                Growing every Thursday.
-              </h2>
-            </div>
-            <p className="text-xs uppercase tracking-[0.2em] text-mute">
-              Pulled live from our channels
-            </p>
-          </div>
-          <StatsBar />
-        </Reveal>
-      </section>
-
       {/* ================= LATEST EPISODE ================= */}
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
         <Reveal>
@@ -79,31 +61,9 @@ export default async function Home() {
         )}
       </section>
 
-      {/* ================= TACTICS BOARD ================= */}
-      <section className="relative overflow-hidden border-y border-line bg-ink-2">
-        <Image
-          src={img.pitchAerial}
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover opacity-[0.06]"
-        />
-        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Interactive"
-              title="The tactics board."
-              sub="Switch the shape, tap any player, and see the job they are actually being asked to do. The same breakdowns we do on the podcast, laid out on grass."
-            />
-          </Reveal>
-          <Reveal delay={80}>
-            <TacticsBoard />
-          </Reveal>
-        </div>
-      </section>
-
       {/* ================= WHAT WE DO ================= */}
-      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
+      <section className="border-y border-line bg-ink-2">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
         <Reveal>
           <SectionHeading
             eyebrow="What we do"
@@ -165,52 +125,7 @@ export default async function Home() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* ================= FOOTBALL IQ ================= */}
-      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-28">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Test yourself"
-            title="Football IQ."
-            sub="Five questions on the things that actually decide matches. Every answer comes with the reasoning behind it."
-          />
-          <FootballIQ />
-        </Reveal>
-      </section>
-
-      {/* ================= GALLERY ================= */}
-      <section className="border-y border-line bg-ink-2">
-        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
-          <Reveal>
-            <SectionHeading eyebrow="The game" title="Grass, leather, floodlights." />
-          </Reveal>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-            {galleryImages.map((g, i) => (
-              <Reveal key={g.src} delay={i * 60}>
-                <TiltCard
-                  src={g.src}
-                  alt={g.alt}
-                  label={g.label}
-                  className="aspect-square sm:aspect-[4/3]"
-                />
-              </Reveal>
-            ))}
-          </div>
         </div>
-      </section>
-
-      {/* ================= FPL ================= */}
-      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Play along"
-            title="The 45one FPL league."
-            sub="Free to enter, open to everyone, and running all season."
-            action={{ href: "/fpl", label: "League page" }}
-          />
-          <FplCallout />
-        </Reveal>
       </section>
 
       {/* ================= LEAGUES ================= */}
@@ -239,6 +154,75 @@ export default async function Home() {
             ))}
           </div>
         </Reveal>
+      </section>
+
+      {/* ================= TACTICS BOARD ================= */}
+      <section className="relative overflow-hidden border-y border-line bg-ink-2">
+        <Image
+          src={img.pitchAerial}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-[0.06]"
+        />
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Interactive"
+              title="The tactics board."
+              sub="Switch the shape, tap any player, and see the job they are actually being asked to do. The same breakdowns we do on the podcast, laid out on grass."
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <TacticsBoard />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ================= FOOTBALL IQ ================= */}
+      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-28">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Test yourself"
+            title="Football IQ."
+            sub="Five questions on the things that actually decide matches. Every answer comes with the reasoning behind it."
+          />
+          <FootballIQ />
+        </Reveal>
+      </section>
+
+      {/* ================= FPL ================= */}
+      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Play along"
+            title="The 45one FPL league."
+            sub="Free to enter, open to everyone, and running all season."
+            action={{ href: "/fpl", label: "League page" }}
+          />
+          <FplCallout />
+        </Reveal>
+      </section>
+
+      {/* ================= GALLERY ================= */}
+      <section className="border-y border-line bg-ink-2">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
+          <Reveal>
+            <SectionHeading eyebrow="The game" title="Grass, leather, floodlights." />
+          </Reveal>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            {galleryImages.map((g, i) => (
+              <Reveal key={g.src} delay={i * 60}>
+                <TiltCard
+                  src={g.src}
+                  alt={g.alt}
+                  label={g.label}
+                  className="aspect-square sm:aspect-[4/3]"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ================= BLOG ================= */}
@@ -273,6 +257,24 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* ================= LIVE AUDIENCE ================= */}
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
+        <Reveal>
+          <div className="mb-9 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <Eyebrow>The audience</Eyebrow>
+              <h2 className="mt-4 font-display text-4xl leading-none tracking-tight md:text-6xl">
+                Growing every Thursday.
+              </h2>
+            </div>
+            <p className="text-xs uppercase tracking-[0.2em] text-mute">
+              Pulled live from our channels
+            </p>
+          </div>
+          <StatsBar />
+        </Reveal>
+      </section>
 
       {/* ================= SPONSOR CTA ================= */}
       <section className="relative overflow-hidden border-t border-line bg-volt text-black">
@@ -309,9 +311,6 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-10 border-t border-black/20 pt-8 sm:mt-16 sm:pt-10">
-            <StatsBar dark />
-          </div>
         </div>
       </section>
     </>
