@@ -30,6 +30,24 @@ tag. Everything is cached for 30 minutes, so it is three requests an hour.
 Adding `YOUTUBE_API_KEY` additionally unlocks **lifetime channel views** and
 **per-video view + like counts** under every thumbnail.
 
+### Instagram in production
+
+Instagram serves its `og:description` to a laptop but blocks requests coming
+from Vercel's datacentre IPs, so the live fetch returns nothing once deployed.
+Rather than show a gap, the numbers are also fetched every six hours by
+`.github/workflows/refresh-stats.yml`, which runs `scripts/refresh-stats.mjs`
+on GitHub's runners and commits `content/stats.json`. The site falls back to
+that file, so the Instagram figure stays current within a few hours.
+
+Run it by hand any time from the repo's **Actions** tab, or locally with:
+
+```bash
+node scripts/refresh-stats.mjs
+```
+
+A card only shows the pulsing **LIVE** badge when the number came from a live
+request in that render, so a snapshot figure is never presented as real-time.
+
 ### If a number ever stops updating
 
 The og:description route depends on Instagram and TikTok keeping their link

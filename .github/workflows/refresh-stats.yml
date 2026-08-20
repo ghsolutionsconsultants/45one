@@ -1,0 +1,40 @@
+name: Refresh audience stats
+
+# Instagram blocks requests from Vercel's datacentre IPs, so the numbers are
+# fetched here (where they do get through) and committed for the site to use.
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every six hours
+  workflow_dispatch: {}      # or run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch the latest counts
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/refresh-stats.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # ignore a timestamp-only change so we do not redeploy for nothing
+          if git diff --quiet -I'"updatedAt"' -- content/stats.json; then
+            echo "No change in the numbers."
+            git checkout -- content/stats.json
+            exit 0
+          fi
+          git add content/stats.json
+          git commit -m "Refresh audience stats"
+          git push

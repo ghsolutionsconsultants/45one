@@ -1,4 +1,5 @@
 import { site } from "./site";
+import snapshot from "../../content/stats.json";
 
 export type PlatformStat = {
   platform: "YouTube" | "Instagram" | "TikTok";
@@ -70,9 +71,24 @@ function countFrom(text: string, word: string): number | null {
 const TTL = 1800;
 
 /* ------------------------------------------------------------------ *
- * Manual fallbacks. Only used when a platform can't be read live.
- * Update these whenever you check your own dashboards.
+ * Fallbacks, in order of preference:
+ *
+ * 1. The live fetch below.
+ * 2. content/stats.json, refreshed every six hours by the GitHub Action in
+ *    .github/workflows/refresh-stats.yml. Instagram refuses requests from
+ *    Vercel's datacentre IPs, so in production this is normally what the
+ *    Instagram card shows.
+ * 3. manualStats, for anything you would rather hard-code.
  * ------------------------------------------------------------------ */
+type Snapshot = {
+  instagram?: { followers?: number; posts?: number };
+  tiktok?: { followers?: number; likes?: number };
+  youtube?: { subscribers?: number; views?: number };
+  updatedAt?: string;
+};
+
+const snap: Snapshot = snapshot;
+
 export const manualStats = {
   instagram: { followers: null as number | null, likes: null as number | null },
   tiktok: { followers: null as number | null, likes: null as number | null },
@@ -225,11 +241,12 @@ export async function getStats(): Promise<Stats> {
       platform: "YouTube",
       href: site.socials.youtube,
       primary: {
-        value: yt?.subscribers ?? manualStats.youtube.subscribers,
+        value:
+          yt?.subscribers ?? snap.youtube?.subscribers ?? manualStats.youtube.subscribers,
         label: "Subscribers",
       },
       secondary: {
-        value: yt?.views ?? manualStats.youtube.views,
+        value: yt?.views ?? snap.youtube?.views ?? manualStats.youtube.views,
         label: "Total views",
       },
       live: Boolean(yt?.subscribers),
@@ -238,12 +255,14 @@ export async function getStats(): Promise<Stats> {
       platform: "Instagram",
       href: site.socials.instagram,
       primary: {
-        value: ig?.followers ?? manualStats.instagram.followers,
+        value:
+          ig?.followers ?? snap.instagram?.followers ?? manualStats.instagram.followers,
         label: "Followers",
       },
       secondary: {
         value:
           ("posts" in (ig ?? {}) ? (ig as { posts: number | null }).posts : null) ??
+          snap.instagram?.posts ??
           manualStats.instagram.likes,
         label: "Posts",
       },
@@ -253,11 +272,12 @@ export async function getStats(): Promise<Stats> {
       platform: "TikTok",
       href: site.socials.tiktok,
       primary: {
-        value: tt?.followers ?? manualStats.tiktok.followers,
+        value:
+          tt?.followers ?? snap.tiktok?.followers ?? manualStats.tiktok.followers,
         label: "Followers",
       },
       secondary: {
-        value: tt?.likes ?? manualStats.tiktok.likes,
+        value: tt?.likes ?? snap.tiktok?.likes ?? manualStats.tiktok.likes,
         label: "Total likes",
       },
       live: Boolean(tt?.followers),
@@ -271,8 +291,8 @@ export async function getStats(): Promise<Stats> {
   return {
     platforms,
     totalAudience: known.length ? known.reduce((a, b) => a + b, 0) : null,
-    youtubeViews: yt?.views ?? manualStats.youtube.views,
-    tiktokLikes: tt?.likes ?? manualStats.tiktok.likes,
+    youtubeViews: yt?.views ?? snap.youtube?.views ?? manualStats.youtube.views,
+    tiktokLikes: tt?.likes ?? snap.tiktok?.likes ?? manualStats.tiktok.likes,
     reporting: platforms.filter((p) => p.primary.value !== null).length,
     fetchedAt: new Date().toISOString(),
   };
