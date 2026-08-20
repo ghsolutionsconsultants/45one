@@ -82,7 +82,7 @@ export const manualStats = {
 /* ----------------------------- YouTube ---------------------------- */
 
 async function youtubeViaApi() {
-  const key = process.env.YOUTUBE_API_KEY;
+  const key = process.env.YOUTUBE_API_KEY?.trim();
   if (!key || !site.youtube.channelId) return null;
 
   const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${site.youtube.channelId}&key=${key}`;
@@ -126,8 +126,8 @@ async function youtubeViaPage() {
  * Set INSTAGRAM_ACCESS_TOKEN + INSTAGRAM_USER_ID to go live.
  */
 async function instagramLive() {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
-  const userId = process.env.INSTAGRAM_USER_ID;
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN?.trim();
+  const userId = process.env.INSTAGRAM_USER_ID?.trim();
   if (!token || !userId) return null;
 
   try {
@@ -174,7 +174,7 @@ async function instagramViaOg() {
  * numbers once you've authorised the account, set TIKTOK_ACCESS_TOKEN.
  */
 async function tiktokLive() {
-  const token = process.env.TIKTOK_ACCESS_TOKEN;
+  const token = process.env.TIKTOK_ACCESS_TOKEN?.trim();
   if (!token) return null;
 
   try {

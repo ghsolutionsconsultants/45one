@@ -31,7 +31,7 @@ export async function POST(req: Request) {
   const to = body.interest ? site.contact.partnerships : site.contact.general;
 
   // Delivery via Resend when configured; otherwise logged for the dev server.
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.RESEND_API_KEY?.trim();
   if (key) {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -40,8 +40,9 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.RESEND_FROM ?? "45one site <onboarding@resend.dev>",
-        to: [process.env.CONTACT_TO ?? to],
+        from:
+          process.env.RESEND_FROM?.trim() || "45one site <onboarding@resend.dev>",
+        to: [process.env.CONTACT_TO?.trim() || to],
         reply_to: body.email,
         subject: `New enquiry from ${body.name}${body.company ? ` (${body.company})` : ""}`,
         text: lines,

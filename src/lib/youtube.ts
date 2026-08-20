@@ -87,7 +87,7 @@ export async function getVideos(): Promise<Video[]> {
  * Without a key the videos simply render without counts.
  */
 async function withStats(videos: Video[]): Promise<Video[]> {
-  const key = process.env.YOUTUBE_API_KEY;
+  const key = process.env.YOUTUBE_API_KEY?.trim();
   if (!key || videos.length === 0) return videos;
 
   try {
