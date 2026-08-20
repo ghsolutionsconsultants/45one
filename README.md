@@ -143,5 +143,29 @@ Anton, body is Inter.
 
 ## Deploying
 
-Push to GitHub and import into Vercel — zero config. Set the env vars in the
-Vercel dashboard.
+The repo lives at `github.com/ghsolutionsconsultants/45one`.
+
+This is a server-rendered Next.js app, so it needs a host that runs Node. It
+will not work on GitHub Pages as-is: Pages only serves static files, which
+would break the `/api/contact` form and freeze the live follower counts at
+build time.
+
+**Recommended: Vercel** (free tier covers this site comfortably)
+
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub.
+2. Import `ghsolutionsconsultants/45one`. Vercel detects Next.js on its own,
+   so every build setting can stay as-is.
+3. Add the environment variables from `.env.example` under Settings →
+   Environment Variables. None are required for a first deploy, but set
+   `NEXT_PUBLIC_SITE_URL` to the live domain once you have one.
+4. Deploy. Every push to `main` redeploys automatically.
+
+Netlify, Render and Railway all work the same way if you prefer them.
+
+**Custom domain**: add it in Vercel under Settings → Domains, point the DNS
+records it gives you, then set `NEXT_PUBLIC_SITE_URL` to match so the sitemap
+and social previews use the right address.
+
+**If you specifically need GitHub Pages**, the site can be switched to a
+static export, at the cost of the contact form (it would need a third-party
+form service) and live stats only refreshing when the site rebuilds.
