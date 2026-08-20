@@ -1,6 +1,17 @@
-export type PhaseId = "buildUp" | "attack" | "restDefence" | "defence" | "transition";
+export type PhaseId =
+  | "base"
+  | "buildUp"
+  | "attack"
+  | "restDefence"
+  | "defence"
+  | "transition";
 
 export const phases: { id: PhaseId; label: string; blurb: string }[] = [
+  {
+    id: "base",
+    label: "Formation",
+    blurb: "The shape as it lines up on the teamsheet, before the ball moves.",
+  },
   {
     id: "buildUp",
     label: "Build-up",
@@ -52,8 +63,8 @@ export type Formation = {
   summary: string;
   strength: string;
   weakness: string;
-  /** How the shape behaves in each phase of play */
-  phaseNotes: Record<PhaseId, { shape: string; detail: string }>;
+  /** How the shape behaves in each phase of play. "base" is derived. */
+  phaseNotes: Partial<Record<PhaseId, { shape: string; detail: string }>>;
   /** Where players move in each phase, keyed by index into spots */
   shifts: Partial<Record<PhaseId, Record<number, { x: number; y: number }>>>;
   spots: Spot[];
@@ -102,7 +113,7 @@ export const formations: Formation[] = [
       attack: {
         shape: "3-2-5",
         detail:
-          "Wingers stay pinned to the touchline to stretch the back four horizontally. The striker occupies both centre backs so the eights can attack the half spaces between full back and centre back. The two deepest midfielders sit at the top of the box for cut-backs and second balls.",
+          "The back four becomes a back three that steps to halfway, one full back inverts alongside the pivot, and five players occupy the five attacking lanes: left wing, left half space, centre, right half space, right wing. Wingers pin the touchline to stretch the back four, the striker occupies both centre backs, and the eights attack the half spaces. Two midfielders sit at the top of the box for cut-backs and second balls.",
       },
       restDefence: {
         shape: "3-2",
@@ -129,15 +140,19 @@ export const formations: Formation[] = [
         7: { x: 48, y: 74 },
         9: { x: 66, y: 50 },
       },
+      // 3-2-5. Back three steps to halfway, five lanes occupied ahead.
       attack: {
-        1: { x: 52, y: 20 },
-        4: { x: 52, y: 88 },
-        5: { x: 56, y: 42 },
-        6: { x: 74, y: 32 },
-        7: { x: 74, y: 68 },
-        8: { x: 90, y: 8 },
+        0: { x: 24, y: 50 },
+        2: { x: 44, y: 34 },
+        3: { x: 44, y: 58 },
+        4: { x: 44, y: 80 },
+        1: { x: 60, y: 62 },
+        5: { x: 60, y: 40 },
+        8: { x: 88, y: 8 },
+        6: { x: 84, y: 30 },
         9: { x: 92, y: 50 },
-        10: { x: 90, y: 92 },
+        7: { x: 84, y: 70 },
+        10: { x: 88, y: 92 },
       },
       restDefence: {
         1: { x: 46, y: 26 },
@@ -377,7 +392,7 @@ export const formations: Formation[] = [
       attack: {
         shape: "2-3-5",
         detail:
-          "Both full backs push high, one pivot steps forward and the other holds. The ten operates in the pocket between the opposition's midfield and defence, which is the hardest area in football to defend because nobody's marking assignment covers it.",
+          "The purest positional shape: two centre backs advance to halfway, both full backs invert to make a midfield three, and five players hold the five lanes. The ten operates in the pocket between the opposition midfield and defence, the hardest area in football to defend because nobody's marking assignment covers it.",
       },
       restDefence: {
         shape: "2-2 or 4-2",
@@ -403,15 +418,19 @@ export const formations: Formation[] = [
         6: { x: 30, y: 70 },
         8: { x: 60, y: 50 },
       },
+      // 2-3-5. Both centre backs advance, full backs invert into the three.
       attack: {
-        1: { x: 62, y: 10 },
-        4: { x: 62, y: 90 },
-        5: { x: 58, y: 40 },
-        6: { x: 48, y: 60 },
-        7: { x: 84, y: 14 },
-        8: { x: 78, y: 50 },
-        9: { x: 84, y: 86 },
-        10: { x: 92, y: 44 },
+        0: { x: 24, y: 50 },
+        2: { x: 46, y: 38 },
+        3: { x: 46, y: 62 },
+        1: { x: 66, y: 26 },
+        5: { x: 64, y: 50 },
+        4: { x: 66, y: 74 },
+        7: { x: 88, y: 8 },
+        8: { x: 86, y: 32 },
+        10: { x: 92, y: 50 },
+        6: { x: 86, y: 68 },
+        9: { x: 88, y: 92 },
       },
       restDefence: {
         1: { x: 40, y: 22 },
@@ -643,7 +662,7 @@ export const formations: Formation[] = [
       attack: {
         shape: "3-2-5",
         detail:
-          "Both wing-backs are on the last line, giving five attackers with two strikers occupying the centre backs. The strike partnership works in tandem: one comes short, the other runs in behind, so the centre backs are pulled in opposite directions.",
+          "The back three carries to halfway behind a double pivot, and the two wing-backs push to the last line. That fills all five lanes: wing-backs hold the touchlines, an eight takes a half space, and the strike partnership works the centre in tandem, one short and one in behind, so the centre backs get pulled in opposite directions.",
       },
       restDefence: {
         shape: "3-2",
@@ -669,14 +688,19 @@ export const formations: Formation[] = [
         8: { x: 48, y: 92 },
         6: { x: 34, y: 50 },
       },
+      // 3-2-5. The back three carries to halfway behind a double pivot.
       attack: {
-        1: { x: 46, y: 22 },
-        3: { x: 46, y: 78 },
-        4: { x: 84, y: 8 },
-        8: { x: 84, y: 92 },
-        5: { x: 62, y: 34 },
-        7: { x: 62, y: 66 },
-        6: { x: 50, y: 50 },
+        0: { x: 24, y: 50 },
+        1: { x: 44, y: 28 },
+        2: { x: 44, y: 50 },
+        3: { x: 44, y: 72 },
+        6: { x: 62, y: 40 },
+        5: { x: 62, y: 62 },
+        4: { x: 88, y: 8 },
+        7: { x: 84, y: 30 },
+        9: { x: 92, y: 46 },
+        10: { x: 84, y: 68 },
+        8: { x: 88, y: 92 },
       },
       restDefence: {
         4: { x: 46, y: 16 },
@@ -932,15 +956,19 @@ export const formations: Formation[] = [
         6: { x: 34, y: 40 },
         7: { x: 34, y: 60 },
       },
+      // 2-4-4. Centre backs step up, both full backs join the midfield line.
       attack: {
-        1: { x: 62, y: 10 },
-        4: { x: 62, y: 90 },
-        5: { x: 82, y: 12 },
-        8: { x: 82, y: 88 },
-        6: { x: 56, y: 40 },
-        7: { x: 60, y: 60 },
+        0: { x: 24, y: 50 },
+        2: { x: 46, y: 38 },
+        3: { x: 46, y: 62 },
+        1: { x: 64, y: 12 },
+        6: { x: 62, y: 40 },
+        7: { x: 62, y: 60 },
+        4: { x: 64, y: 88 },
+        5: { x: 86, y: 16 },
         9: { x: 90, y: 40 },
         10: { x: 90, y: 60 },
+        8: { x: 86, y: 84 },
       },
       restDefence: {
         1: { x: 34, y: 14 },
@@ -1193,17 +1221,19 @@ export const formations: Formation[] = [
         8: { x: 46, y: 74 },
         7: { x: 32, y: 50 },
       },
+      // 3-2-5 in bursts. The back three still advances, just not as far.
       attack: {
-        1: { x: 78, y: 8 },
-        5: { x: 78, y: 92 },
-        6: { x: 62, y: 30 },
-        8: { x: 62, y: 70 },
-        7: { x: 46, y: 50 },
-        2: { x: 34, y: 30 },
-        3: { x: 32, y: 50 },
-        4: { x: 34, y: 70 },
-        9: { x: 88, y: 40 },
-        10: { x: 88, y: 60 },
+        0: { x: 22, y: 50 },
+        2: { x: 40, y: 30 },
+        3: { x: 40, y: 50 },
+        4: { x: 40, y: 70 },
+        7: { x: 58, y: 42 },
+        8: { x: 58, y: 62 },
+        1: { x: 86, y: 8 },
+        6: { x: 82, y: 30 },
+        9: { x: 90, y: 48 },
+        10: { x: 84, y: 68 },
+        5: { x: 86, y: 92 },
       },
       restDefence: {
         1: { x: 40, y: 12 },
@@ -1408,4 +1438,548 @@ export const formations: Formation[] = [
       },
     ],
   },
+  /* ------------------------------------------------------------------ */
+  {
+    id: "343",
+    name: "3-4-3",
+    nickname: "The aggressive one",
+    summary:
+      "A back three, a flat midfield four with wing-backs, and a front three. Built to press high and attack with numbers, and it becomes a 3-2-5 the moment the wing-backs push on.",
+    strength: "Presses in a front three and attacks with five without changing much.",
+    weakness: "Only two central midfielders. A midfield three will outnumber them.",
+    phaseNotes: {
+      buildUp: {
+        shape: "3-2-5",
+        detail:
+          "The back three splits wide with the two central midfielders in front. Because there are already three defenders, nobody needs to drop in, so the shape builds with a natural 3v2 or 3v1 against the first line without moving a single player out of position.",
+      },
+      attack: {
+        shape: "3-2-5",
+        detail:
+          "Wing-backs push to the last line and the front three narrows into the centre and half spaces. That is all five lanes filled: wing-backs wide, wide forwards in the half spaces, striker central, with the back three at halfway and two midfielders screening.",
+      },
+      restDefence: {
+        shape: "3-2",
+        detail:
+          "Three defenders and two central midfielders behind the ball. It is the same structure as a 4-3-3 in attack, which is why so many coaches move between the two shapes without changing personnel.",
+      },
+      defence: {
+        shape: "5-4-1 or 5-2-3",
+        detail:
+          "Pressing high, the front three squeezes the back line and the wing-backs jump the opposition full backs. Dropping off, the wing-backs fall in to make a five and the wide forwards drop to a four, leaving one striker up.",
+      },
+      transition: {
+        shape: "Front three counter",
+        detail:
+          "Three forwards already ahead of the ball means an immediate 3v3 or 3v4. The two central midfielders decide instantly whether to join or hold.",
+      },
+    },
+    shifts: {
+      buildUp: {
+        0: { x: 16, y: 50 },
+        1: { x: 26, y: 24 },
+        3: { x: 26, y: 76 },
+        4: { x: 46, y: 8 },
+        7: { x: 46, y: 92 },
+      },
+      attack: {
+        0: { x: 24, y: 50 },
+        1: { x: 44, y: 28 },
+        2: { x: 44, y: 50 },
+        3: { x: 44, y: 72 },
+        5: { x: 62, y: 40 },
+        6: { x: 62, y: 62 },
+        4: { x: 88, y: 8 },
+        8: { x: 84, y: 30 },
+        9: { x: 92, y: 50 },
+        10: { x: 84, y: 70 },
+        7: { x: 88, y: 92 },
+      },
+      restDefence: {
+        4: { x: 48, y: 16 },
+        7: { x: 48, y: 84 },
+        5: { x: 46, y: 40 },
+        6: { x: 46, y: 60 },
+      },
+      defence: {
+        0: { x: 10, y: 50 },
+        1: { x: 20, y: 30 },
+        2: { x: 18, y: 50 },
+        3: { x: 20, y: 70 },
+        4: { x: 24, y: 10 },
+        7: { x: 24, y: 90 },
+        5: { x: 40, y: 38 },
+        6: { x: 40, y: 62 },
+        8: { x: 44, y: 16 },
+        9: { x: 62, y: 50 },
+        10: { x: 44, y: 84 },
+      },
+    },
+    spots: [
+      keeper(
+        "With three defenders already spread, the keeper is a pure spare man and can play into midfield rather than around the press."
+      ),
+      {
+        x: 22,
+        y: 26,
+        role: "Left centre back",
+        short: "LCB",
+        note: "The wide left of the three. Carries into midfield and covers behind the wing-back.",
+        variants: [
+          { name: "Carrying wide centre back", detail: "Drives forward with the ball to commit a presser and create the free man." },
+          { name: "Left-footed specialist", detail: "Opens the body to switch play and find the wing-back in one pass." },
+        ],
+        players: ["Josko Gvardiol", "Alessandro Bastoni", "Grant Kekana"],
+        jobs: {
+          buildUp: "Splits wide and carries. In a back three the wide defenders are the main progressors.",
+          attack: "Steps to halfway as the left of a back three, providing the switch.",
+          restDefence: "Covers the channel behind the left wing-back.",
+          defence: "Becomes the left centre back of a five and defends the outside channel.",
+        },
+      },
+      {
+        x: 20,
+        y: 50,
+        role: "Central defender",
+        short: "CB",
+        note: "The spare man and the organiser. Sets the line for the other two.",
+        variants: [
+          { name: "Libero", detail: "The free defender who steps into midfield when nobody presses." },
+          { name: "Commander", detail: "Organises the line, dominates the box, never leaves the middle." },
+        ],
+        players: ["Virgil van Dijk", "Kalidou Koulibaly", "Mosa Lebusa"],
+        jobs: {
+          buildUp: "The free man. If unpressed, carrying forward is the instruction, not an option.",
+          attack: "Holds the central position at halfway as the deepest player.",
+          restDefence: "The insurance behind everything.",
+          defence: "Middle of the back five, attacking every cross.",
+        },
+      },
+      {
+        x: 22,
+        y: 74,
+        role: "Right centre back",
+        short: "RCB",
+        note: "Mirrors the left. Steps out into the channel when the wing-back is high.",
+        variants: [
+          { name: "Aggressive stepper", detail: "Follows the forward into midfield to deny the turn." },
+          { name: "Recovery defender", detail: "Pace to cover the space behind when the block is broken." },
+        ],
+        players: ["Rúben Dias", "Gleison Bremer", "Nyiko Mobbie"],
+        jobs: {
+          buildUp: "Carries or switches, mirroring the left centre back.",
+          attack: "Right of the back three at halfway.",
+          restDefence: "Covers the right channel.",
+          defence: "Right centre back of the five.",
+        },
+      },
+      {
+        x: 50,
+        y: 10,
+        role: "Left wing-back",
+        short: "LWB",
+        note: "Provides all the width on the left in every phase.",
+        variants: [
+          { name: "Attacking wing-back", detail: "Reaches the last line and delivers. Effectively a winger." },
+          { name: "Inverted wing-back", detail: "Steps inside to make a midfield three against a three." },
+        ],
+        players: ["Alphonso Davies", "Federico Dimarco", "Aubrey Modiba"],
+        jobs: {
+          buildUp: "Pushes high immediately to pin the opposition full back or winger.",
+          attack: "Holds the left wing lane on the last line. One of the five.",
+          restDefence: "The risk point. The wide centre back covers behind.",
+          defence: "Drops to become the left of a back five.",
+          transition: "Sprints to support the front three and turn a 3v3 into a 4v3.",
+        },
+      },
+      {
+        x: 46,
+        y: 38,
+        role: "Left central midfielder",
+        short: "LCM",
+        note: "Half of a two in the middle. Covers enormous ground by necessity.",
+        variants: [
+          { name: "Box-to-box", detail: "Covers both boxes because there is no third midfielder to share it." },
+          { name: "Deep-lying playmaker", detail: "Sits and dictates while the partner runs beyond." },
+        ],
+        players: ["Nicolò Barella", "Declan Rice", "Teboho Mokoena"],
+        jobs: {
+          buildUp: "Offers the angle in front of the back three and drops wide if the build-up is pressed.",
+          attack: "One of two screening the counter at the top of the box.",
+          restDefence: "Half of the two-man screen. Never both forward at once.",
+          defence: "Shuttles across to help the wing-back and block the half space.",
+        },
+      },
+      {
+        x: 46,
+        y: 62,
+        role: "Right central midfielder",
+        short: "RCM",
+        note: "The other half of the two. Discipline is what keeps this shape viable.",
+        variants: [
+          { name: "Ball winner", detail: "Wins it back quickly, which matters more with only two in there." },
+          { name: "Late runner", detail: "Arrives in the box behind the front three." },
+        ],
+        players: ["Federico Valverde", "Hakan Calhanoglu", "Bongani Zungu"],
+        jobs: {
+          buildUp: "Rotates with the partner so one is always available behind the ball.",
+          attack: "Screens alongside the partner, ready for the second ball.",
+          restDefence: "The other half of the 3-2.",
+          defence: "Blocks the right half space and presses the opposition pivot.",
+        },
+      },
+      {
+        x: 50,
+        y: 90,
+        role: "Right wing-back",
+        short: "RWB",
+        note: "The width on the right, and the main crossing outlet.",
+        variants: [
+          { name: "Attacking wing-back", detail: "Gets to the byline with a front three waiting in the box." },
+          { name: "Balanced wing-back", detail: "Times the run rather than living on the last line." },
+        ],
+        players: ["Achraf Hakimi", "Denzel Dumfries", "Khuliso Mudau"],
+        jobs: {
+          buildUp: "Holds width to stretch the opposition back line.",
+          attack: "Right wing lane on the last line.",
+          restDefence: "Recovers quickly or the back three is exposed.",
+          defence: "Right of the back five.",
+          transition: "The overlap that turns a counter into an overload.",
+        },
+      },
+      {
+        x: 82,
+        y: 26,
+        role: "Left forward",
+        short: "LW",
+        note: "Narrow rather than wide. The wing-back provides the width outside them.",
+        variants: [
+          { name: "Inside forward", detail: "Attacks the half space and the box rather than the touchline." },
+          { name: "Wide playmaker", detail: "Drops into the half space to combine and create." },
+        ],
+        players: ["Rafael Leão", "Vinícius Júnior", "Relebohile Mofokeng"],
+        jobs: {
+          buildUp: "Stays high and narrow, occupying the opposition centre back rather than the full back.",
+          attack: "Left half space. One of the five lanes, and the hardest one to mark.",
+          defence: "Presses the wide centre back and blocks the pass to the full back.",
+          transition: "One of three already ahead of the ball.",
+        },
+      },
+      {
+        x: 88,
+        y: 50,
+        role: "Striker",
+        short: "ST",
+        note: "Central of a front three, pinning the middle centre back.",
+        variants: [
+          { name: "Complete forward", detail: "Holds, runs and finishes with two forwards either side." },
+          { name: "Pressing forward", detail: "Leads a front three press, the shape's biggest weapon." },
+        ],
+        players: ["Erling Haaland", "Victor Osimhen", "Iqraam Rayners"],
+        jobs: {
+          buildUp: "Occupies the central defender so the wide forwards get one-v-ones.",
+          attack: "Centre lane. Attacks the near post and pins the middle of the back line.",
+          defence: "Presses the middle centre back and shows play into the trap.",
+          transition: "Holds the ball to bring the wide forwards into the counter.",
+        },
+      },
+      {
+        x: 82,
+        y: 74,
+        role: "Right forward",
+        short: "RW",
+        note: "Also narrow. Three forwards close together is what makes the press work.",
+        variants: [
+          { name: "Inside forward", detail: "Attacks the right half space and the far post." },
+          { name: "Second striker", detail: "Plays almost level with the striker to make a front two in the box." },
+        ],
+        players: ["Bukayo Saka", "Lamine Yamal", "Oswin Appollis"],
+        jobs: {
+          buildUp: "Narrow and high, pinning the wide centre back.",
+          attack: "Right half space, arriving at the far post on crosses.",
+          defence: "Presses the wide centre back and blocks the pass wide.",
+          transition: "The third runner on the break.",
+        },
+      },
+    ],
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
+    id: "4141",
+    name: "4-1-4-1",
+    nickname: "The block",
+    summary:
+      "A back four, a single holding midfielder, a flat four ahead and a lone striker. Mostly a defensive organisation: the shape a 4-3-3 takes when it does not have the ball.",
+    strength: "Two banks with a screen between them. Almost no gaps to play through.",
+    weakness: "The striker is isolated, and the single pivot is exposed if the four steps too high.",
+    phaseNotes: {
+      buildUp: {
+        shape: "3-2-5",
+        detail:
+          "The pivot drops between or beside the centre backs, the full backs push on, and the flat four splits into two wide and two inside. It becomes a 3-2-5 like any modern side, but it starts from a more conservative base.",
+      },
+      attack: {
+        shape: "3-2-5",
+        detail:
+          "The two inside midfielders take the half spaces, the wide players hold the touchlines and the striker pins the centre backs. Five lanes again, with the pivot and a centre back screening behind.",
+      },
+      restDefence: {
+        shape: "3-1 or 4-1",
+        detail:
+          "Conservative by design. The back four largely holds and the pivot screens, so this shape concedes very few counter-attacks even when it commits players forward.",
+      },
+      defence: {
+        shape: "4-1-4-1",
+        detail:
+          "The defining phase and the reason the shape exists. A flat four ahead of a screening pivot ahead of a back four. There is no pocket between the lines, so a ten has nowhere to receive and play is forced wide.",
+      },
+      transition: {
+        shape: "Slow build or long ball",
+        detail:
+          "With one striker and a deep midfield, counters need runners from the flat four. Otherwise the striker holds it up and the team advances as a unit.",
+      },
+    },
+    shifts: {
+      buildUp: {
+        0: { x: 16, y: 50 },
+        1: { x: 34, y: 12 },
+        4: { x: 34, y: 88 },
+        5: { x: 30, y: 50 },
+        6: { x: 52, y: 34 },
+        7: { x: 52, y: 66 },
+      },
+      attack: {
+        0: { x: 24, y: 50 },
+        2: { x: 44, y: 34 },
+        3: { x: 44, y: 58 },
+        4: { x: 44, y: 80 },
+        1: { x: 60, y: 62 },
+        5: { x: 60, y: 40 },
+        8: { x: 88, y: 8 },
+        6: { x: 84, y: 30 },
+        10: { x: 92, y: 50 },
+        7: { x: 84, y: 70 },
+        9: { x: 88, y: 92 },
+      },
+      restDefence: {
+        1: { x: 40, y: 16 },
+        4: { x: 40, y: 84 },
+        5: { x: 46, y: 50 },
+        6: { x: 50, y: 36 },
+        7: { x: 50, y: 64 },
+      },
+      defence: {
+        0: { x: 10, y: 50 },
+        1: { x: 20, y: 12 },
+        2: { x: 18, y: 38 },
+        3: { x: 18, y: 62 },
+        4: { x: 20, y: 88 },
+        5: { x: 34, y: 50 },
+        8: { x: 46, y: 12 },
+        6: { x: 46, y: 38 },
+        7: { x: 46, y: 62 },
+        9: { x: 46, y: 88 },
+        10: { x: 64, y: 50 },
+      },
+    },
+    spots: [
+      keeper(
+        "The pivot dropping in gives an immediate third option, so the keeper rarely has to go long under pressure."
+      ),
+      {
+        x: 24,
+        y: 12,
+        role: "Left back",
+        short: "LB",
+        note: "Holds the line defensively, provides width when the team has the ball.",
+        variants: [
+          { name: "Balanced full back", detail: "Joins the attack in phases rather than permanently." },
+          { name: "Inverted full back", detail: "Steps in beside the pivot to make a double screen." },
+        ],
+        players: ["Andrew Robertson", "Josko Gvardiol", "Aubrey Modiba"],
+        jobs: {
+          buildUp: "Pushes on to give the wide outlet once the pivot has dropped in.",
+          attack: "Inverts to become the second screen while the wide player holds the touchline.",
+          restDefence: "Tucks into a back three.",
+          defence: "Left of a flat four. Holds the line and does not step out.",
+        },
+      },
+      {
+        x: 20,
+        y: 38,
+        role: "Left centre back",
+        short: "LCB",
+        note: "Ball player of the two. Progresses when the press does not engage.",
+        variants: [
+          { name: "Ball-playing defender", detail: "Passes through the press rather than around it." },
+          { name: "Stepping centre back", detail: "Carries into midfield to create the extra man." },
+        ],
+        players: ["Virgil van Dijk", "William Saliba", "Grant Kekana"],
+        jobs: {
+          buildUp: "Splits wide of the box and looks for the inside midfielder first.",
+          attack: "Steps to halfway as part of a back three.",
+          restDefence: "One of the three that stays.",
+          defence: "Sets the line with the partner.",
+        },
+      },
+      {
+        x: 20,
+        y: 62,
+        role: "Right centre back",
+        short: "RCB",
+        note: "The aggressive half of the partnership.",
+        variants: [
+          { name: "Stopper", detail: "Steps in front of the striker to win it early." },
+          { name: "Aerial anchor", detail: "Wins the direct ball this shape invites." },
+        ],
+        players: ["Rúben Dias", "Gabriel Magalhães", "Mosa Lebusa"],
+        jobs: {
+          buildUp: "The safe switch, or long into the striker's channel.",
+          attack: "Holds at halfway screening the counter.",
+          restDefence: "Central cover.",
+          defence: "Attacks the first ball while the partner covers.",
+        },
+      },
+      {
+        x: 24,
+        y: 88,
+        role: "Right back",
+        short: "RB",
+        note: "Balances the shape. Rarely both full backs high at once.",
+        variants: [
+          { name: "Fullback", detail: "Defensive discipline first, joining only when safe." },
+          { name: "Attacking wingback", detail: "Pushes on when the opposite side stays home." },
+        ],
+        players: ["Kyle Walker", "Trent Alexander-Arnold", "Khuliso Mudau"],
+        jobs: {
+          buildUp: "Offers the outlet on the right and lets the wide midfielder come inside.",
+          attack: "Tucks in as the right of a back three.",
+          restDefence: "Holds position.",
+          defence: "Right of the flat four, forcing play down the line.",
+        },
+      },
+      {
+        x: 36,
+        y: 50,
+        role: "Holding midfielder",
+        short: "CDM",
+        note: "The single screen. This shape lives or dies on their positioning.",
+        variants: [
+          { name: "Holding", detail: "Pure screen between the two banks. Never leaves the space." },
+          { name: "Centre-half", detail: "Drops between the centre backs to build with a three." },
+          { name: "Deep-lying playmaker", detail: "Takes the ball off the defence and starts everything." },
+        ],
+        players: ["Rodri", "Casemiro", "Teboho Mokoena"],
+        jobs: {
+          buildUp: "Drops in to make a three and create the numerical advantage.",
+          attack: "Sits at the top of the box as the first line of counter-prevention.",
+          restDefence: "The single most important player behind the ball.",
+          defence: "Screens the space between the banks. The whole shape depends on it.",
+          transition: "Wins the second ball, then decides between counter and reset.",
+        },
+      },
+      {
+        x: 54,
+        y: 34,
+        role: "Left central midfielder",
+        short: "LCM",
+        note: "Inside midfielder in the flat four. Presses forward with the ball.",
+        variants: [
+          { name: "Box-to-box", detail: "Gets beyond the striker to give them support." },
+          { name: "Half-winger", detail: "Occupies the left half space in possession." },
+        ],
+        players: ["Jude Bellingham", "Ilkay Gündogan", "Themba Zwane"],
+        jobs: {
+          buildUp: "Shows between the lines to give the centre back a forward pass.",
+          attack: "Left half space. The striker cannot be isolated if this player arrives.",
+          restDefence: "Recovers to the edge of the box.",
+          defence: "Inside left of the flat four, screening the half space.",
+        },
+      },
+      {
+        x: 54,
+        y: 66,
+        role: "Right central midfielder",
+        short: "RCM",
+        note: "The other inside midfielder. Supports the striker so they are not alone.",
+        variants: [
+          { name: "Playmaker", detail: "Finds the pocket and plays the pass into the final third." },
+          { name: "Shuttler", detail: "Covers the ground between the pivot and the striker." },
+        ],
+        players: ["Kevin De Bruyne", "Federico Valverde", "Bongani Zungu"],
+        jobs: {
+          buildUp: "Rotates with the partner so one drops and one stays high.",
+          attack: "Right half space, arriving in the box for cut-backs.",
+          restDefence: "Screens with the pivot.",
+          defence: "Inside right of the four.",
+        },
+      },
+      {
+        x: 56,
+        y: 12,
+        role: "Left midfielder",
+        short: "LM",
+        note: "Wide in the flat four. Defends like a midfielder, attacks like a winger.",
+        variants: [
+          { name: "Wide midfielder", detail: "Tracks the full back and holds the bank of four." },
+          { name: "Inside forward", detail: "Comes inside to support the striker in the final third." },
+        ],
+        players: ["Kaoru Mitoma", "Jack Grealish", "Patrick Maswanganyi"],
+        jobs: {
+          buildUp: "Stays high and wide to stretch the opposition back line.",
+          attack: "Left wing lane, isolating the full back.",
+          restDefence: "Stays high as the counter outlet.",
+          defence: "Left of the flat four and doubles up wide.",
+        },
+      },
+      {
+        x: 56,
+        y: 88,
+        role: "Right midfielder",
+        short: "RM",
+        note: "The mirror. Width in attack, fourth man in the bank out of possession.",
+        variants: [
+          { name: "Winger", detail: "Takes on the full back and delivers." },
+          { name: "Wide midfielder", detail: "Defensive discipline first in a compact block." },
+        ],
+        players: ["Bukayo Saka", "Michael Olise", "Oswin Appollis"],
+        jobs: {
+          buildUp: "Holds width on the right to keep the pitch stretched.",
+          attack: "Right wing lane.",
+          restDefence: "Stays high with the striker.",
+          defence: "Right of the flat four.",
+        },
+      },
+      {
+        x: 84,
+        y: 50,
+        role: "Striker",
+        short: "ST",
+        note: "Alone up top. The hardest job in the shape.",
+        variants: [
+          { name: "Target forward", detail: "Holds the ball up alone until support arrives." },
+          { name: "Pressing forward", detail: "Presses two centre backs on their own, curving runs to block one side." },
+          { name: "Complete forward", detail: "Does both jobs, which is why this shape needs a specific profile." },
+        ],
+        players: ["Harry Kane", "Ollie Watkins", "Lyle Foster"],
+        jobs: {
+          buildUp: "The out-ball. Runs the channel or comes short to link.",
+          attack: "Centre lane, pinning both centre backs so the eights can arrive.",
+          defence: "Presses alone, showing the ball into the side the block is set for.",
+          transition: "Holds up the first pass and waits for the midfield.",
+        },
+      },
+    ],
+  },
 ];
+
+/** Phase notes for a formation, with the default view derived from the shape. */
+export function notesFor(f: Formation, phase: PhaseId) {
+  return (
+    f.phaseNotes[phase] ?? {
+      shape: f.name,
+      detail: f.summary,
+    }
+  );
+}

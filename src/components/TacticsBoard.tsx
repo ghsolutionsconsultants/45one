@@ -1,15 +1,22 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { formations, phases, type PhaseId, type Spot } from "@/lib/formations";
+import {
+  formations,
+  notesFor,
+  phases,
+  type PhaseId,
+  type Spot,
+} from "@/lib/formations";
+import { rolesFor } from "@/lib/roles";
 
 export default function TacticsBoard() {
   const [active, setActive] = useState(formations[0]);
-  const [phase, setPhase] = useState<PhaseId>("buildUp");
+  const [phase, setPhase] = useState<PhaseId>("base");
   const [selected, setSelected] = useState<number | null>(null);
 
   const phaseMeta = phases.find((p) => p.id === phase)!;
-  const notes = active.phaseNotes[phase];
+  const notes = notesFor(active, phase);
 
   // player positions for the current phase
   const positions = useMemo(() => {
@@ -18,7 +25,8 @@ export default function TacticsBoard() {
   }, [active, phase]);
 
   const player: Spot | null = selected === null ? null : active.spots[selected];
-  const job = player?.jobs[phase];
+  const job = phase === "base" ? player?.note : player?.jobs[phase];
+  const roles = player ? rolesFor(player.short) : [];
 
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-ink-2 sm:rounded-3xl">
@@ -105,7 +113,8 @@ export default function TacticsBoard() {
 
             {positions.map((s, i) => {
               const on = selected === i;
-              const involved = Boolean(active.spots[i].jobs[phase]);
+              const involved =
+                phase === "base" || Boolean(active.spots[i].jobs[phase]);
               return (
                 <button
                   key={`${active.id}-${i}`}
@@ -159,20 +168,47 @@ export default function TacticsBoard() {
 
               <div className="mt-6 rounded-xl border border-volt/25 bg-volt/[0.05] p-4">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-volt">
-                  In the {phaseMeta.label.toLowerCase()} phase
+                  {phase === "base"
+                    ? "The position"
+                    : `In the ${phaseMeta.label.toLowerCase()} phase`}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-bone/90">
-                  {job ?? "Not a defining role in this phase. They hold their position and stay available."}
+                  {job ??
+                    "Not a defining role in this phase. They hold their position and stay available."}
                 </p>
               </div>
 
               <div className="mt-7">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-mute">
-                  Role types
+                  Role types &amp; focus
+                </p>
+                <ul className="mt-3 flex flex-col gap-3">
+                  {roles.map((r) => (
+                    <li
+                      key={`${r.name}-${r.focus}`}
+                      className="border-l-2 border-line pl-3.5"
+                    >
+                      <div className="flex flex-wrap items-baseline gap-x-2">
+                        <p className="text-sm font-semibold text-bone">{r.name}</p>
+                        <span className="rounded-full border border-volt/30 px-2 py-0.5 text-[9px] uppercase tracking-[0.12em] text-volt">
+                          {r.focus}
+                        </span>
+                      </div>
+                      <p className="mt-1 text-xs leading-relaxed text-mute">
+                        {r.detail}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-7">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-mute">
+                  In this shape
                 </p>
                 <ul className="mt-3 flex flex-col gap-3">
                   {player.variants.map((v) => (
-                    <li key={v.name} className="border-l-2 border-line pl-3.5">
+                    <li key={v.name} className="border-l-2 border-volt/40 pl-3.5">
                       <p className="text-sm font-semibold text-bone">{v.name}</p>
                       <p className="mt-1 text-xs leading-relaxed text-mute">
                         {v.detail}
