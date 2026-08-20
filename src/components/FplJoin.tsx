@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
-function remaining(target: number) {
+export function remaining(target: number) {
   const s = Math.max(0, Math.floor((target - Date.now()) / 1000));
   return {
     days: Math.floor(s / 86400),
@@ -12,6 +12,60 @@ function remaining(target: number) {
     secs: s % 60,
     over: s === 0,
   };
+}
+
+/** Ticks once a second until the gameweek deadline. */
+export function useDeadline() {
+  const target = new Date(site.fpl.deadline).getTime();
+  const [left, setLeft] = useState<ReturnType<typeof remaining> | null>(null);
+
+  useEffect(() => {
+    const tick = () => setLeft(remaining(target));
+    const raf = requestAnimationFrame(tick);
+    const id = setInterval(tick, 1000);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearInterval(id);
+    };
+  }, [target]);
+
+  return left;
+}
+
+/** The league code as a tap-to-copy button. */
+export function LeagueCode({ size = "md" }: { size?: "md" | "sm" }) {
+  const [copied, setCopied] = useState(false);
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(site.fpl.code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* clipboard blocked, the code is on screen anyway */
+    }
+  }
+
+  return (
+    <button
+      onClick={copy}
+      className={`group flex w-full items-center justify-between gap-4 rounded-xl border-2 border-volt bg-ink transition hover:bg-volt/10 ${
+        size === "sm" ? "px-4 py-3" : "px-5 py-4 sm:px-6 sm:py-5"
+      }`}
+      aria-label={`Copy league code ${site.fpl.code}`}
+    >
+      <span
+        className={`font-mono tracking-[0.3em] text-volt ${
+          size === "sm" ? "text-xl sm:text-2xl" : "text-2xl sm:text-4xl"
+        }`}
+      >
+        {site.fpl.code}
+      </span>
+      <span className="shrink-0 text-[10px] uppercase tracking-[0.2em] text-mute transition group-hover:text-volt">
+        {copied ? "Copied" : "Tap to copy"}
+      </span>
+    </button>
+  );
 }
 
 /** League code with a copy button, plus the countdown to the deadline. */

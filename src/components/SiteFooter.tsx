@@ -57,7 +57,14 @@ export default function SiteFooter() {
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p>
             Designed &amp; built by{" "}
-            <span className="font-medium text-volt">Nuuhaven</span>
+            <a
+              href="https://nuuhaven.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-volt underline-offset-4 hover:underline"
+            >
+              Nuuhaven
+            </a>
           </p>
         </div>
       </div>

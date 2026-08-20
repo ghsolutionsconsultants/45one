@@ -10,6 +10,7 @@ import StatsBar from "@/components/StatsBar";
 import TacticsBoard from "@/components/TacticsBoard";
 import Countdown from "@/components/Countdown";
 import FootballIQ from "@/components/FootballIQ";
+import FplCallout from "@/components/FplCallout";
 import TiltCard from "@/components/TiltCard";
 import Reveal from "@/components/Reveal";
 import { SocialRow } from "@/components/SocialIcons";
@@ -197,6 +198,19 @@ export default async function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ================= FPL ================= */}
+      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-24">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Play along"
+            title="The 45one FPL league."
+            sub="Free to enter, open to everyone, and running all season."
+            action={{ href: "/fpl", label: "League page" }}
+          />
+          <FplCallout />
+        </Reveal>
       </section>
 
       {/* ================= LEAGUES ================= */}
