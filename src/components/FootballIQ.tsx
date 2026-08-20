@@ -1,80 +1,76 @@
 "use client";
 
 import { useState } from "react";
-
-type Question = {
-  q: string;
-  options: string[];
-  answer: number;
-  why: string;
-};
-
-const QUESTIONS: Question[] = [
-  {
-    q: "A side defends with a back five and two banks ahead of it. What are they accepting in exchange?",
-    options: [
-      "Losing the midfield battle",
-      "Inviting sustained pressure",
-      "Conceding the width",
-    ],
-    answer: 1,
-    why: "A low block gives up territory by design. The trade is space for structure: you concede the ball and the half, and you keep the space between your lines too small to play in.",
-  },
-  {
-    q: "Why does a holding midfielder drop between the centre backs at a goal kick?",
-    options: [
-      "To get on the ball earlier",
-      "To create a spare man against the press",
-      "To let the full backs defend deeper",
-    ],
-    answer: 1,
-    why: "Two forwards pressing three defenders means one is always free. Building through a spare man is the cleanest way to break a first line of pressure without going long.",
-  },
-  {
-    q: "A winger who plays on the opposite side to their stronger foot is usually there to do what?",
-    options: [
-      "Hold the touchline and cross",
-      "Cut inside to shoot and combine",
-      "Track the opposing full back",
-    ],
-    answer: 1,
-    why: "An inverted winger comes inside onto the stronger foot, which opens the shot and the through ball. It also empties the touchline for the full back to overlap into.",
-  },
-  {
-    q: "What is the biggest risk a high defensive line takes on?",
-    options: [
-      "The ball over the top",
-      "Losing aerial duels",
-      "Fouling near your own box",
-    ],
-    answer: 0,
-    why: "Squeezing the pitch compresses the space in front of you and leaves grass behind you. It only works with a keeper who sweeps and defenders who can turn and run.",
-  },
-  {
-    q: "In a 3-5-2, which job is usually the most physically demanding?",
-    options: ["The holding midfielder", "The wing-back", "The centre backs"],
-    answer: 1,
-    why: "Wing-backs supply all the width in a 3-5-2. They defend as part of a back five and attack as wingers, which means covering the full flank for ninety minutes.",
-  },
-];
+import { quizzes, type Quiz } from "@/lib/quizzes";
 
 export default function FootballIQ() {
+  const [quiz, setQuiz] = useState<Quiz | null>(null);
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
-  const q = QUESTIONS[i];
-  const correct = picked === q.answer;
+  function start(q: Quiz) {
+    setQuiz(q);
+    setI(0);
+    setPicked(null);
+    setScore(0);
+    setDone(false);
+  }
+
+  function reset() {
+    setQuiz(null);
+    setDone(false);
+  }
+
+  /* ---------------- category picker ---------------- */
+  if (!quiz) {
+    return (
+      <div className="relative overflow-hidden rounded-2xl border border-line bg-ink-2 p-5 sm:rounded-3xl sm:p-8 md:p-10">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-volt/10 blur-3xl" />
+        <div className="relative">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-volt sm:text-xs sm:tracking-[0.3em]">
+            Pick your round
+          </p>
+          <h3 className="mt-4 font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl">
+            Five rounds. Eight questions each. Every answer explained.
+          </h3>
+
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {quizzes.map((q) => (
+              <button
+                key={q.id}
+                onClick={() => start(q)}
+                className="group rounded-2xl border border-line bg-ink p-5 text-left transition hover:border-volt hover:bg-ink-3"
+              >
+                <div className="flex items-baseline justify-between gap-2">
+                  <p className="font-display text-xl tracking-tight transition group-hover:text-volt">
+                    {q.name}
+                  </p>
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-mute">
+                    {q.questions.length} Qs
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-mute">{q.tagline}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const question = quiz.questions[i];
+  const correct = picked === question.answer;
 
   function choose(idx: number) {
     if (picked !== null) return;
     setPicked(idx);
-    if (idx === q.answer) setScore((s) => s + 1);
+    if (idx === question.answer) setScore((s) => s + 1);
   }
 
   function next() {
-    if (i === QUESTIONS.length - 1) {
+    if (i === quiz!.questions.length - 1) {
       setDone(true);
       return;
     }
@@ -82,46 +78,52 @@ export default function FootballIQ() {
     setPicked(null);
   }
 
-  function restart() {
-    setI(0);
-    setPicked(null);
-    setScore(0);
-    setDone(false);
-  }
-
+  /* ---------------- result ---------------- */
   if (done) {
+    const total = quiz.questions.length;
     const verdict =
-      score === QUESTIONS.length
-        ? "You could take the coaching badges."
-        : score >= 3
-          ? "Solid. You watch the game properly."
-          : "Plenty to build on. That is what the podcast is for.";
+      score === total
+        ? "Full marks. You could take the badges."
+        : score >= total * 0.75
+          ? "Strong. You watch the game properly."
+          : score >= total * 0.5
+            ? "Decent. The gaps are the interesting part."
+            : "Plenty to build on. That is what the podcast is for.";
 
     return (
       <div className="relative overflow-hidden rounded-2xl border border-line bg-ink-2 p-6 text-center sm:rounded-3xl sm:p-8 md:p-14">
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-volt/10 blur-3xl" />
         <div className="relative">
-          <p className="text-xs uppercase tracking-[0.3em] text-volt">
-            Your score
+          <p className="text-[10px] uppercase tracking-[0.25em] text-volt">
+            {quiz.name}
           </p>
           <p className="mt-5 font-display text-6xl leading-none tracking-tight text-volt sm:text-7xl md:text-8xl">
             {score}
-            <span className="text-bone/30">/{QUESTIONS.length}</span>
+            <span className="text-bone/30">/{total}</span>
           </p>
           <p className="mx-auto mt-5 max-w-md font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl">
             {verdict}
           </p>
-          <button
-            onClick={restart}
-            className="mt-8 rounded-full bg-volt px-7 py-3 text-sm font-bold text-black transition hover:brightness-110"
-          >
-            Play again
-          </button>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <button
+              onClick={() => start(quiz)}
+              className="rounded-full bg-volt px-6 py-3 text-sm font-bold text-black transition hover:brightness-110"
+            >
+              Play again
+            </button>
+            <button
+              onClick={reset}
+              className="rounded-full border border-line px-6 py-3 text-sm font-bold transition hover:border-volt hover:text-volt"
+            >
+              Try another round
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
+  /* ---------------- question ---------------- */
   return (
     <div className="relative overflow-hidden rounded-2xl border border-line bg-ink-2 p-5 sm:rounded-3xl sm:p-8 md:p-12">
       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-volt/10 blur-3xl" />
@@ -129,23 +131,32 @@ export default function FootballIQ() {
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
           <p className="text-[10px] uppercase tracking-[0.2em] text-volt sm:text-xs sm:tracking-[0.3em]">
-            Football IQ · Question {i + 1} of {QUESTIONS.length}
+            {quiz.name} · {i + 1} of {quiz.questions.length}
           </p>
-          <div className="hidden h-1 w-40 overflow-hidden rounded-full bg-ink-3 sm:block">
-            <div
-              className="h-full bg-volt transition-all duration-500"
-              style={{ width: `${((i + (picked !== null ? 1 : 0)) / QUESTIONS.length) * 100}%` }}
-            />
-          </div>
+          <button
+            onClick={reset}
+            className="shrink-0 text-[10px] uppercase tracking-[0.15em] text-mute hover:text-volt"
+          >
+            Change round
+          </button>
         </div>
 
-        <h3 className="mt-5 max-w-3xl font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-4xl">
-          {q.q}
+        <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-ink-3">
+          <div
+            className="h-full bg-volt transition-all duration-500"
+            style={{
+              width: `${((i + (picked !== null ? 1 : 0)) / quiz.questions.length) * 100}%`,
+            }}
+          />
+        </div>
+
+        <h3 className="mt-6 max-w-3xl font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-4xl">
+          {question.q}
         </h3>
 
         <div className="mt-6 grid gap-2.5 sm:mt-8 sm:gap-3">
-          {q.options.map((opt, idx) => {
-            const isAnswer = idx === q.answer;
+          {question.options.map((opt, idx) => {
+            const isAnswer = idx === question.answer;
             const isPicked = picked === idx;
             const revealed = picked !== null;
 
@@ -182,20 +193,20 @@ export default function FootballIQ() {
         {picked !== null && (
           <div className="animate-rise mt-7 border-t border-line pt-6">
             <p
-              className={`text-xs uppercase tracking-[0.25em] ${
+              className={`text-[10px] uppercase tracking-[0.25em] ${
                 correct ? "text-volt" : "text-bone/60"
               }`}
             >
               {correct ? "Correct" : "Not quite"}
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-mute">
-              {q.why}
+              {question.why}
             </p>
             <button
               onClick={next}
-              className="mt-6 rounded-full bg-volt px-7 py-3 text-sm font-bold text-black transition hover:brightness-110"
+              className="mt-6 rounded-full bg-volt px-6 py-3 text-sm font-bold text-black transition hover:brightness-110"
             >
-              {i === QUESTIONS.length - 1 ? "See your score" : "Next question"}
+              {i === quiz.questions.length - 1 ? "See your score" : "Next question"}
             </button>
           </div>
         )}

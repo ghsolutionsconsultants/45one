@@ -60,6 +60,16 @@ export const site = {
     email: "hello@45one.co.za",
   },
 
+  // --- Fantasy Premier League -----------------------------------------
+  fpl: {
+    leagueName: "45one Premier League",
+    code: "udo8ot",
+    season: "2026/27",
+    // Gameweek 1 deadline, 19:30 SAST (17:30 UTC)
+    deadline: "2026-08-21T17:30:00.000Z",
+    joinUrl: "https://fantasy.premierleague.com/leagues/auto-join/udo8ot",
+  },
+
   release: {
     day: "Thursday",
     time: "08:00 SAST",
@@ -70,6 +80,7 @@ export const site = {
 export const navLinks = [
   { href: "/podcast", label: "Podcast" },
   { href: "/watch", label: "Watch" },
+  { href: "/fpl", label: "FPL" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/partner", label: "Partner" },

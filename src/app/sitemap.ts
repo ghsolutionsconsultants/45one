@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 import { getAllPosts } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/podcast", "/watch", "/blog", "/about", "/partner", "/contact"];
+  const routes = ["", "/podcast", "/watch", "/fpl", "/blog", "/about", "/partner", "/contact"];
   const now = new Date();
 
   return [

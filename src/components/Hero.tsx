@@ -5,7 +5,6 @@ import { img } from "@/lib/images";
 import { episodeNumber, type Video } from "@/lib/youtube";
 import HeroBadge from "./HeroBadge";
 import Countdown from "./Countdown";
-import { SocialRow } from "./SocialIcons";
 
 export default function Hero({ latest }: { latest?: Video }) {
   const ep = latest ? episodeNumber(latest.title) : null;
@@ -68,12 +67,12 @@ export default function Hero({ latest }: { latest?: Video }) {
             </p>
 
             <div
-              className="animate-rise mt-7 flex flex-wrap items-center gap-2.5 sm:gap-3"
+              className="animate-rise mt-7 grid w-full max-w-md grid-cols-2 gap-2.5 sm:gap-3"
               style={{ animationDelay: "340ms" }}
             >
               <Link
                 href="/podcast"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-volt py-2.5 pl-2.5 pr-5 text-[13px] font-bold text-black transition hover:brightness-110 sm:gap-3 sm:py-3.5 sm:pl-4 sm:pr-7 sm:text-sm"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-volt px-4 py-3 text-[13px] font-bold text-black transition hover:brightness-110 sm:gap-3 sm:py-3.5 sm:text-sm"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-volt transition group-hover:scale-110 sm:h-8 sm:w-8">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-3.5 w-3.5">
@@ -84,15 +83,12 @@ export default function Hero({ latest }: { latest?: Video }) {
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-line bg-ink/40 px-5 py-2.5 text-center text-[13px] font-bold backdrop-blur-sm transition hover:border-volt hover:text-volt sm:px-7 sm:py-3.5 sm:text-sm"
+                className="inline-flex items-center justify-center rounded-full border border-line bg-ink/40 px-4 py-3 text-center text-[13px] font-bold backdrop-blur-sm transition hover:border-volt hover:text-volt sm:py-3.5 sm:text-sm"
               >
                 Get in touch
               </Link>
             </div>
 
-            <div className="animate-rise mt-8" style={{ animationDelay: "430ms" }}>
-              <SocialRow size="sm" />
-            </div>
           </div>
 
           {/* ---------- badge + drop panel ---------- */}

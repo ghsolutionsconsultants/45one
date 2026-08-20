@@ -55,7 +55,10 @@ export default function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-line pt-6 text-xs text-mute sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <p>Made in South Africa 🇿🇦</p>
+          <p>
+            Designed &amp; built by{" "}
+            <span className="font-medium text-volt">Nuuhaven</span>
+          </p>
         </div>
       </div>
     </footer>

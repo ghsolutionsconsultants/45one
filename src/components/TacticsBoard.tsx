@@ -1,15 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { formations, type Spot } from "@/lib/formations";
+import { useMemo, useState } from "react";
+import { formations, phases, type PhaseId, type Spot } from "@/lib/formations";
 
 export default function TacticsBoard() {
   const [active, setActive] = useState(formations[0]);
-  const [selected, setSelected] = useState<Spot | null>(null);
+  const [phase, setPhase] = useState<PhaseId>("buildUp");
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const phaseMeta = phases.find((p) => p.id === phase)!;
+  const notes = active.phaseNotes[phase];
+
+  // player positions for the current phase
+  const positions = useMemo(() => {
+    const shift = active.shifts[phase] ?? {};
+    return active.spots.map((s, i) => ({ ...s, ...(shift[i] ?? {}) }));
+  }, [active, phase]);
+
+  const player: Spot | null = selected === null ? null : active.spots[selected];
+  const job = player?.jobs[phase];
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-line bg-ink-2">
-      {/* formation switcher */}
+    <div className="overflow-hidden rounded-2xl border border-line bg-ink-2 sm:rounded-3xl">
+      {/* ---------- formation switcher ---------- */}
       <div className="flex gap-2 overflow-x-auto border-b border-line p-2.5 sm:p-3">
         {formations.map((f) => {
           const on = f.id === active.id;
@@ -32,14 +45,39 @@ export default function TacticsBoard() {
         })}
       </div>
 
+      {/* ---------- phase switcher ---------- */}
+      <div className="flex gap-1.5 overflow-x-auto border-b border-line bg-ink/40 p-2.5 sm:gap-2 sm:p-3">
+        {phases.map((p) => {
+          const on = p.id === phase;
+          return (
+            <button
+              key={p.id}
+              onClick={() => setPhase(p.id)}
+              className={`shrink-0 rounded-full px-3.5 py-1.5 text-[11px] uppercase tracking-[0.14em] transition sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.18em] ${
+                on
+                  ? "bg-volt/15 text-volt ring-1 ring-volt/50"
+                  : "text-mute hover:text-bone"
+              }`}
+            >
+              {p.label}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="grid lg:grid-cols-[1.35fr_1fr]">
         {/* ---------------- pitch ---------------- */}
         <div className="relative border-b border-line p-3 sm:p-4 lg:border-b-0 lg:border-r">
-          <p className="mb-2 text-center text-[10px] uppercase tracking-[0.2em] text-bone/40 sm:hidden">
-            Tap a player for their role
-          </p>
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-volt">
+              {notes.shape}
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-bone/40">
+              Tap a player
+            </p>
+          </div>
+
           <div className="relative aspect-[16/11] w-full overflow-hidden rounded-xl bg-[#0a1a0d] sm:rounded-2xl">
-            {/* mown stripes */}
             <div
               className="absolute inset-0 opacity-60"
               style={{
@@ -47,7 +85,6 @@ export default function TacticsBoard() {
                   "repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 8%, transparent 8% 16%)",
               }}
             />
-            {/* markings */}
             <svg
               viewBox="0 0 100 62"
               className="absolute inset-0 h-full w-full"
@@ -66,22 +103,24 @@ export default function TacticsBoard() {
               <circle cx="50" cy="31" r="0.7" fill="rgba(255,255,255,0.4)" />
             </svg>
 
-            {/* players */}
-            {active.spots.map((s, i) => {
-              const on = selected?.short === s.short && selected?.y === s.y;
+            {positions.map((s, i) => {
+              const on = selected === i;
+              const involved = Boolean(active.spots[i].jobs[phase]);
               return (
                 <button
                   key={`${active.id}-${i}`}
-                  onClick={() => setSelected(on ? null : s)}
-                  className="group absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  onClick={() => setSelected(on ? null : i)}
+                  className="group absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   style={{ left: `${s.x}%`, top: `${s.y}%` }}
-                  aria-label={s.role}
+                  aria-label={`${s.role}, ${phaseMeta.label}`}
                 >
                   <span
-                    className={`flex h-6 w-6 items-center justify-center rounded-full border font-display text-[9px] tracking-wide transition sm:h-11 sm:w-11 sm:border-2 sm:text-sm ${
+                    className={`flex h-7 w-7 items-center justify-center rounded-full border font-display text-[8px] tracking-tight transition sm:h-12 sm:w-12 sm:border-2 sm:text-[11px] ${
                       on
                         ? "scale-110 border-volt bg-volt text-black"
-                        : "border-volt/70 bg-ink/85 text-volt group-hover:scale-110 group-hover:bg-volt group-hover:text-black"
+                        : involved
+                          ? "border-volt/70 bg-ink/85 text-volt group-hover:scale-110 group-hover:bg-volt group-hover:text-black"
+                          : "border-line bg-ink/70 text-bone/45 group-hover:border-volt/60"
                     }`}
                   >
                     {s.short}
@@ -89,54 +128,110 @@ export default function TacticsBoard() {
                 </button>
               );
             })}
-
-            <p className="absolute bottom-2 right-3 hidden text-[10px] uppercase tracking-[0.2em] text-bone/40 sm:block sm:bottom-3 sm:left-4 sm:right-auto">
-              Tap a player
-            </p>
           </div>
+
+          <p className="mt-2 text-[11px] leading-relaxed text-mute">
+            {phaseMeta.blurb}
+          </p>
         </div>
 
         {/* ---------------- detail ---------------- */}
         <div className="flex flex-col p-5 sm:p-7 md:p-9">
-          {selected ? (
+          {player ? (
             <div className="animate-rise">
               <button
                 onClick={() => setSelected(null)}
-                className="text-xs uppercase tracking-[0.25em] text-mute hover:text-volt"
+                className="text-[10px] uppercase tracking-[0.25em] text-mute hover:text-volt"
               >
-                ← Back to shape
+                ← Back to the shape
               </button>
-              <p className="mt-5 font-display text-5xl leading-none text-volt sm:mt-7 sm:text-6xl">
-                {selected.short}
-              </p>
-              <h3 className="mt-3 font-display text-2xl tracking-tight">
-                {selected.role}
-              </h3>
-              <p className="mt-4 text-sm leading-relaxed text-mute">
-                {selected.note}
-              </p>
+
+              <div className="mt-5 flex items-baseline gap-3">
+                <span className="font-display text-4xl leading-none text-volt sm:text-5xl">
+                  {player.short}
+                </span>
+                <h3 className="font-display text-lg tracking-tight sm:text-xl">
+                  {player.role}
+                </h3>
+              </div>
+
+              <p className="mt-4 text-sm leading-relaxed text-mute">{player.note}</p>
+
+              <div className="mt-6 rounded-xl border border-volt/25 bg-volt/[0.05] p-4">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-volt">
+                  In the {phaseMeta.label.toLowerCase()} phase
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-bone/90">
+                  {job ?? "Not a defining role in this phase. They hold their position and stay available."}
+                </p>
+              </div>
+
+              <div className="mt-7">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-mute">
+                  Role types
+                </p>
+                <ul className="mt-3 flex flex-col gap-3">
+                  {player.variants.map((v) => (
+                    <li key={v.name} className="border-l-2 border-line pl-3.5">
+                      <p className="text-sm font-semibold text-bone">{v.name}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-mute">
+                        {v.detail}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-7 border-t border-line pt-5">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-mute">
+                  Players who define it
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {player.players.map((n) => (
+                    <span
+                      key={n}
+                      className="rounded-full border border-line px-3 py-1.5 text-xs text-bone/85"
+                    >
+                      {n}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
             <div className="animate-rise">
-              <p className="text-xs uppercase tracking-[0.25em] text-volt">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-volt">
                 {active.nickname}
               </p>
-              <h3 className="mt-3 font-display text-4xl leading-none tracking-tight sm:text-5xl">
-                {active.name}
-              </h3>
-              <p className="mt-5 text-sm leading-relaxed text-mute">
-                {active.summary}
-              </p>
+              <div className="mt-3 flex items-baseline gap-3">
+                <h3 className="font-display text-4xl leading-none tracking-tight sm:text-5xl">
+                  {active.name}
+                </h3>
+                <span className="rounded-full border border-volt/40 px-2.5 py-1 text-[10px] uppercase tracking-[0.15em] text-volt">
+                  {notes.shape}
+                </span>
+              </div>
 
-              <dl className="mt-8 flex flex-col gap-5 border-t border-line pt-6">
+              <p className="mt-5 text-sm leading-relaxed text-mute">{active.summary}</p>
+
+              <div className="mt-6 rounded-xl border border-volt/25 bg-volt/[0.05] p-4">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-volt">
+                  {phaseMeta.label}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-bone/90">
+                  {notes.detail}
+                </p>
+              </div>
+
+              <dl className="mt-7 flex flex-col gap-5 border-t border-line pt-5">
                 <div>
-                  <dt className="text-[10px] uppercase tracking-[0.25em] text-volt">
+                  <dt className="text-[10px] uppercase tracking-[0.22em] text-volt">
                     Strength
                   </dt>
                   <dd className="mt-1.5 text-sm text-bone/85">{active.strength}</dd>
                 </div>
                 <div>
-                  <dt className="text-[10px] uppercase tracking-[0.25em] text-mute">
+                  <dt className="text-[10px] uppercase tracking-[0.22em] text-mute">
                     Weakness
                   </dt>
                   <dd className="mt-1.5 text-sm text-bone/85">{active.weakness}</dd>
