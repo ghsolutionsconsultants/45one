@@ -6,8 +6,8 @@ import { SocialRow } from "./SocialIcons";
 export default function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-line bg-ink-2">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
+        <div className="grid gap-9 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
               <Image
@@ -29,31 +29,31 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          <nav className="flex flex-col gap-3">
+          <nav className="flex flex-col gap-1">
             <p className="mb-1 text-xs uppercase tracking-[0.25em] text-mute">Explore</p>
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="text-sm text-bone/80 hover:text-volt">
+              <Link key={l.href} href={l.href} className="py-1.5 text-sm text-bone/80 hover:text-volt">
                 {l.label}
               </Link>
             ))}
-            <Link href="/contact" className="text-sm text-bone/80 hover:text-volt">
+            <Link href="/contact" className="py-1.5 text-sm text-bone/80 hover:text-volt">
               Get in touch
             </Link>
           </nav>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-mute">Follow</p>
             <SocialRow size="sm" showLabels />
             <a
               href={`mailto:${site.contact.email}`}
-              className="mt-4 text-sm text-bone/80 hover:text-volt"
+              className="mt-3 py-1.5 text-sm text-bone/80 hover:text-volt"
             >
               {site.contact.email}
             </a>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 text-xs text-mute sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-line pt-6 text-xs text-mute sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p>Made in South Africa 🇿🇦</p>
         </div>

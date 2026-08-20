@@ -44,14 +44,14 @@ export default function AboutPage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
           <div>
             <Eyebrow>Who we are</Eyebrow>
-            <h1 className="mt-6 font-display text-[clamp(2.75rem,8vw,6rem)] leading-[0.88] tracking-tight">
+            <h1 className="mt-6 font-display text-[clamp(2.4rem,9vw,6rem)] leading-[0.88] tracking-tight">
               45+1.
               <br />
               <span className="text-volt">THE MINUTE</span>
               <br />
               IT ALL MAKES SENSE.
             </h1>
-            <p className="mt-7 max-w-lg text-lg leading-relaxed text-mute">
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-mute sm:mt-7 sm:text-lg">
               {site.description}
             </p>
             <div className="mt-9">
@@ -70,14 +70,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
         <SectionHeading
           eyebrow="What we stand for"
           title="Understanding first."
         />
         <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-3">
           {values.map((v) => (
-            <div key={v.t} className="bg-ink p-8 md:p-10">
+            <div key={v.t} className="bg-ink p-6 sm:p-8 md:p-10">
               <h3 className="font-display text-2xl leading-tight tracking-tight">
                 {v.t}
               </h3>
@@ -100,7 +100,7 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-line bg-ink-2">
-        <div className="mx-auto max-w-3xl px-5 py-20 text-center md:px-8 md:py-24">
+        <div className="mx-auto max-w-3xl px-5 py-14 text-center md:px-8 md:py-24">
           <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">
             Want to talk to us?
           </h2>

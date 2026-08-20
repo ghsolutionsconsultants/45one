@@ -44,7 +44,7 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <>
-      <article className="mx-auto max-w-3xl px-5 py-14 md:px-8 md:py-20">
+      <article className="mx-auto max-w-3xl px-5 py-10 md:px-8 md:py-20">
         <Link
           href="/blog"
           className="text-xs uppercase tracking-[0.25em] text-mute hover:text-volt"
@@ -67,7 +67,7 @@ export default async function PostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        <div className="mt-16 rounded-2xl border border-line bg-ink-2 p-8 text-center">
+        <div className="mt-16 rounded-2xl border border-line bg-ink-2 p-6 sm:p-8 text-center">
           <h2 className="font-display text-2xl tracking-tight md:text-3xl">
             Hear us break this down
           </h2>

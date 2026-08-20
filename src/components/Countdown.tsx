@@ -52,16 +52,16 @@ export default function Countdown() {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-2 sm:gap-3">
+    <div className="grid min-w-0 grid-cols-4 gap-1.5 sm:gap-3">
       {cells.map((c) => (
         <div
           key={c.l}
-          className="rounded-2xl border border-line bg-ink-2/80 px-2 py-4 text-center backdrop-blur-sm sm:px-4 sm:py-5"
+          className="min-w-0 rounded-xl border border-line bg-ink-2/80 px-1 py-3 text-center backdrop-blur-sm sm:rounded-2xl sm:px-4 sm:py-5"
         >
-          <p className="font-display text-3xl leading-none tracking-tight text-volt tabular-nums sm:text-5xl">
+          <p className="font-display text-2xl leading-none tracking-tight text-volt tabular-nums sm:text-5xl">
             {left ? String(c.v).padStart(2, "0") : "--"}
           </p>
-          <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-mute">
+          <p className="mt-1.5 text-[9px] uppercase tracking-[0.15em] text-mute sm:mt-2 sm:text-[10px] sm:tracking-[0.2em]">
             {c.l}
           </p>
         </div>

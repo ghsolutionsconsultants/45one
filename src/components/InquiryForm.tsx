@@ -19,8 +19,10 @@ const interests = [
   "Something else",
 ];
 
+// text-base on phones is deliberate: iOS Safari zooms the viewport when a
+// focused field is under 16px.
 const field =
-  "w-full rounded-xl border border-line bg-ink px-4 py-3.5 text-sm text-bone outline-none transition placeholder:text-mute focus:border-volt";
+  "w-full rounded-xl border border-line bg-ink px-4 py-3.5 text-base text-bone outline-none transition placeholder:text-mute focus:border-volt sm:text-sm";
 
 export default function InquiryForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(

@@ -41,8 +41,8 @@ export function VideoCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
           <span className="absolute inset-0 flex items-center justify-center">
-            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-volt text-black transition duration-300 group-hover:scale-110">
-              <PlayIcon className="ml-1 h-7 w-7" />
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-volt text-black transition duration-300 group-hover:scale-110 sm:h-16 sm:w-16">
+              <PlayIcon className="ml-0.5 h-5 w-5 sm:ml-1 sm:h-7 sm:w-7" />
             </span>
           </span>
           {ep && (
@@ -71,13 +71,13 @@ export function VideoCard({
         </p>
         <h3
           className={`mt-2 font-display tracking-tight ${
-            featured ? "text-2xl md:text-4xl" : "text-lg md:text-xl"
+            featured ? "text-xl sm:text-2xl md:text-4xl" : "text-base sm:text-lg md:text-xl"
           }`}
         >
           {video.title}
         </h3>
         {featured && video.description && (
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-mute">
+          <p className="mt-2 max-w-xl text-xs leading-relaxed text-mute sm:mt-3 sm:text-sm">
             {video.description}
           </p>
         )}
@@ -111,12 +111,12 @@ export default function VideoGrid({
   return (
     <>
       {featureFirst && first && (
-        <div className="mb-16">
+        <div className="mb-10 sm:mb-16">
           <VideoCard video={first} onPlay={setActive} featured />
         </div>
       )}
 
-      <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3">
         {grid.map((v) => (
           <VideoCard key={v.id} video={v} onPlay={setActive} />
         ))}

@@ -7,7 +7,7 @@
  */
 export default function HeroBadge() {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[440px]">
+    <div className="relative mx-auto aspect-square w-full min-w-0 max-w-[300px] sm:max-w-[380px] lg:max-w-[440px]">
       {/* glow */}
       <div className="absolute inset-[12%] rounded-full bg-volt/20 blur-[70px]" />
       <div className="absolute inset-[26%] rounded-full bg-volt/15 blur-[40px]" />

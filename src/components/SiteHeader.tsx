@@ -35,17 +35,17 @@ export default function SiteHeader() {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>
           <Image
             src="/brand/logo-glow.png"
             alt=""
             width={44}
             height={44}
-            className="h-10 w-10 object-contain md:h-11 md:w-11"
+            className="h-9 w-9 object-contain md:h-11 md:w-11"
             priority
           />
-          <span className="font-display text-xl tracking-tight md:text-2xl">
+          <span className="font-display text-lg tracking-tight md:text-2xl">
             45<span className="text-volt">one</span>
           </span>
         </Link>

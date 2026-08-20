@@ -31,14 +31,14 @@ export default async function PodcastPage() {
           className="object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/88 to-ink" />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
           <Eyebrow>{site.release.cadence}</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(3rem,10vw,7.5rem)] leading-[0.85] tracking-tight">
+          <h1 className="mt-6 font-display text-[clamp(2.6rem,10vw,7.5rem)] leading-[0.85] tracking-tight">
             THE 451
             <br />
             <span className="text-volt">PODCAST</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mute">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-mute sm:text-lg">
             Full-length football analysis. The PSL covered properly, the
             Premier League&apos;s money and mistakes, La Liga, Serie A and the
             rest of Europe. The context nobody else makes time for.
@@ -61,7 +61,7 @@ export default async function PodcastPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
         <Reveal>
           <VideoGrid videos={videos} featureFirst />
         </Reveal>

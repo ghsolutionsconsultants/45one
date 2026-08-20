@@ -29,19 +29,19 @@ export default function BlogIndex() {
           className="object-cover object-top opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/90 to-ink" />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
           <Eyebrow>Writing</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,8vw,6rem)] leading-[0.9] tracking-tight">
+          <h1 className="mt-6 font-display text-[clamp(2.4rem,9vw,6rem)] leading-[0.9] tracking-tight">
             THE <span className="text-volt">BLOG</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mute">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-mute sm:text-lg">
             The analysis that needs more room than a podcast segment. Tactics,
             transfers and the business of the game.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
         {posts.length === 0 && (
           <div className="relative overflow-hidden rounded-3xl border border-line">
             <Image

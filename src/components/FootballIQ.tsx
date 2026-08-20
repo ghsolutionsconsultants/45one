@@ -98,17 +98,17 @@ export default function FootballIQ() {
           : "Plenty to build on. That is what the podcast is for.";
 
     return (
-      <div className="relative overflow-hidden rounded-3xl border border-line bg-ink-2 p-8 text-center md:p-14">
+      <div className="relative overflow-hidden rounded-2xl border border-line bg-ink-2 p-6 text-center sm:rounded-3xl sm:p-8 md:p-14">
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-volt/10 blur-3xl" />
         <div className="relative">
           <p className="text-xs uppercase tracking-[0.3em] text-volt">
             Your score
           </p>
-          <p className="mt-6 font-display text-7xl leading-none tracking-tight text-volt md:text-8xl">
+          <p className="mt-5 font-display text-6xl leading-none tracking-tight text-volt sm:text-7xl md:text-8xl">
             {score}
             <span className="text-bone/30">/{QUESTIONS.length}</span>
           </p>
-          <p className="mx-auto mt-6 max-w-md font-display text-2xl leading-tight tracking-tight md:text-3xl">
+          <p className="mx-auto mt-5 max-w-md font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl">
             {verdict}
           </p>
           <button
@@ -123,12 +123,12 @@ export default function FootballIQ() {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-line bg-ink-2 p-8 md:p-12">
+    <div className="relative overflow-hidden rounded-2xl border border-line bg-ink-2 p-5 sm:rounded-3xl sm:p-8 md:p-12">
       <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-volt/10 blur-3xl" />
 
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-volt">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-volt sm:text-xs sm:tracking-[0.3em]">
             Football IQ · Question {i + 1} of {QUESTIONS.length}
           </p>
           <div className="hidden h-1 w-40 overflow-hidden rounded-full bg-ink-3 sm:block">
@@ -139,11 +139,11 @@ export default function FootballIQ() {
           </div>
         </div>
 
-        <h3 className="mt-7 max-w-3xl font-display text-2xl leading-tight tracking-tight md:text-4xl">
+        <h3 className="mt-5 max-w-3xl font-display text-xl leading-tight tracking-tight sm:text-2xl md:text-4xl">
           {q.q}
         </h3>
 
-        <div className="mt-8 grid gap-3">
+        <div className="mt-6 grid gap-2.5 sm:mt-8 sm:gap-3">
           {q.options.map((opt, idx) => {
             const isAnswer = idx === q.answer;
             const isPicked = picked === idx;
@@ -154,7 +154,7 @@ export default function FootballIQ() {
                 key={opt}
                 onClick={() => choose(idx)}
                 disabled={revealed}
-                className={`flex items-center gap-4 rounded-2xl border px-5 py-4 text-left text-sm transition md:text-base ${
+                className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm transition sm:gap-4 sm:rounded-2xl sm:px-5 sm:py-4 md:text-base ${
                   revealed && isAnswer
                     ? "border-volt bg-volt/10 text-bone"
                     : revealed && isPicked

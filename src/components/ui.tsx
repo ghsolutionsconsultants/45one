@@ -22,18 +22,18 @@ export function SectionHeading({
   action?: { href: string; label: string };
 }) {
   return (
-    <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+    <div className="mb-8 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
       <div className="max-w-2xl">
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-        <h2 className="mt-4 font-display text-4xl leading-[0.95] tracking-tight md:text-6xl">
+        <h2 className="mt-3 font-display text-3xl leading-[0.95] tracking-tight sm:text-4xl md:text-6xl">
           {title}
         </h2>
-        {sub && <p className="mt-4 text-base leading-relaxed text-mute">{sub}</p>}
+        {sub && <p className="mt-3 text-sm leading-relaxed text-mute sm:text-base">{sub}</p>}
       </div>
       {action && (
         <Link
           href={action.href}
-          className="shrink-0 rounded-full border border-line px-6 py-3 text-sm font-medium transition hover:border-volt hover:text-volt"
+          className="w-fit shrink-0 rounded-full border border-line px-5 py-2.5 text-xs font-medium transition hover:border-volt hover:text-volt sm:px-6 sm:py-3 sm:text-sm"
         >
           {action.label}
         </Link>
@@ -56,7 +56,7 @@ export function Button({
   className?: string;
 }) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition";
+    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition sm:px-7 sm:py-3.5";
   const styles =
     variant === "solid"
       ? "bg-volt text-black hover:brightness-110"
@@ -84,7 +84,7 @@ export function Marquee({ items }: { items: string[] }) {
       <div className="animate-marquee flex shrink-0 items-center gap-8 pr-8">
         {row.map((item, i) => (
           <span key={i} className="flex items-center gap-8 whitespace-nowrap">
-            <span className="font-display text-xl tracking-tight text-bone/70 md:text-2xl">
+            <span className="font-display text-base tracking-tight text-bone/70 sm:text-xl md:text-2xl">
               {item}
             </span>
             <span className="text-volt">◆</span>

@@ -88,14 +88,14 @@ export default async function PartnerPage() {
           className="object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/88 to-ink" />
-        <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
           <Eyebrow>For brands & agencies</Eyebrow>
-          <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.75rem,8vw,6.5rem)] leading-[0.88] tracking-tight">
+          <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,9vw,6.5rem)] leading-[0.88] tracking-tight">
             PUT YOUR BRAND
             <br />
             IN THE <span className="text-volt">CONVERSATION.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-mute">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-mute sm:mt-7 sm:text-lg">
             45one works with brands that want to reach football fans properly 
             not with a banner they ignore, but inside content they choose to
             watch. Sponsorships across the 451 podcast, Instagram and TikTok.
@@ -110,7 +110,7 @@ export default async function PartnerPage() {
       </section>
 
       {/* ---------- LIVE AUDIENCE ---------- */}
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
         <SectionHeading
           eyebrow="The numbers"
           title="Live, not last quarter's."
@@ -119,7 +119,7 @@ export default async function PartnerPage() {
         <StatsBar />
 
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-line bg-ink-2 p-7">
+          <div className="rounded-2xl border border-line bg-ink-2 p-5 sm:p-7">
             <p className="font-display text-4xl tracking-tight text-volt">
               {stats.totalAudience !== null
                 ? formatCompact(stats.totalAudience)
@@ -130,7 +130,7 @@ export default async function PartnerPage() {
               {stats.platforms.length} platforms
             </p>
           </div>
-          <div className="rounded-2xl border border-line bg-ink-2 p-7">
+          <div className="rounded-2xl border border-line bg-ink-2 p-5 sm:p-7">
             <p className="font-display text-4xl tracking-tight text-volt">
               {stats.tiktokLikes !== null
                 ? formatCompact(stats.tiktokLikes)
@@ -144,7 +144,7 @@ export default async function PartnerPage() {
                 : "Lifetime YouTube views"}
             </p>
           </div>
-          <div className="rounded-2xl border border-line bg-ink-2 p-7">
+          <div className="rounded-2xl border border-line bg-ink-2 p-5 sm:p-7">
             <p className="font-display text-4xl tracking-tight text-volt">52</p>
             <p className="mt-2 text-sm text-mute">
               Episodes a year, a weekly slot, not a one-off
@@ -153,11 +153,11 @@ export default async function PartnerPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl border-t border-line px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl border-t border-line px-5 py-12 md:px-8 md:py-28">
         <SectionHeading eyebrow="Why 45one" title="Attention, not impressions." />
         <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-3">
           {why.map((w) => (
-            <div key={w.t} className="bg-ink p-8 md:p-10">
+            <div key={w.t} className="bg-ink p-6 sm:p-8 md:p-10">
               <h3 className="font-display text-2xl leading-tight tracking-tight">
                 {w.t}
               </h3>
@@ -168,7 +168,7 @@ export default async function PartnerPage() {
       </section>
 
       <section className="border-y border-line bg-ink-2">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <SectionHeading
             eyebrow="Ways to work together"
             title="Pick a lane, or we'll build one."
@@ -190,7 +190,7 @@ export default async function PartnerPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
                 </div>
-                <div className="flex flex-1 flex-col p-8">
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <span className="w-fit rounded-full border border-volt/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-volt">
                   {p.tag}
                 </span>
@@ -229,11 +229,11 @@ export default async function PartnerPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/85 to-ink" />
 
-        <div className="relative mx-auto max-w-4xl px-5 py-24 text-center md:px-8 md:py-32">
+        <div className="relative mx-auto max-w-4xl px-5 py-16 text-center md:px-8 md:py-32">
           <Eyebrow>
             <span className="mx-auto">Next step</span>
           </Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2.5rem,7vw,5rem)] leading-[0.9] tracking-tight">
+          <h2 className="mt-6 font-display text-[clamp(2.3rem,8vw,5rem)] leading-[0.9] tracking-tight">
             LET&apos;S TALK
             <br />
             <span className="text-volt">NUMBERS.</span>

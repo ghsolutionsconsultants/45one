@@ -41,7 +41,7 @@ export default async function Home() {
       />
 
       {/* ================= LIVE AUDIENCE ================= */}
-      <section className="mx-auto max-w-7xl px-5 pt-20 md:px-8 md:pt-28">
+      <section className="mx-auto max-w-7xl px-5 pt-12 md:px-8 md:pt-28">
         <Reveal>
           <div className="mb-9 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -59,7 +59,7 @@ export default async function Home() {
       </section>
 
       {/* ================= LATEST EPISODE ================= */}
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
         <Reveal>
           <SectionHeading
             eyebrow="Latest episode"
@@ -87,7 +87,7 @@ export default async function Home() {
           sizes="100vw"
           className="object-cover opacity-[0.06]"
         />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <Reveal>
             <SectionHeading
               eyebrow="Interactive"
@@ -102,7 +102,7 @@ export default async function Home() {
       </section>
 
       {/* ================= WHAT WE DO ================= */}
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
         <Reveal>
           <SectionHeading
             eyebrow="What we do"
@@ -111,7 +111,7 @@ export default async function Home() {
           />
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-3">
           {[
             {
               n: "01",
@@ -140,7 +140,7 @@ export default async function Home() {
           ].map((c, i) => (
             <Reveal key={c.n} delay={i * 90}>
               <Link href={c.href} className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-line">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-line sm:aspect-[4/3]">
                   <Image
                     src={c.src}
                     alt={c.alt}
@@ -149,10 +149,10 @@ export default async function Home() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-                  <p className="absolute left-6 top-5 font-display text-4xl text-volt/70">
+                  <p className="absolute left-5 top-4 font-display text-3xl text-volt/70 sm:left-6 sm:top-5 sm:text-4xl">
                     {c.n}
                   </p>
-                  <h3 className="absolute bottom-5 left-6 font-display text-2xl tracking-tight">
+                  <h3 className="absolute bottom-4 left-5 font-display text-xl tracking-tight sm:bottom-5 sm:left-6 sm:text-2xl">
                     {c.t}
                   </h3>
                 </div>
@@ -167,7 +167,7 @@ export default async function Home() {
       </section>
 
       {/* ================= FOOTBALL IQ ================= */}
-      <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
+      <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-28">
         <Reveal>
           <SectionHeading
             eyebrow="Test yourself"
@@ -180,18 +180,18 @@ export default async function Home() {
 
       {/* ================= GALLERY ================= */}
       <section className="border-y border-line bg-ink-2">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <Reveal>
             <SectionHeading eyebrow="The game" title="Grass, leather, floodlights." />
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {galleryImages.map((g, i) => (
               <Reveal key={g.src} delay={i * 60}>
                 <TiltCard
                   src={g.src}
                   alt={g.alt}
                   label={g.label}
-                  className={`aspect-[4/3] ${i === 0 ? "lg:aspect-[4/3]" : ""}`}
+                  className="aspect-square sm:aspect-[4/3]"
                 />
               </Reveal>
             ))}
@@ -200,7 +200,7 @@ export default async function Home() {
       </section>
 
       {/* ================= LEAGUES ================= */}
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
         <Reveal>
           <SectionHeading
             eyebrow="What we cover"
@@ -216,8 +216,8 @@ export default async function Home() {
               { l: "Bundesliga & Ligue 1", d: "The talent factories the rest of Europe shops at." },
               { l: "Europe & beyond", d: "Champions League nights, internationals and the big transfers." },
             ].map((c) => (
-              <div key={c.l} className="group bg-ink p-8 transition hover:bg-ink-3">
-                <h3 className="font-display text-2xl tracking-tight transition group-hover:text-volt">
+              <div key={c.l} className="group bg-ink p-6 transition hover:bg-ink-3 sm:p-8">
+                <h3 className="font-display text-xl tracking-tight transition group-hover:text-volt sm:text-2xl">
                   {c.l}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-mute">{c.d}</p>
@@ -229,7 +229,7 @@ export default async function Home() {
 
       {/* ================= BLOG ================= */}
       {posts.length > 0 && (
-        <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <Reveal>
             <SectionHeading
               eyebrow="From the blog"
@@ -262,18 +262,18 @@ export default async function Home() {
 
       {/* ================= SPONSOR CTA ================= */}
       <section className="relative overflow-hidden border-t border-line bg-volt text-black">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
           <div className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-black/60">
                 For brands
               </p>
-              <h2 className="mt-4 font-display text-4xl leading-[0.95] tracking-tight md:text-6xl">
+              <h2 className="mt-3 font-display text-3xl leading-[0.95] tracking-tight sm:text-4xl md:text-6xl">
                 REACH FOOTBALL FANS
                 <br />
                 WHO ACTUALLY WATCH.
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-black/70">
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-black/70 sm:text-base">
                 Episode sponsorships, integrated reads, branded segments and
                 social campaigns across YouTube, Instagram and TikTok. Tell us
                 what you need and we will send the media kit.
@@ -295,7 +295,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-16 border-t border-black/20 pt-10">
+          <div className="mt-10 border-t border-black/20 pt-8 sm:mt-16 sm:pt-10">
             <StatsBar dark />
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function TacticsBoard() {
   return (
     <div className="overflow-hidden rounded-3xl border border-line bg-ink-2">
       {/* formation switcher */}
-      <div className="flex gap-2 overflow-x-auto border-b border-line p-3">
+      <div className="flex gap-2 overflow-x-auto border-b border-line p-2.5 sm:p-3">
         {formations.map((f) => {
           const on = f.id === active.id;
           return (
@@ -20,7 +20,7 @@ export default function TacticsBoard() {
                 setActive(f);
                 setSelected(null);
               }}
-              className={`shrink-0 rounded-full px-5 py-2.5 font-display text-lg tracking-wide transition ${
+              className={`shrink-0 rounded-full px-4 py-2 font-display text-base tracking-wide transition sm:px-5 sm:py-2.5 sm:text-lg ${
                 on
                   ? "bg-volt text-black"
                   : "border border-line text-bone/70 hover:border-volt hover:text-volt"
@@ -34,8 +34,11 @@ export default function TacticsBoard() {
 
       <div className="grid lg:grid-cols-[1.35fr_1fr]">
         {/* ---------------- pitch ---------------- */}
-        <div className="relative border-b border-line p-4 lg:border-b-0 lg:border-r">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#0a1a0d] sm:aspect-[16/11]">
+        <div className="relative border-b border-line p-3 sm:p-4 lg:border-b-0 lg:border-r">
+          <p className="mb-2 text-center text-[10px] uppercase tracking-[0.2em] text-bone/40 sm:hidden">
+            Tap a player for their role
+          </p>
+          <div className="relative aspect-[16/11] w-full overflow-hidden rounded-xl bg-[#0a1a0d] sm:rounded-2xl">
             {/* mown stripes */}
             <div
               className="absolute inset-0 opacity-60"
@@ -75,7 +78,7 @@ export default function TacticsBoard() {
                   aria-label={s.role}
                 >
                   <span
-                    className={`flex h-9 w-9 items-center justify-center rounded-full border-2 font-display text-xs tracking-wide transition sm:h-11 sm:w-11 sm:text-sm ${
+                    className={`flex h-6 w-6 items-center justify-center rounded-full border font-display text-[9px] tracking-wide transition sm:h-11 sm:w-11 sm:border-2 sm:text-sm ${
                       on
                         ? "scale-110 border-volt bg-volt text-black"
                         : "border-volt/70 bg-ink/85 text-volt group-hover:scale-110 group-hover:bg-volt group-hover:text-black"
@@ -87,14 +90,14 @@ export default function TacticsBoard() {
               );
             })}
 
-            <p className="absolute bottom-3 left-4 text-[10px] uppercase tracking-[0.25em] text-bone/40">
+            <p className="absolute bottom-2 right-3 hidden text-[10px] uppercase tracking-[0.2em] text-bone/40 sm:block sm:bottom-3 sm:left-4 sm:right-auto">
               Tap a player
             </p>
           </div>
         </div>
 
         {/* ---------------- detail ---------------- */}
-        <div className="flex flex-col p-7 md:p-9">
+        <div className="flex flex-col p-5 sm:p-7 md:p-9">
           {selected ? (
             <div className="animate-rise">
               <button
@@ -103,7 +106,7 @@ export default function TacticsBoard() {
               >
                 ← Back to shape
               </button>
-              <p className="mt-7 font-display text-6xl leading-none text-volt">
+              <p className="mt-5 font-display text-5xl leading-none text-volt sm:mt-7 sm:text-6xl">
                 {selected.short}
               </p>
               <h3 className="mt-3 font-display text-2xl tracking-tight">
@@ -118,7 +121,7 @@ export default function TacticsBoard() {
               <p className="text-xs uppercase tracking-[0.25em] text-volt">
                 {active.nickname}
               </p>
-              <h3 className="mt-4 font-display text-5xl leading-none tracking-tight">
+              <h3 className="mt-3 font-display text-4xl leading-none tracking-tight sm:text-5xl">
                 {active.name}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-mute">

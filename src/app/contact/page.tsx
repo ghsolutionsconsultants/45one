@@ -72,14 +72,14 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/85 to-ink" />
 
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <Eyebrow>Contact</Eyebrow>
-          <h1 className="mt-6 max-w-4xl font-display text-[clamp(3rem,9vw,7rem)] leading-[0.85] tracking-tight">
+          <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.6rem,10vw,7rem)] leading-[0.85] tracking-tight">
             TELL US WHAT
             <br />
             <span className="text-volt">YOU NEED.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-bone/70">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-bone/70 sm:mt-7 sm:text-lg">
             One form, one inbox, one place. Sponsorships, guest requests, press
             or a take you need to get off your chest. It all reaches us here.
           </p>
@@ -90,11 +90,11 @@ export default function ContactPage() {
       </section>
 
       {/* ---------- ROUTES ---------- */}
-      <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
         <div className="grid gap-6 lg:grid-cols-3">
           {routes.map((r, i) => (
             <Reveal key={r.tag} delay={i * 80}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-ink-2 p-8">
+              <div className="flex h-full flex-col rounded-2xl border border-line bg-ink-2 p-6 sm:p-8">
                 <span className="w-fit rounded-full border border-volt/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-volt">
                   {r.tag}
                 </span>
@@ -134,7 +134,7 @@ export default function ContactPage() {
           sizes="100vw"
           className="object-cover opacity-[0.05]"
         />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-28">
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <Eyebrow>Send it through</Eyebrow>
@@ -164,7 +164,7 @@ export default function ContactPage() {
       </section>
 
       {/* ---------- FAQ ---------- */}
-      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
         <Eyebrow>Before you ask</Eyebrow>
         <h2 className="mt-5 font-display text-4xl leading-none tracking-tight md:text-5xl">
           The usual questions.
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
         <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
           {faqs.map((f) => (
-            <div key={f.q} className="bg-ink p-8">
+            <div key={f.q} className="bg-ink p-6 sm:p-8">
               <h3 className="font-display text-xl tracking-tight">{f.q}</h3>
               <p className="mt-3 text-sm leading-relaxed text-mute">{f.a}</p>
             </div>

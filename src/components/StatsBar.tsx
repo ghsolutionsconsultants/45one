@@ -24,7 +24,7 @@ export default async function StatsBar({ dark = false }: { dark?: boolean }) {
           href={p.href}
           target="_blank"
           rel="noreferrer"
-          className={`group p-7 transition md:p-8 ${
+          className={`group p-5 transition sm:p-7 md:p-8 ${
             dark ? "bg-volt hover:bg-volt/90" : "bg-ink hover:bg-ink-3"
           }`}
         >
@@ -55,7 +55,7 @@ export default async function StatsBar({ dark = false }: { dark?: boolean }) {
           {p.primary.value !== null ? (
             <>
               <p
-                className={`mt-4 font-display text-5xl tracking-tight md:text-6xl ${
+                className={`mt-3 font-display text-4xl tracking-tight sm:text-5xl md:text-6xl ${
                   dark ? "text-black" : "text-volt"
                 }`}
               >
@@ -68,7 +68,7 @@ export default async function StatsBar({ dark = false }: { dark?: boolean }) {
           ) : (
             <>
               <p
-                className={`mt-4 font-display text-3xl tracking-tight md:text-4xl ${
+                className={`mt-3 font-display text-2xl tracking-tight sm:text-3xl md:text-4xl ${
                   dark ? "text-black" : "text-bone"
                 }`}
               >
