@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { img } from "@/lib/images";
 import { episodeNumber, type Video } from "@/lib/youtube";
 import HeroBadge from "./HeroBadge";
+import { YouTubeIcon } from "./SocialIcons";
 import Countdown from "./Countdown";
 
 export default function Hero({ latest }: { latest?: Video }) {
@@ -26,9 +27,12 @@ export default function Hero({ latest }: { latest?: Video }) {
       <div className="pitch-grid absolute inset-0 -z-10" />
 
       <div className="mx-auto max-w-7xl px-5 pb-12 pt-8 md:px-8 md:pb-24 md:pt-20">
-        <div className="grid min-w-0 items-center gap-9 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8">
+        <div className="flex min-w-0 flex-col gap-9 lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-8">
           {/* ---------- copy ---------- */}
-          <div className="min-w-0">
+          {/* `contents` on phones lets the badge slot between the copy and the
+              buttons; on large screens it becomes a normal column again. */}
+          <div className="contents min-w-0 lg:block">
+            <div className="order-1 min-w-0">
             <div className="animate-rise inline-flex max-w-full items-center gap-2.5 rounded-full border border-volt/30 bg-volt/[0.07] px-3.5 py-1.5 backdrop-blur-sm sm:gap-3 sm:px-4 sm:py-2">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt opacity-75" />
@@ -66,8 +70,10 @@ export default function Hero({ latest }: { latest?: Video }) {
               rest of Europe&apos;s top leagues. The why behind the result.
             </p>
 
+            </div>
+
             <div
-              className="animate-rise mt-7 grid w-full max-w-md grid-cols-2 gap-2.5 sm:gap-3"
+              className="animate-rise order-3 grid w-full max-w-md grid-cols-2 gap-2.5 sm:mt-7 sm:gap-3"
               style={{ animationDelay: "340ms" }}
             >
               <Link
@@ -79,23 +85,33 @@ export default function Hero({ latest }: { latest?: Video }) {
                     <path d="M8 5.5v13l11-6.5-11-6.5Z" />
                   </svg>
                 </span>
-                Watch the podcast
+                <span className="whitespace-nowrap">
+                  Watch<span className="hidden xs:inline sm:inline"> the podcast</span>
+                </span>
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-line bg-ink/40 px-4 py-3 text-center text-[13px] font-bold backdrop-blur-sm transition hover:border-volt hover:text-volt sm:py-3.5 sm:text-sm"
+              <a
+                href={site.youtube.subscribeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-ink/40 px-4 py-3 text-center text-[13px] font-bold backdrop-blur-sm transition hover:border-volt hover:text-volt sm:py-3.5 sm:text-sm"
               >
-                Get in touch
-              </Link>
+                <YouTubeIcon className="h-4 w-4 text-volt" />
+                Subscribe
+              </a>
             </div>
 
           </div>
 
           {/* ---------- badge + drop panel ---------- */}
-          <div className="relative min-w-0">
-            <HeroBadge />
+          <div className="contents lg:relative lg:block lg:min-w-0">
+            <div className="order-2 min-w-0">
+              <HeroBadge />
+            </div>
 
-            <div className="animate-rise mt-4 rounded-3xl border border-line/80 bg-ink/55 p-4 backdrop-blur-xl sm:p-5 md:p-6" style={{ animationDelay: "300ms" }}>
+            <div
+              className="animate-rise order-4 rounded-3xl border border-line/80 bg-ink/55 p-4 backdrop-blur-xl sm:p-5 lg:mt-4 md:p-6"
+              style={{ animationDelay: "300ms" }}
+            >
               <div className="flex items-center justify-between">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-mute">
                   Next episode drops in

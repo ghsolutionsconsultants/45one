@@ -125,6 +125,22 @@ export async function getLatestVideo(): Promise<Video> {
   return first ?? fallbackVideos[0];
 }
 
+/**
+ * Full episodes are titled "451 EP.n: ...", everything else is a clip or a
+ * Short. The feed is newest-first, so without this split a Short posted on
+ * Saturday would take the featured episode slot.
+ */
+export function isEpisode(video: Video): boolean {
+  return episodeNumber(video.title) !== null;
+}
+
+export function splitVideos(videos: Video[]) {
+  return {
+    episodes: videos.filter(isEpisode),
+    clips: videos.filter((v) => !isEpisode(v)),
+  };
+}
+
 export function episodeNumber(title: string): string | null {
   const m = title.match(/EP\.?\s*(\d+)/i);
   return m ? m[1] : null;

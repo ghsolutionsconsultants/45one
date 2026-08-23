@@ -47,6 +47,7 @@ export const site = {
     channelId: env("YOUTUBE_CHANNEL_ID") ?? "UCJF9nMe1hKT22XskyCdlinA",
     handle: "@45oneza",
     url: "https://www.youtube.com/@45oneza",
+    subscribeUrl: "https://www.youtube.com/@45oneza?sub_confirmation=1",
   },
 
   socials: {

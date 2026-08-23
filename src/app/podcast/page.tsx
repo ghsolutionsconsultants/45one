@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 import { img } from "@/lib/images";
 import Countdown from "@/components/Countdown";
 import Reveal from "@/components/Reveal";
-import { getVideos } from "@/lib/youtube";
+import { getVideos, splitVideos } from "@/lib/youtube";
 import VideoGrid from "@/components/VideoGrid";
 import { Button, Eyebrow } from "@/components/ui";
 
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 
 export default async function PodcastPage() {
   const videos = await getVideos();
+  const { episodes, clips } = splitVideos(videos);
 
   return (
     <>
@@ -63,8 +64,30 @@ export default async function PodcastPage() {
 
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
         <Reveal>
-          <VideoGrid videos={videos} featureFirst />
+          <VideoGrid videos={episodes} featureFirst />
         </Reveal>
+
+        {clips.length > 0 && (
+          <div className="mt-16 border-t border-line pt-12 md:mt-24 md:pt-16">
+            <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-volt">
+                  <span className="h-px w-8 bg-volt" />
+                  Between episodes
+                </p>
+                <h2 className="mt-4 font-display text-3xl leading-none tracking-tight sm:text-4xl">
+                  Clips &amp; shorts
+                </h2>
+              </div>
+              <p className="text-xs uppercase tracking-[0.2em] text-mute">
+                {clips.length} to watch
+              </p>
+            </div>
+            <Reveal>
+              <VideoGrid videos={clips} />
+            </Reveal>
+          </div>
+        )}
       </section>
     </>
   );

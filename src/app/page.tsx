@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { img, galleryImages } from "@/lib/images";
-import { getVideos, formatDate } from "@/lib/youtube";
+import { getVideos, splitVideos, formatDate } from "@/lib/youtube";
 import { getAllPosts, formatPostDate } from "@/lib/posts";
 import Hero from "@/components/Hero";
 import VideoGrid from "@/components/VideoGrid";
@@ -20,7 +20,10 @@ export const revalidate = 1800;
 
 export default async function Home() {
   const videos = await getVideos();
-  const latest = videos[0];
+  const { episodes, clips } = splitVideos(videos);
+  // Feature the newest full episode, not whichever Short went up last.
+  const latest = episodes[0] ?? videos[0];
+  const featured = [latest, ...clips.slice(0, 3)].filter(Boolean);
   const posts = getAllPosts().slice(0, 3);
 
   return (
@@ -52,7 +55,7 @@ export default async function Home() {
           />
         </Reveal>
         <Reveal delay={80}>
-          <VideoGrid videos={videos.slice(0, 4)} featureFirst />
+          <VideoGrid videos={featured} featureFirst />
         </Reveal>
         {latest && (
           <p className="mt-10 text-sm text-mute">
