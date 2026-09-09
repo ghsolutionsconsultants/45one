@@ -73,6 +73,7 @@ const snap = snapshot as {
   updatedAt: string;
   standings: Standing[];
   history: Record<string, GameweekRow[]>;
+  nextEvent: { id: number; deadline: string; name: string } | null;
   teamOfTheWeek: TeamOfTheWeek | null;
 };
 
@@ -121,6 +122,9 @@ export async function getStandings(): Promise<StandingsResult> {
     };
   }
 }
+
+/** The next gameweek deadline, straight from FPL. */
+export const nextEvent = snap.nextEvent ?? null;
 
 /** The highest-scoring squad of the latest gameweek, with its players. */
 export const teamOfTheWeek: TeamOfTheWeek | null = snap.teamOfTheWeek ?? null;

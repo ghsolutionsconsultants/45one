@@ -11,6 +11,9 @@ import TacticsBoard from "@/components/TacticsBoard";
 import Countdown from "@/components/Countdown";
 import FootballIQ from "@/components/FootballIQ";
 import FplCallout from "@/components/FplCallout";
+import FplHomeTable from "@/components/FplHomeTable";
+import TeamOfTheWeek from "@/components/TeamOfTheWeek";
+import { getStandings, teamOfTheWeek } from "@/lib/fpl";
 import TiltCard from "@/components/TiltCard";
 import Reveal from "@/components/Reveal";
 import { SocialRow } from "@/components/SocialIcons";
@@ -21,6 +24,7 @@ export const revalidate = 1800;
 export default async function Home() {
   const videos = await getVideos();
   const { episodes, clips } = splitVideos(videos);
+  const table = await getStandings();
   // Feature the newest full episode, not whichever Short went up last.
   const latest = episodes[0] ?? videos[0];
   const featured = [latest, ...clips.slice(0, 3)].filter(Boolean);
@@ -206,6 +210,14 @@ export default async function Home() {
             action={{ href: "/fpl", label: "League page" }}
           />
           <FplCallout />
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+            <FplHomeTable
+              standings={table.standings}
+              managerCount={table.standings.length}
+            />
+            {teamOfTheWeek && <TeamOfTheWeek totw={teamOfTheWeek} />}
+          </div>
         </Reveal>
       </section>
 

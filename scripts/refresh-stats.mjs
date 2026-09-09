@@ -120,6 +120,11 @@ async function buildTeamOfTheWeek(standings, history) {
     live.elements.map((e) => [e.id, e.stats.total_points])
   );
 
+  // The next gameweek deadline, so the countdown stays useful all season
+  const schedule = boot.events ?? [];
+  const next =
+    schedule.find((e) => e.is_next) ?? schedule.find((e) => !e.finished);
+
   const players = picks.picks.map((p) => {
     const el = byId.get(p.element);
     const base = points.get(p.element) ?? 0;
@@ -138,6 +143,9 @@ async function buildTeamOfTheWeek(standings, history) {
   });
 
   return {
+    nextEvent: next
+      ? { id: next.id, deadline: next.deadline_time, name: next.name }
+      : null,
     gw,
     team: top.team,
     manager: top.manager,
@@ -209,6 +217,7 @@ async function refreshStandings() {
     updatedAt: new Date().toISOString(),
     standings,
     history,
+    nextEvent: teamOfTheWeek?.nextEvent ?? null,
     teamOfTheWeek,
   };
 

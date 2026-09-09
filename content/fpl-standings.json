@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-09-09T16:17:17.686Z",
+  "updatedAt": "2026-09-09T16:29:30.848Z",
   "standings": [
     {
       "rank": 1,
@@ -158,20 +158,20 @@
     },
     {
       "rank": 18,
-      "lastRank": 10,
-      "entry": 2620114,
-      "team": "Ballon D'or Bhengs",
-      "manager": "Nsika Bhengu",
-      "gw": 43,
-      "total": 205
-    },
-    {
-      "rank": 18,
       "lastRank": 16,
       "entry": 5974302,
       "team": "MATuniTed",
       "manager": "Mthoe Mlonyeni",
       "gw": 47,
+      "total": 205
+    },
+    {
+      "rank": 18,
+      "lastRank": 10,
+      "entry": 2620114,
+      "team": "Ballon D'or Bhengs",
+      "manager": "Nsika Bhengu",
+      "gw": 43,
       "total": 205
     },
     {
@@ -203,20 +203,20 @@
     },
     {
       "rank": 23,
-      "lastRank": 16,
-      "entry": 5758628,
-      "team": "rayfc",
-      "manager": "Urlly Ray",
-      "gw": 44,
-      "total": 202
-    },
-    {
-      "rank": 23,
       "lastRank": 22,
       "entry": 2764509,
       "team": "Chazunguza FC",
       "manager": "Wadzanai Musa",
       "gw": 56,
+      "total": 202
+    },
+    {
+      "rank": 23,
+      "lastRank": 16,
+      "entry": 5758628,
+      "team": "rayfc",
+      "manager": "Urlly Ray",
+      "gw": 44,
       "total": 202
     },
     {
@@ -248,20 +248,20 @@
     },
     {
       "rank": 28,
-      "lastRank": 26,
-      "entry": 6822432,
-      "team": "Sakadelics",
-      "manager": "Themba Zotwane",
-      "gw": 45,
-      "total": 191
-    },
-    {
-      "rank": 28,
       "lastRank": 38,
       "entry": 1439254,
       "team": "Classic XI",
       "manager": "Ndaba Ncube",
       "gw": 59,
+      "total": 191
+    },
+    {
+      "rank": 28,
+      "lastRank": 26,
+      "entry": 6822432,
+      "team": "Sakadelics",
+      "manager": "Themba Zotwane",
+      "gw": 45,
       "total": 191
     },
     {
@@ -311,20 +311,20 @@
     },
     {
       "rank": 35,
-      "lastRank": 33,
-      "entry": 5042302,
-      "team": "WHYESEL",
-      "manager": "Sphiwe Lekhuleni",
-      "gw": 49,
-      "total": 186
-    },
-    {
-      "rank": 35,
       "lastRank": 28,
       "entry": 7840183,
       "team": "False 9",
       "manager": "Thato Magagane",
       "gw": 41,
+      "total": 186
+    },
+    {
+      "rank": 35,
+      "lastRank": 33,
+      "entry": 5042302,
+      "team": "WHYESEL",
+      "manager": "Sphiwe Lekhuleni",
+      "gw": 49,
       "total": 186
     },
     {
@@ -1560,7 +1560,17 @@
       }
     ]
   },
+  "nextEvent": {
+    "id": 4,
+    "deadline": "2026-09-12T12:30:00Z",
+    "name": "Gameweek 4"
+  },
   "teamOfTheWeek": {
+    "nextEvent": {
+      "id": 4,
+      "deadline": "2026-09-12T12:30:00Z",
+      "name": "Gameweek 4"
+    },
     "gw": 3,
     "team": "Sagie's Team",
     "manager": "Sagie Chetty",

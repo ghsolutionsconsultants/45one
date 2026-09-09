@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
+import { nextEvent } from "@/lib/fpl";
 
 export function remaining(target: number) {
   const s = Math.max(0, Math.floor((target - Date.now()) / 1000));
@@ -16,7 +17,8 @@ export function remaining(target: number) {
 
 /** Ticks once a second until the gameweek deadline. */
 export function useDeadline() {
-  const target = new Date(site.fpl.deadline).getTime();
+  // The next gameweek deadline from FPL, falling back to the season opener.
+  const target = new Date(nextEvent?.deadline ?? site.fpl.deadline).getTime();
   const [left, setLeft] = useState<ReturnType<typeof remaining> | null>(null);
 
   useEffect(() => {
@@ -123,7 +125,9 @@ export default function FplJoin() {
       <div className="mt-7">
         <div className="flex items-baseline justify-between gap-3">
           <p className="text-[10px] uppercase tracking-[0.25em] text-mute">
-            {left?.over ? "The season is under way" : "Gameweek 1 deadline"}
+            {left?.over
+              ? "The season is under way"
+              : `${nextEvent?.name ?? "Gameweek 1"} deadline`}
           </p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-volt">
             Fri 21 Aug · 19:30

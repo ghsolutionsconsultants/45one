@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { leader, managerCount } from "@/lib/fpl";
+import { leader, managerCount, nextEvent } from "@/lib/fpl";
 import { img } from "@/lib/images";
 import { LeagueCode, useDeadline } from "./FplJoin";
 
@@ -79,7 +79,9 @@ export default function FplCallout() {
           </div>
 
           <p className="mt-6 text-[10px] uppercase tracking-[0.22em] text-mute">
-            {left?.over ? "Current leader" : "Gameweek 1 deadline"}
+            {left?.over
+              ? "Current leader"
+              : `${nextEvent?.name ?? "Gameweek 1"} deadline`}
           </p>
 
           {left?.over ? (
