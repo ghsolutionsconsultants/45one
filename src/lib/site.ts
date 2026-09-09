@@ -65,6 +65,9 @@ export const site = {
   fpl: {
     leagueName: "45one Premier League",
     code: "udo8ot",
+    leagueId: 1306638,
+    tableUrl:
+      "https://fantasy.premierleague.com/en/leagues/1306638/standings/c",
     season: "2026/27",
     // Gameweek 1 deadline, 19:30 SAST (17:30 UTC)
     deadline: "2026-08-21T17:30:00.000Z",

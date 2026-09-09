@@ -123,7 +123,7 @@ export default function FplJoin() {
       <div className="mt-7">
         <div className="flex items-baseline justify-between gap-3">
           <p className="text-[10px] uppercase tracking-[0.25em] text-mute">
-            {left?.over ? "Gameweek 1 has kicked off" : "Gameweek 1 deadline"}
+            {left?.over ? "The season is under way" : "Gameweek 1 deadline"}
           </p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-volt">
             Fri 21 Aug · 19:30
@@ -132,8 +132,8 @@ export default function FplJoin() {
 
         {left?.over ? (
           <p className="mt-3 text-sm leading-relaxed text-mute">
-            You can still join. Late entries start on zero for the gameweeks
-            already played, so the sooner the better.
+            You can still join. Late entries score from the gameweek they enter,
+            so the sooner the better.
           </p>
         ) : (
           <div className="mt-3 grid grid-cols-4 gap-1.5 sm:gap-3">

@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { getStandings, getLeagueStats, teamOfTheWeek } from "@/lib/fpl";
+import TeamOfTheWeek from "@/components/TeamOfTheWeek";
+import RaceChart from "@/components/RaceChart";
+import Podium from "@/components/Podium";
+import LeagueAwards from "@/components/LeagueAwards";
 import { img } from "@/lib/images";
 import FplJoin from "@/components/FplJoin";
+import Standings from "@/components/Standings";
 import Reveal from "@/components/Reveal";
 import { Eyebrow, SectionHeading } from "@/components/ui";
 
@@ -37,7 +43,7 @@ const rules = [
   },
   {
     t: "Join whenever you like",
-    d: "The league stays open all season. Late joiners keep the points they have scored from the gameweek they entered, so joining now is the fairest start.",
+    d: "The league stays open all season. Late joiners keep the points they have scored from the gameweek they entered, which is why a few totals near the bottom look light.",
   },
   {
     t: "Settled on the podcast",
@@ -49,7 +55,14 @@ const rules = [
   },
 ];
 
-export default function FplPage() {
+export const revalidate = 1800;
+
+export default async function FplPage() {
+  const table = await getStandings();
+  const managerCount = table.standings.length;
+  const leader = table.standings[0];
+  const stats = getLeagueStats(table.standings);
+
   return (
     <>
       {/* ---------- HERO ---------- */}
@@ -74,18 +87,25 @@ export default function FplPage() {
                 <span className="text-volt">PREMIER LEAGUE.</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-bone/75 sm:text-lg">
-                Our mini-league is open to every 451 listener. Pick a squad,
-                join with the code, and spend the season proving your football
-                opinions actually hold up.
+                {managerCount} managers, one table, and a season of proving your
+                football opinions actually hold up. {leader.manager} leads on{" "}
+                {leader.total} points. Still open to every 451 listener.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-mute">
-                <span>38 gameweeks</span>
+                <span>{managerCount} managers</span>
                 <span className="text-volt">·</span>
-                <span>One winner</span>
+                <span>38 gameweeks</span>
                 <span className="text-volt">·</span>
                 <span>Free to enter</span>
               </div>
+
+              <a
+                href="#standings"
+                className="mt-7 inline-flex rounded-full border border-line px-6 py-3 text-sm font-bold transition hover:border-volt hover:text-volt"
+              >
+                Jump to the table
+              </a>
             </div>
 
             <div className="min-w-0">
@@ -117,42 +137,204 @@ export default function FplPage() {
         </div>
       </section>
 
-      {/* ---------- STANDINGS PLACEHOLDER ---------- */}
-      <section className="border-y border-line bg-ink-2">
+      {/* ---------- STANDINGS ---------- */}
+      <section id="standings" className="scroll-mt-24 border-y border-line bg-ink-2">
         <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
           <Reveal>
             <SectionHeading
               eyebrow="Standings"
-              title="The table lands after gameweek 1."
-              sub="Once the season is under way, the live league table will live right here: rank, gameweek points, total, and the movers."
+              title="The table."
+              sub={`${managerCount} managers deep and counting. Search for your team to find yourself, or scroll the whole league.`}
+
             />
           </Reveal>
-
-          <div className="overflow-hidden rounded-2xl border border-line">
-            <div className="grid grid-cols-[3rem_1fr_4rem_4.5rem] gap-2 border-b border-line bg-ink px-4 py-3 text-[10px] uppercase tracking-[0.15em] text-mute sm:grid-cols-[4rem_1fr_6rem_6rem] sm:px-6">
-              <span>Rank</span>
-              <span>Manager</span>
-              <span className="text-right">GW</span>
-              <span className="text-right">Total</span>
-            </div>
-
-            {[1, 2, 3, 4, 5].map((n) => (
-              <div
-                key={n}
-                className="grid grid-cols-[3rem_1fr_4rem_4.5rem] items-center gap-2 border-b border-line/60 px-4 py-4 last:border-0 sm:grid-cols-[4rem_1fr_6rem_6rem] sm:px-6"
-              >
-                <span className="font-display text-lg text-volt/30">{n}</span>
-                <span className="h-3 w-2/3 rounded-full bg-line" />
-                <span className="ml-auto h-3 w-8 rounded-full bg-line" />
-                <span className="ml-auto h-3 w-10 rounded-full bg-line" />
-              </div>
-            ))}
+          <div className="mb-8">
+            <Podium standings={table.standings} />
           </div>
 
-          <p className="mt-5 text-sm text-mute">
-            Join before the deadline and your name is on this table from the
-            first gameweek.
-          </p>
+          <Standings
+            standings={table.standings}
+            updatedAt={table.updatedAt}
+            live={table.live}
+            form={stats.form}
+          />
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-2xl text-xs leading-relaxed text-mute">
+              Ranks are exactly as Fantasy Premier League reports them, ties
+              included. Managers who joined late score from the gameweek they
+              entered, which is why a few totals sit well below the pack.
+            </p>
+            <a
+              href={site.fpl.tableUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="shrink-0 text-xs uppercase tracking-[0.18em] text-volt hover:underline"
+            >
+              Open on FPL →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- LEAGUE STATS ---------- */}
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
+        <Reveal>
+          <SectionHeading
+            eyebrow={stats.gameweek ? `After gameweek ${stats.gameweek}` : "The numbers"}
+            title="League stats."
+            sub="Updated with the table, every gameweek, all season."
+          />
+        </Reveal>
+
+        <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              v: stats.managerOfTheWeek?.value ?? 0,
+              l: "Manager of the week",
+              d: stats.managerOfTheWeek?.team ?? "",
+              sub: stats.managerOfTheWeek?.manager ?? "",
+            },
+            {
+              v: stats.averageGw,
+              l: "League average this week",
+              d: `${stats.averageTotal} average total`,
+              sub: `${stats.medianTotal} median`,
+            },
+            {
+              v: stats.seasonBest?.value ?? 0,
+              l: "Best gameweek so far",
+              d: stats.seasonBest?.team ?? "",
+              sub: stats.seasonBest?.note ?? "",
+            },
+            {
+              v: stats.spread,
+              l: "Points top to bottom",
+              d: `${stats.chasingPack} within 20 of the lead`,
+              sub: `${managerCount} managers`,
+            },
+          ].map((c) => (
+            <div key={c.l} className="bg-ink p-6">
+              <p className="font-display text-4xl leading-none text-volt sm:text-5xl">
+                {c.v}
+              </p>
+              <p className="mt-3 text-[10px] uppercase tracking-[0.18em] text-mute">
+                {c.l}
+              </p>
+              <p className="mt-2 truncate text-sm text-bone">{c.d}</p>
+              <p className="truncate text-xs text-mute">{c.sub}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6">
+          <Reveal>
+            <RaceChart race={stats.race} />
+          </Reveal>
+        </div>
+
+        {stats.gameweekWinners.length > 0 && (
+          <div className="mt-6 overflow-hidden rounded-2xl border border-line bg-ink-2">
+            <p className="border-b border-line px-5 py-4 text-[10px] uppercase tracking-[0.22em] text-volt sm:px-6">
+              Gameweek winners
+            </p>
+            <div className="flex gap-3 overflow-x-auto p-4 sm:p-5">
+              {[...stats.gameweekWinners].reverse().map((w) => (
+                <div
+                  key={w.event}
+                  className="w-44 shrink-0 rounded-xl border border-line bg-ink p-4"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-mute">
+                    Gameweek {w.event}
+                  </p>
+                  <p className="mt-2 truncate text-sm font-medium text-bone">
+                    {w.team}
+                  </p>
+                  <p className="truncate text-xs text-mute">{w.manager}</p>
+                  <p className="mt-3 font-display text-2xl leading-none text-volt">
+                    {w.points}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {teamOfTheWeek && (
+          <div className="mt-6">
+            <Reveal>
+              <TeamOfTheWeek totw={teamOfTheWeek} />
+            </Reveal>
+          </div>
+        )}
+      </section>
+
+      {/* ---------- AWARDS ---------- */}
+      <section className="border-y border-line bg-ink-2">
+        <div className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Awards"
+              title="Running all season."
+              sub="Every category updates with the table. No prizes, just receipts."
+            />
+          </Reveal>
+          <LeagueAwards stats={stats} />
+        </div>
+      </section>
+
+      {/* ---------- QUARTERS ---------- */}
+      <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-24">
+        <Reveal>
+          <SectionHeading
+            eyebrow="The season in four"
+            title="Quarter by quarter."
+            sub="The league splits into four blocks. Win a quarter and you have something to talk about even if the title has gone."
+          />
+        </Reveal>
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {stats.quarters.map((q) => (
+            <div
+              key={q.label}
+              className={`rounded-2xl border p-6 ${
+                q.played > 0 ? "border-line bg-ink-2" : "border-line/60 bg-ink"
+              }`}
+            >
+              <div className="flex items-baseline justify-between gap-2">
+                <h3 className="font-display text-xl tracking-tight">{q.label}</h3>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-mute">
+                  {q.range}
+                </span>
+              </div>
+
+              {q.played === 0 ? (
+                <p className="mt-4 text-sm text-mute">Not played yet.</p>
+              ) : (
+                <ol className="mt-4 flex flex-col gap-2.5">
+                  {q.leaders.map((e, i) => (
+                    <li key={e.team} className="flex items-baseline gap-2.5">
+                      <span
+                        className={`w-3 shrink-0 font-display text-sm ${
+                          i === 0 ? "text-volt" : "text-mute"
+                        }`}
+                      >
+                        {i + 1}
+                      </span>
+                      <span className="min-w-0 flex-1 truncate text-sm text-bone">
+                        {e.team}
+                      </span>
+                      <span
+                        className={`shrink-0 font-display text-base tabular-nums ${
+                          i === 0 ? "text-volt" : "text-bone/70"
+                        }`}
+                      >
+                        {e.value}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 

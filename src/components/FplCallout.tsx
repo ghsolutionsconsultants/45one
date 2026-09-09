@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { leader, managerCount } from "@/lib/fpl";
 import { img } from "@/lib/images";
 import { LeagueCode, useDeadline } from "./FplJoin";
 
@@ -35,7 +36,7 @@ export default function FplCallout() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-volt" />
             </span>
-            Fantasy Premier League · {site.fpl.season}
+            Fantasy Premier League · {managerCount} managers
           </p>
 
           <h3 className="mt-4 font-display text-3xl leading-[0.95] tracking-tight sm:text-4xl md:text-5xl">
@@ -45,9 +46,10 @@ export default function FplCallout() {
           </h3>
 
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-bone/75 sm:text-base">
-            Our mini-league is free and open to every listener. 38 gameweeks,
-            one winner, and a season of proving your football opinions actually
-            hold up.
+            Free and open to every listener, and already {managerCount} deep.{" "}
+            <strong className="text-bone">{leader.team}</strong> leads on{" "}
+            {leader.total} points. Late entries score from the gameweek they
+            join, so there is still a season to chase.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-3">
@@ -60,10 +62,10 @@ export default function FplCallout() {
               Join the league
             </a>
             <Link
-              href="/fpl"
+              href="/fpl#standings"
               className="rounded-full border border-line bg-ink/40 px-6 py-3 text-sm font-bold backdrop-blur-sm transition hover:border-volt hover:text-volt"
             >
-              How it works
+              See the table
             </Link>
           </div>
         </div>
@@ -77,13 +79,21 @@ export default function FplCallout() {
           </div>
 
           <p className="mt-6 text-[10px] uppercase tracking-[0.22em] text-mute">
-            {left?.over ? "Gameweek 1 has kicked off" : "Gameweek 1 deadline"}
+            {left?.over ? "Current leader" : "Gameweek 1 deadline"}
           </p>
 
           {left?.over ? (
-            <p className="mt-2 text-sm leading-relaxed text-mute">
-              Still open. Late entries start from the gameweek they join.
-            </p>
+            <div className="mt-2 rounded-lg border border-line bg-ink px-3 py-2.5">
+              <p className="truncate text-sm font-medium text-bone">
+                {leader.team}
+              </p>
+              <p className="mt-0.5 flex items-baseline justify-between gap-2 text-xs text-mute">
+                <span className="truncate">{leader.manager}</span>
+                <span className="shrink-0 font-display text-base text-volt">
+                  {leader.total}
+                </span>
+              </p>
+            </div>
           ) : (
             <div className="mt-2.5 grid grid-cols-4 gap-1.5">
               {cells.map((c) => (
