@@ -29,12 +29,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Both snapshots: the audience numbers and the league table. The
+          # league file was previously written but never staged, which left the
+          # gameweek history frozen while the live table moved on.
+          FILES="content/stats.json content/fpl-standings.json"
           # ignore a timestamp-only change so we do not redeploy for nothing
-          if git diff --quiet -I'"updatedAt"' -- content/stats.json; then
+          if git diff --quiet -I'"updatedAt"' -- $FILES; then
             echo "No change in the numbers."
-            git checkout -- content/stats.json
+            git checkout -- $FILES
             exit 0
           fi
-          git add content/stats.json
-          git commit -m "Refresh audience stats"
+          git add $FILES
+          git commit -m "Refresh audience stats and league table"
           git push

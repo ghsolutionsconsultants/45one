@@ -1,448 +1,457 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-09-09T16:29:30.848Z",
+  "updatedAt": "2026-11-02T20:11:30.881Z",
   "standings": [
     {
       "rank": 1,
-      "lastRank": 2,
+      "lastRank": 1,
       "entry": 5285905,
       "team": "Pap & Saka-laka",
       "manager": "Lesedi Kutumela",
-      "gw": 55,
-      "total": 239
+      "gw": 67,
+      "total": 651
     },
     {
       "rank": 2,
-      "lastRank": 1,
-      "entry": 8382938,
-      "team": "Change Name",
-      "manager": "Saleboga Ledwaba",
-      "gw": 45,
-      "total": 230
+      "lastRank": 3,
+      "entry": 1439254,
+      "team": "Classic XI",
+      "manager": "Ndaba Ncube",
+      "gw": 58,
+      "total": 608
     },
     {
       "rank": 3,
-      "lastRank": 4,
-      "entry": 857006,
-      "team": "DMK Denizens F.C",
-      "manager": "Rick Leitch",
-      "gw": 55,
-      "total": 226
-    },
-    {
-      "rank": 4,
-      "lastRank": 7,
-      "entry": 8519235,
-      "team": "IMBATTABLES FC",
-      "manager": "Aphiwe Mange",
-      "gw": 56,
-      "total": 222
-    },
-    {
-      "rank": 5,
-      "lastRank": 3,
+      "lastRank": 2,
       "entry": 2067305,
       "team": "Can't Get Any Wirtz",
       "manager": "glynn mckiernan",
-      "gw": 46,
-      "total": 219
+      "gw": 32,
+      "total": 607
+    },
+    {
+      "rank": 4,
+      "lastRank": 5,
+      "entry": 857006,
+      "team": "DMK Denizens F.C",
+      "manager": "Rick Leitch",
+      "gw": 63,
+      "total": 603
+    },
+    {
+      "rank": 5,
+      "lastRank": 4,
+      "entry": 4478709,
+      "team": "TheRealGOAT FC �",
+      "manager": "Mbongeni Golide",
+      "gw": 58,
+      "total": 600
     },
     {
       "rank": 6,
-      "lastRank": 6,
-      "entry": 1665483,
-      "team": "MK07",
-      "manager": "Mitchlin Kingsley",
-      "gw": 51,
-      "total": 219
+      "lastRank": 8,
+      "entry": 8382938,
+      "team": "Change Name",
+      "manager": "Saleboga Ledwaba",
+      "gw": 65,
+      "total": 598
     },
     {
       "rank": 7,
-      "lastRank": 10,
-      "entry": 6574790,
-      "team": "FC Russclat",
-      "manager": "Russel M",
-      "gw": 55,
-      "total": 217
+      "lastRank": 13,
+      "entry": 7000934,
+      "team": "Bruno Penandes",
+      "manager": "Chris Thomas",
+      "gw": 65,
+      "total": 586
     },
     {
       "rank": 8,
-      "lastRank": 16,
-      "entry": 525933,
-      "team": "SPLURGE FC",
-      "manager": "Millio César",
-      "gw": 58,
-      "total": 216
+      "lastRank": 11,
+      "entry": 6574790,
+      "team": "FC Russclat",
+      "manager": "Russel M",
+      "gw": 52,
+      "total": 583
     },
     {
       "rank": 9,
-      "lastRank": 7,
+      "lastRank": 12,
+      "entry": 1514740,
+      "team": "EndoTheWorld",
+      "manager": "Koketso Kekana",
+      "gw": 54,
+      "total": 581
+    },
+    {
+      "rank": 10,
+      "lastRank": 9,
       "entry": 1192840,
       "team": "Uzonga fc",
       "manager": "Al~ameen X",
-      "gw": 49,
-      "total": 215
+      "gw": 47,
+      "total": 579
     },
     {
-      "rank": 10,
-      "lastRank": 22,
-      "entry": 6435257,
-      "team": "Cherki Tigers",
-      "manager": "Moleke NKADIMENG",
-      "gw": 66,
-      "total": 212
-    },
-    {
-      "rank": 10,
-      "lastRank": 4,
+      "rank": 11,
+      "lastRank": 9,
       "entry": 30406,
       "team": "Cherki Blinders",
       "manager": "Itumeleng Lekgeu",
-      "gw": 41,
-      "total": 212
+      "gw": 46,
+      "total": 578
     },
     {
-      "rank": 12,
+      "rank": 11,
+      "lastRank": 6,
+      "entry": 2764509,
+      "team": "Chazunguza FC",
+      "manager": "Wadzanai Musa",
+      "gw": 40,
+      "total": 578
+    },
+    {
+      "rank": 13,
       "lastRank": 15,
-      "entry": 5926860,
-      "team": "Frezco FC",
-      "manager": "Colin Essi",
-      "gw": 52,
-      "total": 211
-    },
-    {
-      "rank": 12,
-      "lastRank": 14,
-      "entry": 7584076,
-      "team": "Wirtz Case Scenario",
-      "manager": "Stanley  Marsberg",
-      "gw": 51,
-      "total": 211
-    },
-    {
-      "rank": 14,
-      "lastRank": 13,
-      "entry": 7927994,
-      "team": "Koto Amatsukami",
-      "manager": "Sello Ledwaba",
-      "gw": 50,
-      "total": 211
-    },
-    {
-      "rank": 15,
-      "lastRank": 12,
       "entry": 6905421,
       "team": "Litchi FC",
       "manager": "Lee Purdon",
-      "gw": 49,
-      "total": 210
+      "gw": 66,
+      "total": 578
+    },
+    {
+      "rank": 14,
+      "lastRank": 7,
+      "entry": 5022390,
+      "team": "Alisson Wonderland",
+      "manager": "rachel mckiernan",
+      "gw": 38,
+      "total": 571
+    },
+    {
+      "rank": 15,
+      "lastRank": 23,
+      "entry": 1229404,
+      "team": "The Special One",
+      "manager": "Kopano Lekgeu",
+      "gw": 57,
+      "total": 555
     },
     {
       "rank": 16,
       "lastRank": 19,
-      "entry": 4478709,
-      "team": "TheRealGOAT FC �",
-      "manager": "Mbongeni Golide",
-      "gw": 56,
-      "total": 209
+      "entry": 525933,
+      "team": "SPLURGE FC",
+      "manager": "Millio César",
+      "gw": 58,
+      "total": 555
     },
     {
       "rank": 17,
-      "lastRank": 22,
-      "entry": 1514740,
-      "team": "EndoTheWorld",
-      "manager": "Koketso Kekana",
-      "gw": 60,
-      "total": 206
+      "lastRank": 14,
+      "entry": 1665483,
+      "team": "MK07",
+      "manager": "Mitchlin Kingsley",
+      "gw": 41,
+      "total": 554
     },
     {
       "rank": 18,
-      "lastRank": 16,
-      "entry": 5974302,
-      "team": "MATuniTed",
-      "manager": "Mthoe Mlonyeni",
-      "gw": 47,
-      "total": 205
-    },
-    {
-      "rank": 18,
-      "lastRank": 10,
-      "entry": 2620114,
-      "team": "Ballon D'or Bhengs",
-      "manager": "Nsika Bhengu",
-      "gw": 43,
-      "total": 205
-    },
-    {
-      "rank": 20,
-      "lastRank": 33,
-      "entry": 7231936,
-      "team": "LeroySane",
-      "manager": "Leeroy Magudze",
-      "gw": 66,
-      "total": 203
-    },
-    {
-      "rank": 21,
-      "lastRank": 37,
-      "entry": 5022390,
-      "team": "Alisson Wonderland",
-      "manager": "rachel mckiernan",
-      "gw": 70,
-      "total": 203
-    },
-    {
-      "rank": 22,
-      "lastRank": 29,
-      "entry": 7000934,
-      "team": "Bruno Penandes",
-      "manager": "Chris Thomas",
-      "gw": 58,
-      "total": 202
-    },
-    {
-      "rank": 23,
-      "lastRank": 22,
-      "entry": 2764509,
-      "team": "Chazunguza FC",
-      "manager": "Wadzanai Musa",
-      "gw": 56,
-      "total": 202
-    },
-    {
-      "rank": 23,
-      "lastRank": 16,
-      "entry": 5758628,
-      "team": "rayfc",
-      "manager": "Urlly Ray",
-      "gw": 44,
-      "total": 202
-    },
-    {
-      "rank": 25,
-      "lastRank": 22,
+      "lastRank": 17,
       "entry": 4966278,
       "team": "Shadow FC",
       "manager": "Sadheshan Govender",
-      "gw": 48,
-      "total": 194
+      "gw": 43,
+      "total": 553
     },
     {
-      "rank": 26,
+      "rank": 19,
       "lastRank": 21,
-      "entry": 3140607,
-      "team": "Shuga and Spice",
-      "manager": "Tshwanelo Mokoene",
-      "gw": 46,
-      "total": 193
+      "entry": 8519235,
+      "team": "IMBATTABLES FC",
+      "manager": "Aphiwe Mange",
+      "gw": 54,
+      "total": 553
     },
     {
-      "rank": 27,
-      "lastRank": 9,
-      "entry": 20992,
-      "team": "The Boogeyman",
-      "manager": "Luto Sibotoboto",
-      "gw": 28,
-      "total": 191
-    },
-    {
-      "rank": 28,
-      "lastRank": 38,
-      "entry": 1439254,
-      "team": "Classic XI",
-      "manager": "Ndaba Ncube",
-      "gw": 59,
-      "total": 191
-    },
-    {
-      "rank": 28,
-      "lastRank": 26,
-      "entry": 6822432,
-      "team": "Sakadelics",
-      "manager": "Themba Zotwane",
-      "gw": 45,
-      "total": 191
-    },
-    {
-      "rank": 30,
-      "lastRank": 43,
-      "entry": 7729245,
-      "team": "Boas club de'futbol",
-      "manager": "Tshiamo Masenya",
-      "gw": 67,
-      "total": 190
-    },
-    {
-      "rank": 31,
-      "lastRank": 35,
-      "entry": 3202326,
-      "team": "Shashalaza FC",
-      "manager": "Osego Khomo",
-      "gw": 56,
-      "total": 189
-    },
-    {
-      "rank": 32,
-      "lastRank": 35,
-      "entry": 6517490,
-      "team": "mbuzi fc",
-      "manager": "Thando Mpfumadi",
-      "gw": 56,
-      "total": 189
-    },
-    {
-      "rank": 33,
-      "lastRank": 30,
-      "entry": 6290638,
-      "team": "OCG",
-      "manager": "Norbeth Jnr",
-      "gw": 46,
-      "total": 188
-    },
-    {
-      "rank": 34,
-      "lastRank": 45,
-      "entry": 5013265,
-      "team": "Sagie's Team",
-      "manager": "Sagie Chetty",
-      "gw": 72,
-      "total": 187
-    },
-    {
-      "rank": 35,
-      "lastRank": 28,
-      "entry": 7840183,
-      "team": "False 9",
-      "manager": "Thato Magagane",
-      "gw": 41,
-      "total": 186
-    },
-    {
-      "rank": 35,
-      "lastRank": 33,
-      "entry": 5042302,
-      "team": "WHYESEL",
-      "manager": "Sphiwe Lekhuleni",
-      "gw": 49,
-      "total": 186
-    },
-    {
-      "rank": 37,
-      "lastRank": 27,
-      "entry": 7064748,
-      "team": "Bruno Marsenal",
-      "manager": "Chris Smoothe",
-      "gw": 40,
-      "total": 185
-    },
-    {
-      "rank": 38,
-      "lastRank": 41,
-      "entry": 1621185,
-      "team": "Smurk FC",
-      "manager": "Lethabo Smurk",
-      "gw": 57,
-      "total": 184
-    },
-    {
-      "rank": 39,
-      "lastRank": 38,
-      "entry": 1229404,
-      "team": "The Special One",
-      "manager": "Kopano Lekgeu",
-      "gw": 50,
-      "total": 182
-    },
-    {
-      "rank": 40,
-      "lastRank": 40,
-      "entry": 3981932,
-      "team": "Stark28 FC",
-      "manager": "Anthony Mashigo",
-      "gw": 53,
-      "total": 181
-    },
-    {
-      "rank": 41,
-      "lastRank": 20,
-      "entry": 4031988,
-      "team": "DOLOLO FC",
-      "manager": "Gavin Kamberipa",
-      "gw": 40,
-      "total": 181
-    },
-    {
-      "rank": 42,
-      "lastRank": 44,
-      "entry": 4212838,
-      "team": "Derbyshire City",
-      "manager": "Rito Baloyi",
-      "gw": 59,
-      "total": 178
-    },
-    {
-      "rank": 43,
-      "lastRank": 32,
+      "rank": 20,
+      "lastRank": 24,
       "entry": 6847405,
       "team": "1 Season Wonders",
       "manager": "Katlego Ledwaba",
-      "gw": 52,
-      "total": 174
+      "gw": 61,
+      "total": 549
     },
     {
-      "rank": 44,
+      "rank": 21,
+      "lastRank": 16,
+      "entry": 7927994,
+      "team": "Koto Amatsukami",
+      "manager": "Sello Ledwaba",
+      "gw": 37,
+      "total": 548
+    },
+    {
+      "rank": 22,
+      "lastRank": 20,
+      "entry": 6435257,
+      "team": "Cherki Tigers",
+      "manager": "Moleke NKADIMENG",
+      "gw": 42,
+      "total": 542
+    },
+    {
+      "rank": 23,
+      "lastRank": 27,
+      "entry": 2620114,
+      "team": "Ballon D'or Bhengs",
+      "manager": "Nsika Bhengu",
+      "gw": 55,
+      "total": 540
+    },
+    {
+      "rank": 24,
+      "lastRank": 26,
+      "entry": 5974302,
+      "team": "MATuniTed",
+      "manager": "Mthoe Mlonyeni",
+      "gw": 51,
+      "total": 540
+    },
+    {
+      "rank": 25,
+      "lastRank": 18,
+      "entry": 7231936,
+      "team": "LeroySane",
+      "manager": "Leeroy Magudze",
+      "gw": 34,
+      "total": 535
+    },
+    {
+      "rank": 26,
+      "lastRank": 28,
+      "entry": 5758628,
+      "team": "rayfc",
+      "manager": "Urlly Ray",
+      "gw": 48,
+      "total": 531
+    },
+    {
+      "rank": 27,
+      "lastRank": 30,
+      "entry": 4515134,
+      "team": "K-Man FC",
+      "manager": "Kutloano Tshiafhula",
+      "gw": 49,
+      "total": 528
+    },
+    {
+      "rank": 28,
+      "lastRank": 25,
+      "entry": 7729245,
+      "team": "Boas club de'futbol",
+      "manager": "Tshiamo Masenya",
+      "gw": 38,
+      "total": 528
+    },
+    {
+      "rank": 29,
+      "lastRank": 33,
+      "entry": 4031988,
+      "team": "DOLOLO FC",
+      "manager": "Gavin Kamberipa",
+      "gw": 58,
+      "total": 521
+    },
+    {
+      "rank": 30,
+      "lastRank": 32,
+      "entry": 7584076,
+      "team": "Wirtz Case Scenario",
+      "manager": "Stanley  Marsberg",
+      "gw": 45,
+      "total": 520
+    },
+    {
+      "rank": 31,
+      "lastRank": 22,
+      "entry": 1621185,
+      "team": "Smurk FC",
+      "manager": "Lethabo Smurk",
+      "gw": 21,
+      "total": 519
+    },
+    {
+      "rank": 32,
+      "lastRank": 29,
+      "entry": 5926860,
+      "team": "Frezco FC",
+      "manager": "Colin Essi",
+      "gw": 39,
+      "total": 518
+    },
+    {
+      "rank": 33,
       "lastRank": 31,
-      "entry": 6270966,
-      "team": "Mtilikwe Giants",
-      "manager": "Solomon Ndhlovu",
-      "gw": 35,
-      "total": 173
+      "entry": 6822432,
+      "team": "Sakadelics",
+      "manager": "Themba Zotwane",
+      "gw": 40,
+      "total": 516
     },
     {
-      "rank": 45,
-      "lastRank": 46,
+      "rank": 34,
+      "lastRank": 37,
+      "entry": 7064748,
+      "team": "Bruno Marsenal",
+      "manager": "Chris Smoothe",
+      "gw": 56,
+      "total": 514
+    },
+    {
+      "rank": 35,
+      "lastRank": 36,
+      "entry": 5013265,
+      "team": "Sagie's Team",
+      "manager": "Sagie Chetty",
+      "gw": 46,
+      "total": 506
+    },
+    {
+      "rank": 36,
+      "lastRank": 34,
+      "entry": 5042302,
+      "team": "WHYESEL",
+      "manager": "Sphiwe Lekhuleni",
+      "gw": 34,
+      "total": 497
+    },
+    {
+      "rank": 36,
+      "lastRank": 35,
       "entry": 5691503,
       "team": "Wa lala wa Saka",
       "manager": "Tshepang Ramatsoma",
-      "gw": 61,
-      "total": 172
+      "gw": 35,
+      "total": 497
     },
     {
-      "rank": 46,
+      "rank": 38,
       "lastRank": 42,
+      "entry": 6270966,
+      "team": "Mtilikwe Giants",
+      "manager": "Solomon Ndhlovu",
+      "gw": 66,
+      "total": 495
+    },
+    {
+      "rank": 39,
+      "lastRank": 39,
       "entry": 2334569,
       "team": "Impossible",
       "manager": "Katleho Babedi",
       "gw": 44,
-      "total": 168
+      "total": 492
+    },
+    {
+      "rank": 40,
+      "lastRank": 38,
+      "entry": 6290638,
+      "team": "OCG",
+      "manager": "Norbeth Jnr",
+      "gw": 28,
+      "total": 480
+    },
+    {
+      "rank": 40,
+      "lastRank": 44,
+      "entry": 20992,
+      "team": "The Boogeyman",
+      "manager": "Luto Sibotoboto",
+      "gw": 54,
+      "total": 480
+    },
+    {
+      "rank": 42,
+      "lastRank": 40,
+      "entry": 6517490,
+      "team": "mbuzi fc",
+      "manager": "Thando Mpfumadi",
+      "gw": 21,
+      "total": 467
+    },
+    {
+      "rank": 43,
+      "lastRank": 43,
+      "entry": 3140607,
+      "team": "Shuga and Spice",
+      "manager": "Tshwanelo Mokoene",
+      "gw": 35,
+      "total": 467
+    },
+    {
+      "rank": 44,
+      "lastRank": 45,
+      "entry": 7840183,
+      "team": "False 9",
+      "manager": "Thato Magagane",
+      "gw": 39,
+      "total": 464
+    },
+    {
+      "rank": 45,
+      "lastRank": 46,
+      "entry": 3981932,
+      "team": "Stark28 FC",
+      "manager": "Anthony Mashigo",
+      "gw": 46,
+      "total": 464
+    },
+    {
+      "rank": 46,
+      "lastRank": 41,
+      "entry": 4212838,
+      "team": "Derbyshire City",
+      "manager": "Rito Baloyi",
+      "gw": 20,
+      "total": 458
     },
     {
       "rank": 47,
-      "lastRank": 47,
-      "entry": 9318347,
-      "team": "Ntlakuso's Team",
-      "manager": "Ntlakuso Divine",
-      "gw": 61,
-      "total": 96
+      "lastRank": 46,
+      "entry": 3202326,
+      "team": "Shashalaza FC",
+      "manager": "Osego Khomo",
+      "gw": 33,
+      "total": 451
     },
     {
       "rank": 48,
       "lastRank": 48,
-      "entry": 9084675,
-      "team": "bhilaz",
-      "manager": "Kardishah Mabhena",
-      "gw": 61,
-      "total": 85
+      "entry": 784667,
+      "team": "Maninji FC",
+      "manager": "Idriss Maninji",
+      "gw": 50,
+      "total": 428
     },
     {
       "rank": 49,
       "lastRank": 49,
-      "entry": 5330579,
-      "team": "PERTN FC",
-      "manager": "Uncle Peter",
-      "gw": 53,
-      "total": 12
+      "entry": 9084675,
+      "team": "bhilaz",
+      "manager": "Kardishah Mabhena",
+      "gw": 34,
+      "total": 379
+    },
+    {
+      "rank": 50,
+      "lastRank": 51,
+      "entry": 9318347,
+      "team": "Ntlakuso's Team",
+      "manager": "Ntlakuso Divine",
+      "gw": 49,
+      "total": 371
     }
   ],
   "history": {
@@ -465,6 +474,48 @@
         "event": 3,
         "points": 28,
         "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 50,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 44,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 55,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 46,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 40,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 53,
+        "bench": 10,
         "hit": 0,
         "transfers": 0
       }
@@ -490,6 +541,48 @@
         "bench": 14,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 81,
+        "bench": 17,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 5,
+        "points": 72,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 59,
+        "bench": 27,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 62,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 46,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 45,
+        "bench": 31,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "525933": [
@@ -513,6 +606,113 @@
         "bench": 7,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 74,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 52,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 66,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 67,
+        "bench": 1,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 30,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 59,
+        "bench": 5,
+        "hit": 4,
+        "transfers": 3
+      }
+    ],
+    "784667": [
+      {
+        "event": 1,
+        "points": 23,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 2,
+        "points": 43,
+        "bench": 20,
+        "hit": 12,
+        "transfers": 4
+      },
+      {
+        "event": 3,
+        "points": 51,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 75,
+        "bench": 14,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 53,
+        "bench": 10,
+        "hit": 12,
+        "transfers": 4
+      },
+      {
+        "event": 6,
+        "points": 78,
+        "bench": 13,
+        "hit": 20,
+        "transfers": 6
+      },
+      {
+        "event": 7,
+        "points": 74,
+        "bench": 16,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 53,
+        "bench": 13,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 49,
+        "bench": 20,
+        "hit": 16,
+        "transfers": 5
       }
     ],
     "857006": [
@@ -536,6 +736,48 @@
         "bench": 9,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 87,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 58,
+        "bench": 18,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 6,
+        "points": 75,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 58,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 36,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 64,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "1192840": [
@@ -557,6 +799,48 @@
         "event": 3,
         "points": 49,
         "bench": 18,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 85,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 47,
+        "bench": 18,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 70,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 70,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 45,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 46,
+        "bench": 30,
         "hit": 0,
         "transfers": 1
       }
@@ -582,6 +866,48 @@
         "bench": 6,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 71,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 50,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 6,
+        "points": 68,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 83,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 44,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 59,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "1439254": [
@@ -603,6 +929,48 @@
         "event": 3,
         "points": 59,
         "bench": 0,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 95,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 50,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 95,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 65,
+        "bench": 19,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 54,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 58,
+        "bench": 21,
         "hit": 0,
         "transfers": 2
       }
@@ -628,6 +996,48 @@
         "bench": 11,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 68,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 52,
+        "bench": 16,
+        "hit": 4,
+        "transfers": 3
+      },
+      {
+        "event": 6,
+        "points": 86,
+        "bench": 11,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 76,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 47,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 54,
+        "bench": 24,
+        "hit": 0,
+        "transfers": 2
       }
     ],
     "1621185": [
@@ -649,6 +1059,48 @@
         "event": 3,
         "points": 57,
         "bench": 19,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 80,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 63,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 6,
+        "points": 66,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 61,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 44,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 19,
+        "bench": 21,
         "hit": 0,
         "transfers": 0
       }
@@ -674,6 +1126,48 @@
         "bench": 8,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 78,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 47,
+        "bench": 22,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 65,
+        "bench": 20,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 65,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 39,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 39,
+        "bench": 30,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "2067305": [
@@ -695,6 +1189,48 @@
         "event": 3,
         "points": 46,
         "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 107,
+        "bench": 21,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 60,
+        "bench": 20,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 84,
+        "bench": 21,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 61,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 44,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 4
+      },
+      {
+        "event": 9,
+        "points": 34,
+        "bench": 8,
         "hit": 0,
         "transfers": 0
       }
@@ -720,6 +1256,48 @@
         "bench": 17,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 71,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 36,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 82,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 58,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 33,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 45,
+        "bench": 12,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "2620114": [
@@ -741,6 +1319,48 @@
         "event": 3,
         "points": 43,
         "bench": 28,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 62,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 43,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 75,
+        "bench": 4,
+        "hit": 4,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 55,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 49,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 57,
+        "bench": 7,
         "hit": 0,
         "transfers": 1
       }
@@ -766,6 +1386,48 @@
         "bench": 6,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 95,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 51,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 68,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 64,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 58,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 38,
+        "bench": 16,
+        "hit": 0,
+        "transfers": 3
       }
     ],
     "3140607": [
@@ -787,6 +1449,48 @@
         "event": 3,
         "points": 46,
         "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 56,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 40,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 63,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 55,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 25,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 33,
+        "bench": 17,
         "hit": 0,
         "transfers": 0
       }
@@ -812,6 +1516,48 @@
         "bench": 13,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 63,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 34,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 44,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 40,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 33,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "3981932": [
@@ -835,6 +1581,48 @@
         "bench": 5,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 37,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 42,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 45,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 75,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 38,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 45,
+        "bench": 18,
+        "hit": 0,
+        "transfers": 3
       }
     ],
     "4031988": [
@@ -858,6 +1646,48 @@
         "bench": 16,
         "hit": 8,
         "transfers": 3
+      },
+      {
+        "event": 4,
+        "points": 88,
+        "bench": 22,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 61,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 63,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 43,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 27,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 56,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "4212838": [
@@ -878,6 +1708,48 @@
       {
         "event": 3,
         "points": 59,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 61,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 5,
+        "points": 39,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 52,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 60,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 22,
         "bench": 3,
         "hit": 0,
         "transfers": 0
@@ -904,6 +1776,113 @@
         "bench": 12,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 100,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 44,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 6,
+        "points": 66,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 84,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 8,
+        "points": 39,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 60,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 1
+      }
+    ],
+    "4515134": [
+      {
+        "event": 1,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 2,
+        "points": 85,
+        "bench": 10,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 3,
+        "points": 36,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 72,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 43,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 68,
+        "bench": 16,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 87,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 44,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 48,
+        "bench": 28,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "4966278": [
@@ -927,6 +1906,48 @@
         "bench": 11,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 74,
+        "bench": 27,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 5,
+        "points": 47,
+        "bench": 19,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 79,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 67,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 49,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 45,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 2
       }
     ],
     "5013265": [
@@ -950,6 +1971,48 @@
         "bench": 23,
         "hit": 4,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 60,
+        "bench": 19,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 74,
+        "bench": 25,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 49,
+        "bench": 18,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 48,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 42,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 45,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "5022390": [
@@ -971,6 +2034,48 @@
         "event": 3,
         "points": 70,
         "bench": 10,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 99,
+        "bench": 19,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 41,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 81,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 63,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 46,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 38,
+        "bench": 11,
         "hit": 0,
         "transfers": 0
       }
@@ -996,6 +2101,48 @@
         "bench": 15,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 73,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 50,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 72,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 56,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 34,
+        "bench": 3,
+        "hit": 8,
+        "transfers": 3
+      },
+      {
+        "event": 9,
+        "points": 33,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "5285905": [
@@ -1019,29 +2166,48 @@
         "bench": 13,
         "hit": 0,
         "transfers": 1
-      }
-    ],
-    "5330579": [
+      },
       {
-        "event": 1,
-        "points": 60,
-        "bench": 0,
+        "event": 4,
+        "points": 97,
+        "bench": 16,
         "hit": 0,
         "transfers": 0
       },
       {
-        "event": 2,
-        "points": 47,
-        "bench": 17,
-        "hit": 76,
-        "transfers": 20
+        "event": 5,
+        "points": 55,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 0
       },
       {
-        "event": 3,
-        "points": 53,
-        "bench": 9,
-        "hit": 72,
-        "transfers": 19
+        "event": 6,
+        "points": 79,
+        "bench": 22,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 64,
+        "bench": 16,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 50,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 67,
+        "bench": 30,
+        "hit": 0,
+        "transfers": 4
       }
     ],
     "5691503": [
@@ -1065,6 +2231,48 @@
         "bench": 12,
         "hit": 4,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 71,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 54,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 57,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 7,
+        "points": 52,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 56,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 9,
+        "points": 35,
+        "bench": 20,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "5758628": [
@@ -1088,6 +2296,48 @@
         "bench": 9,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 57,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 31,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 61,
+        "bench": 10,
+        "hit": 8,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 79,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 61,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 47,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "5926860": [
@@ -1109,6 +2359,48 @@
         "event": 3,
         "points": 52,
         "bench": 2,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 66,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 37,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 47,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 68,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 50,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 41,
+        "bench": 9,
         "hit": 0,
         "transfers": 0
       }
@@ -1134,6 +2426,48 @@
         "bench": 0,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 78,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 32,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 70,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 63,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 41,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 51,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 3
       }
     ],
     "6270966": [
@@ -1157,6 +2491,48 @@
         "bench": 0,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 83,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 29,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 71,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 47,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 30,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 66,
+        "bench": 1,
+        "hit": 4,
+        "transfers": 3
       }
     ],
     "6290638": [
@@ -1178,6 +2554,48 @@
         "event": 3,
         "points": 46,
         "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 59,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 44,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 49,
+        "bench": 0,
+        "hit": 4,
+        "transfers": 5
+      },
+      {
+        "event": 7,
+        "points": 68,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 27,
+        "bench": 4,
         "hit": 0,
         "transfers": 0
       }
@@ -1203,6 +2621,48 @@
         "bench": 6,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 63,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 5,
+        "points": 75,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 60,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 53,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 37,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 43,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 3
       }
     ],
     "6517490": [
@@ -1226,6 +2686,48 @@
         "bench": 5,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 53,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 52,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 41,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 66,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 45,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 19,
+        "bench": 17,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "6574790": [
@@ -1247,6 +2749,48 @@
         "event": 3,
         "points": 55,
         "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 76,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 39,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 62,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 74,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 63,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 51,
+        "bench": 3,
         "hit": 0,
         "transfers": 0
       }
@@ -1272,6 +2816,48 @@
         "bench": 9,
         "hit": 0,
         "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 58,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 69,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 58,
+        "bench": 21,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 63,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 37,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 41,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 2
       }
     ],
     "6847405": [
@@ -1295,6 +2881,48 @@
         "bench": 3,
         "hit": 16,
         "transfers": 5
+      },
+      {
+        "event": 4,
+        "points": 73,
+        "bench": 2,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 66,
+        "bench": 4,
+        "hit": 8,
+        "transfers": 3
+      },
+      {
+        "event": 6,
+        "points": 71,
+        "bench": 5,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 86,
+        "bench": 4,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 46,
+        "bench": 2,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 60,
+        "bench": 10,
+        "hit": 4,
+        "transfers": 2
       }
     ],
     "6905421": [
@@ -1318,6 +2946,48 @@
         "bench": 18,
         "hit": 0,
         "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 74,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 51,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 61,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 75,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 41,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 9,
+        "points": 66,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "7000934": [
@@ -1339,6 +3009,48 @@
         "event": 3,
         "points": 58,
         "bench": 13,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 81,
+        "bench": 18,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 56,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 63,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 65,
+        "bench": 17,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 54,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 63,
+        "bench": 11,
         "hit": 0,
         "transfers": 1
       }
@@ -1364,6 +3076,48 @@
         "bench": 5,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 75,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 30,
+        "bench": 9,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 6,
+        "points": 50,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 7,
+        "points": 56,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 62,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 55,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "7231936": [
@@ -1387,6 +3141,48 @@
         "bench": 0,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 72,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 51,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 73,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 54,
+        "bench": 11,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 48,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 36,
+        "bench": 10,
+        "hit": 0,
+        "transfers": 2
       }
     ],
     "7584076": [
@@ -1410,6 +3206,48 @@
         "bench": 5,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 68,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 65,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 53,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 7,
+        "points": 47,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 31,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 9,
+        "points": 44,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "7729245": [
@@ -1430,6 +3268,48 @@
       {
         "event": 3,
         "points": 67,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 4,
+        "points": 67,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 5,
+        "points": 73,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 6,
+        "points": 45,
+        "bench": -1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 63,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 52,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 36,
         "bench": 0,
         "hit": 0,
         "transfers": 2
@@ -1456,6 +3336,48 @@
         "bench": 1,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 62,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 17,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 63,
+        "bench": 6,
+        "hit": 0,
+        "transfers": 4
+      },
+      {
+        "event": 7,
+        "points": 64,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 8,
+        "points": 33,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 39,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "7927994": [
@@ -1479,6 +3401,48 @@
         "bench": 2,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 76,
+        "bench": 3,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 42,
+        "bench": 8,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 61,
+        "bench": 5,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 73,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 9,
+        "points": 36,
+        "bench": 4,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "8382938": [
@@ -1499,6 +3463,48 @@
       {
         "event": 3,
         "points": 45,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 1
+      },
+      {
+        "event": 4,
+        "points": 76,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 39,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 76,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 4
+      },
+      {
+        "event": 7,
+        "points": 62,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 50,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 67,
         "bench": 1,
         "hit": 0,
         "transfers": 1
@@ -1525,6 +3531,48 @@
         "bench": 6,
         "hit": 0,
         "transfers": 0
+      },
+      {
+        "event": 4,
+        "points": 57,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 5,
+        "points": 34,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 3
+      },
+      {
+        "event": 6,
+        "points": 47,
+        "bench": 25,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 79,
+        "bench": 7,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 8,
+        "points": 60,
+        "bench": 16,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 53,
+        "bench": 14,
+        "hit": 0,
+        "transfers": 1
       }
     ],
     "9084675": [
@@ -1541,6 +3589,48 @@
         "bench": 0,
         "hit": 20,
         "transfers": 6
+      },
+      {
+        "event": 4,
+        "points": 63,
+        "bench": 0,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 5,
+        "points": 48,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 53,
+        "bench": 0,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 7,
+        "points": 60,
+        "bench": 1,
+        "hit": 0,
+        "transfers": 2
+      },
+      {
+        "event": 8,
+        "points": 44,
+        "bench": 0,
+        "hit": 4,
+        "transfers": 2
+      },
+      {
+        "event": 9,
+        "points": 35,
+        "bench": 2,
+        "hit": 0,
+        "transfers": 0
       }
     ],
     "9318347": [
@@ -1557,31 +3647,73 @@
         "bench": 10,
         "hit": 28,
         "transfers": 8
+      },
+      {
+        "event": 4,
+        "points": 72,
+        "bench": 12,
+        "hit": 20,
+        "transfers": 6
+      },
+      {
+        "event": 5,
+        "points": 72,
+        "bench": 13,
+        "hit": 0,
+        "transfers": 0
+      },
+      {
+        "event": 6,
+        "points": 62,
+        "bench": 0,
+        "hit": 16,
+        "transfers": 5
+      },
+      {
+        "event": 7,
+        "points": 61,
+        "bench": 7,
+        "hit": 20,
+        "transfers": 6
+      },
+      {
+        "event": 8,
+        "points": 51,
+        "bench": 14,
+        "hit": 36,
+        "transfers": 10
+      },
+      {
+        "event": 9,
+        "points": 48,
+        "bench": 15,
+        "hit": 0,
+        "transfers": 0
       }
     ]
   },
   "nextEvent": {
-    "id": 4,
-    "deadline": "2026-09-12T12:30:00Z",
-    "name": "Gameweek 4"
+    "id": 10,
+    "deadline": "2026-11-06T18:30:00Z",
+    "name": "Gameweek 10"
   },
   "teamOfTheWeek": {
     "nextEvent": {
-      "id": 4,
-      "deadline": "2026-09-12T12:30:00Z",
-      "name": "Gameweek 4"
+      "id": 10,
+      "deadline": "2026-11-06T18:30:00Z",
+      "name": "Gameweek 10"
     },
-    "gw": 3,
-    "team": "Sagie's Team",
-    "manager": "Sagie Chetty",
-    "points": 72,
-    "bench": 23,
-    "hit": 4,
+    "gw": 9,
+    "team": "Pap & Saka-laka",
+    "manager": "Lesedi Kutumela",
+    "points": 67,
+    "bench": 30,
+    "hit": 0,
     "chip": null,
     "players": [
       {
-        "name": "Tzolakis",
-        "club": "HUL",
+        "name": "Kinsky",
+        "club": "TOT",
         "position": "GKP",
         "points": 6,
         "raw": 6,
@@ -1592,11 +3724,11 @@
         "order": 1
       },
       {
-        "name": "Gabriel",
-        "club": "ARS",
+        "name": "Hill",
+        "club": "BOU",
         "position": "DEF",
-        "points": 2,
-        "raw": 2,
+        "points": 6,
+        "raw": 6,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -1604,11 +3736,11 @@
         "order": 2
       },
       {
-        "name": "Guéhi",
-        "club": "MCI",
+        "name": "Konsa",
+        "club": "ARS",
         "position": "DEF",
-        "points": 8,
-        "raw": 8,
+        "points": 10,
+        "raw": 10,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -1616,8 +3748,8 @@
         "order": 3
       },
       {
-        "name": "Tarkowski",
-        "club": "EVE",
+        "name": "Muharemović",
+        "club": "LEE",
         "position": "DEF",
         "points": 3,
         "raw": 3,
@@ -1628,32 +3760,8 @@
         "order": 4
       },
       {
-        "name": "Gakpo",
-        "club": "LIV",
-        "position": "MID",
-        "points": 11,
-        "raw": 11,
-        "multiplier": 1,
-        "captain": false,
-        "viceCaptain": false,
-        "bench": false,
-        "order": 5
-      },
-      {
-        "name": "Semenyo",
-        "club": "MCI",
-        "position": "MID",
-        "points": 12,
-        "raw": 6,
-        "multiplier": 2,
-        "captain": true,
-        "viceCaptain": false,
-        "bench": false,
-        "order": 6
-      },
-      {
-        "name": "Mbeumo",
-        "club": "MUN",
+        "name": "Palmer",
+        "club": "CHE",
         "position": "MID",
         "points": 8,
         "raw": 8,
@@ -1661,38 +3769,62 @@
         "captain": false,
         "viceCaptain": false,
         "bench": false,
-        "order": 7
+        "order": 5
       },
       {
         "name": "Rogers",
         "club": "CHE",
         "position": "MID",
-        "points": 6,
-        "raw": 6,
-        "multiplier": 1,
-        "captain": false,
-        "viceCaptain": true,
-        "bench": false,
-        "order": 8
-      },
-      {
-        "name": "Wissa",
-        "club": "NEW",
-        "position": "FWD",
-        "points": 1,
-        "raw": 1,
+        "points": 9,
+        "raw": 9,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
         "bench": false,
+        "order": 6
+      },
+      {
+        "name": "Tavernier",
+        "club": "BOU",
+        "position": "MID",
+        "points": 3,
+        "raw": 3,
+        "multiplier": 1,
+        "captain": false,
+        "viceCaptain": false,
+        "bench": false,
+        "order": 7
+      },
+      {
+        "name": "Manzambi",
+        "club": "AVL",
+        "position": "MID",
+        "points": 7,
+        "raw": 7,
+        "multiplier": 1,
+        "captain": false,
+        "viceCaptain": false,
+        "bench": false,
+        "order": 8
+      },
+      {
+        "name": "Evanilson",
+        "club": "BOU",
+        "position": "FWD",
+        "points": 9,
+        "raw": 9,
+        "multiplier": 1,
+        "captain": false,
+        "viceCaptain": true,
+        "bench": false,
         "order": 9
       },
       {
-        "name": "Isak",
-        "club": "LIV",
+        "name": "Calvert-Lewin",
+        "club": "LEE",
         "position": "FWD",
-        "points": 13,
-        "raw": 13,
+        "points": 2,
+        "raw": 2,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -1700,13 +3832,13 @@
         "order": 10
       },
       {
-        "name": "Thiago",
-        "club": "BRE",
+        "name": "Haaland",
+        "club": "MCI",
         "position": "FWD",
-        "points": 2,
+        "points": 4,
         "raw": 2,
-        "multiplier": 1,
-        "captain": false,
+        "multiplier": 2,
+        "captain": true,
         "viceCaptain": false,
         "bench": false,
         "order": 11
@@ -1715,8 +3847,8 @@
         "name": "Verbruggen",
         "club": "BHA",
         "position": "GKP",
-        "points": 3,
-        "raw": 3,
+        "points": 11,
+        "raw": 11,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
@@ -1727,8 +3859,8 @@
         "name": "De Cuyper",
         "club": "BHA",
         "position": "DEF",
-        "points": 4,
-        "raw": 4,
+        "points": 9,
+        "raw": 9,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
@@ -1736,11 +3868,11 @@
         "order": 13
       },
       {
-        "name": "George",
-        "club": "EVE",
+        "name": "Groß",
+        "club": "BHA",
         "position": "MID",
-        "points": 10,
-        "raw": 10,
+        "points": 2,
+        "raw": 2,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
@@ -1748,8 +3880,8 @@
         "order": 14
       },
       {
-        "name": "Virgil",
-        "club": "LIV",
+        "name": "Calafiori",
+        "club": "ARS",
         "position": "DEF",
         "points": 6,
         "raw": 6,
