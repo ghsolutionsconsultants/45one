@@ -11,7 +11,7 @@ const budgets = [
   "Not sure yet",
 ];
 
-const interests = [
+const defaultInterests = [
   "Episode sponsorship",
   "Branded segment",
   "Social campaign (IG / TikTok)",
@@ -24,7 +24,17 @@ const interests = [
 const field =
   "w-full rounded-xl border border-line bg-ink px-4 py-3.5 text-base text-bone outline-none transition placeholder:text-mute focus:border-volt sm:text-sm";
 
-export default function InquiryForm() {
+/**
+ * The shared enquiry form. Pages pass their own `interests` list and a
+ * `source` so the mail that lands in the inbox says where it came from.
+ */
+export default function InquiryForm({
+  interests = defaultInterests,
+  source,
+}: {
+  interests?: readonly string[];
+  source?: string;
+} = {}) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
@@ -115,6 +125,8 @@ export default function InquiryForm() {
         placeholder="Tell us about the campaign, timing and what success looks like."
         className={`${field} sm:col-span-2`}
       />
+
+      {source && <input type="hidden" name="source" value={source} />}
 
       {/* honeypot */}
       <input

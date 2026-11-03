@@ -158,7 +158,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <InquiryForm />
+            <InquiryForm source="Contact page" />
           </div>
         </div>
       </section>
