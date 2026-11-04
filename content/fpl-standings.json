@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-03T22:50:09.380Z",
+  "updatedAt": "2026-11-04T04:40:13.056Z",
   "standings": [
     {
       "rank": 1,
@@ -329,20 +329,20 @@
     },
     {
       "rank": 37,
-      "lastRank": 34,
-      "entry": 5042302,
-      "team": "WHYESEL",
-      "manager": "Sphiwe Lekhuleni",
-      "gw": 38,
-      "total": 501
-    },
-    {
-      "rank": 37,
       "lastRank": 35,
       "entry": 5691503,
       "team": "Wa lala wa Saka",
       "manager": "Tshepang Ramatsoma",
       "gw": 39,
+      "total": 501
+    },
+    {
+      "rank": 37,
+      "lastRank": 34,
+      "entry": 5042302,
+      "team": "WHYESEL",
+      "manager": "Sphiwe Lekhuleni",
+      "gw": 38,
       "total": 501
     },
     {
