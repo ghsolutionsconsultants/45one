@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-06T04:54:31.561Z",
+  "updatedAt": "2026-11-06T13:40:41.560Z",
   "standings": [
     {
       "rank": 1,
@@ -77,20 +77,20 @@
     },
     {
       "rank": 9,
-      "lastRank": 11,
-      "entry": 6574790,
-      "team": "FC Russclat",
-      "manager": "Russel M",
-      "gw": 53,
-      "total": 584
-    },
-    {
-      "rank": 9,
       "lastRank": 15,
       "entry": 6905421,
       "team": "Litchi FC",
       "manager": "Lee Purdon",
       "gw": 72,
+      "total": 584
+    },
+    {
+      "rank": 9,
+      "lastRank": 11,
+      "entry": 6574790,
+      "team": "FC Russclat",
+      "manager": "Russel M",
+      "gw": 53,
       "total": 584
     },
     {
