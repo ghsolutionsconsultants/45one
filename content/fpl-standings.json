@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-07T12:22:11.833Z",
+  "updatedAt": "2026-11-07T21:23:19.322Z",
   "standings": [
     {
       "rank": 1,
@@ -9,197 +9,197 @@
       "entry": 5285905,
       "team": "Pap & Saka-laka",
       "manager": "Lesedi Kutumela",
-      "gw": 0,
-      "total": 651
+      "gw": 16,
+      "total": 667
     },
     {
       "rank": 2,
-      "lastRank": 2,
-      "entry": 2067305,
-      "team": "Can't Get Any Wirtz",
-      "manager": "glynn mckiernan",
-      "gw": 0,
-      "total": 611
-    },
-    {
-      "rank": 3,
       "lastRank": 3,
       "entry": 1439254,
       "team": "Classic XI",
       "manager": "Ndaba Ncube",
-      "gw": 0,
-      "total": 610
+      "gw": 26,
+      "total": 636
+    },
+    {
+      "rank": 3,
+      "lastRank": 2,
+      "entry": 2067305,
+      "team": "Can't Get Any Wirtz",
+      "manager": "glynn mckiernan",
+      "gw": 23,
+      "total": 634
     },
     {
       "rank": 4,
-      "lastRank": 4,
-      "entry": 857006,
-      "team": "DMK Denizens F.C",
-      "manager": "Rick Leitch",
-      "gw": 0,
-      "total": 604
-    },
-    {
-      "rank": 5,
-      "lastRank": 8,
-      "entry": 1192840,
-      "team": "Uzonga fc",
-      "manager": "Al~ameen X",
-      "gw": 16,
-      "total": 603
-    },
-    {
-      "rank": 6,
-      "lastRank": 5,
-      "entry": 4478709,
-      "team": "TheRealGOAT FC �",
-      "manager": "Mbongeni Golide",
-      "gw": 0,
-      "total": 600
-    },
-    {
-      "rank": 7,
       "lastRank": 6,
       "entry": 8382938,
       "team": "Change Name",
       "manager": "Saleboga Ledwaba",
-      "gw": 0,
-      "total": 598
+      "gw": 30,
+      "total": 628
+    },
+    {
+      "rank": 5,
+      "lastRank": 5,
+      "entry": 4478709,
+      "team": "TheRealGOAT FC �",
+      "manager": "Mbongeni Golide",
+      "gw": 23,
+      "total": 623
+    },
+    {
+      "rank": 6,
+      "lastRank": 4,
+      "entry": 857006,
+      "team": "DMK Denizens F.C",
+      "manager": "Rick Leitch",
+      "gw": 18,
+      "total": 622
+    },
+    {
+      "rank": 7,
+      "lastRank": 8,
+      "entry": 1192840,
+      "team": "Uzonga fc",
+      "manager": "Al~ameen X",
+      "gw": 32,
+      "total": 619
     },
     {
       "rank": 8,
-      "lastRank": 7,
-      "entry": 7000934,
-      "team": "Bruno Penandes",
-      "manager": "Chris Thomas",
-      "gw": 0,
-      "total": 588
-    },
-    {
-      "rank": 9,
-      "lastRank": 9,
-      "entry": 6905421,
-      "team": "Litchi FC",
-      "manager": "Lee Purdon",
-      "gw": 2,
-      "total": 586
-    },
-    {
-      "rank": 10,
-      "lastRank": 11,
-      "entry": 30406,
-      "team": "Cherki Blinders",
-      "manager": "Itumeleng Lekgeu",
-      "gw": 2,
-      "total": 585
-    },
-    {
-      "rank": 11,
-      "lastRank": 9,
-      "entry": 6574790,
-      "team": "FC Russclat",
-      "manager": "Russel M",
-      "gw": 0,
-      "total": 584
-    },
-    {
-      "rank": 12,
-      "lastRank": 12,
-      "entry": 1514740,
-      "team": "EndoTheWorld",
-      "manager": "Koketso Kekana",
-      "gw": 0,
-      "total": 581
-    },
-    {
-      "rank": 13,
-      "lastRank": 13,
-      "entry": 2764509,
-      "team": "Chazunguza FC",
-      "manager": "Wadzanai Musa",
-      "gw": 0,
-      "total": 580
-    },
-    {
-      "rank": 14,
-      "lastRank": 14,
-      "entry": 5022390,
-      "team": "Alisson Wonderland",
-      "manager": "rachel mckiernan",
-      "gw": 0,
-      "total": 578
-    },
-    {
-      "rank": 15,
       "lastRank": 15,
       "entry": 1665483,
       "team": "MK07",
       "manager": "Mitchlin Kingsley",
-      "gw": 0,
-      "total": 575
+      "gw": 41,
+      "total": 616
     },
     {
-      "rank": 16,
-      "lastRank": 16,
-      "entry": 525933,
-      "team": "SPLURGE FC",
-      "manager": "Millio César",
+      "rank": 9,
+      "lastRank": 9,
+      "entry": 6574790,
+      "team": "FC Russclat",
+      "manager": "Russel M",
+      "gw": 31,
+      "total": 615
+    },
+    {
+      "rank": 10,
+      "lastRank": 7,
+      "entry": 7000934,
+      "team": "Bruno Penandes",
+      "manager": "Chris Thomas",
+      "gw": 24,
+      "total": 612
+    },
+    {
+      "rank": 11,
+      "lastRank": 11,
+      "entry": 30406,
+      "team": "Cherki Blinders",
+      "manager": "Itumeleng Lekgeu",
+      "gw": 24,
+      "total": 607
+    },
+    {
+      "rank": 12,
+      "lastRank": 13,
+      "entry": 2764509,
+      "team": "Chazunguza FC",
+      "manager": "Wadzanai Musa",
+      "gw": 25,
+      "total": 605
+    },
+    {
+      "rank": 13,
+      "lastRank": 12,
+      "entry": 1514740,
+      "team": "EndoTheWorld",
+      "manager": "Koketso Kekana",
       "gw": 20,
-      "total": 572
+      "total": 601
     },
     {
-      "rank": 17,
-      "lastRank": 25,
-      "entry": 2620114,
-      "team": "Ballon D'or Bhengs",
-      "manager": "Nsika Bhengu",
-      "gw": 16,
-      "total": 556
+      "rank": 14,
+      "lastRank": 9,
+      "entry": 6905421,
+      "team": "Litchi FC",
+      "manager": "Lee Purdon",
+      "gw": 12,
+      "total": 596
     },
     {
-      "rank": 18,
+      "rank": 15,
       "lastRank": 22,
       "entry": 1621185,
       "team": "Smurk FC",
       "manager": "Lethabo Smurk",
-      "gw": 11,
-      "total": 555
+      "gw": 44,
+      "total": 588
     },
     {
-      "rank": 19,
-      "lastRank": 17,
-      "entry": 1229404,
-      "team": "The Special One",
-      "manager": "Kopano Lekgeu",
-      "gw": 0,
-      "total": 555
+      "rank": 16,
+      "lastRank": 14,
+      "entry": 5022390,
+      "team": "Alisson Wonderland",
+      "manager": "rachel mckiernan",
+      "gw": 8,
+      "total": 586
     },
     {
-      "rank": 20,
-      "lastRank": 18,
-      "entry": 8519235,
-      "team": "IMBATTABLES FC",
-      "manager": "Aphiwe Mange",
-      "gw": 0,
-      "total": 554
-    },
-    {
-      "rank": 21,
+      "rank": 17,
       "lastRank": 27,
       "entry": 7729245,
       "team": "Boas club de'futbol",
       "manager": "Tshiamo Masenya",
-      "gw": 16,
-      "total": 554
+      "gw": 48,
+      "total": 586
     },
     {
-      "rank": 22,
+      "rank": 18,
+      "lastRank": 16,
+      "entry": 525933,
+      "team": "SPLURGE FC",
+      "manager": "Millio César",
+      "gw": 34,
+      "total": 586
+    },
+    {
+      "rank": 19,
+      "lastRank": 18,
+      "entry": 8519235,
+      "team": "IMBATTABLES FC",
+      "manager": "Aphiwe Mange",
+      "gw": 27,
+      "total": 581
+    },
+    {
+      "rank": 20,
+      "lastRank": 23,
+      "entry": 6435257,
+      "team": "Cherki Tigers",
+      "manager": "Moleke NKADIMENG",
+      "gw": 36,
+      "total": 579
+    },
+    {
+      "rank": 21,
       "lastRank": 19,
       "entry": 7927994,
       "team": "Koto Amatsukami",
       "manager": "Sello Ledwaba",
-      "gw": 0,
-      "total": 553
+      "gw": 25,
+      "total": 578
+    },
+    {
+      "rank": 22,
+      "lastRank": 17,
+      "entry": 1229404,
+      "team": "The Special One",
+      "manager": "Kopano Lekgeu",
+      "gw": 22,
+      "total": 577
     },
     {
       "rank": 23,
@@ -207,107 +207,107 @@
       "entry": 4966278,
       "team": "Shadow FC",
       "manager": "Sadheshan Govender",
-      "gw": 0,
-      "total": 553
+      "gw": 23,
+      "total": 576
     },
     {
       "rank": 24,
-      "lastRank": 29,
-      "entry": 4031988,
-      "team": "DOLOLO FC",
-      "manager": "Gavin Kamberipa",
-      "gw": 14,
-      "total": 546
-    },
-    {
-      "rank": 25,
-      "lastRank": 21,
-      "entry": 6847405,
-      "team": "1 Season Wonders",
-      "manager": "Katlego Ledwaba",
-      "gw": 0,
-      "total": 546
-    },
-    {
-      "rank": 26,
-      "lastRank": 23,
-      "entry": 6435257,
-      "team": "Cherki Tigers",
-      "manager": "Moleke NKADIMENG",
-      "gw": 0,
-      "total": 543
-    },
-    {
-      "rank": 27,
       "lastRank": 24,
       "entry": 7231936,
       "team": "LeroySane",
       "manager": "Leeroy Magudze",
-      "gw": 0,
-      "total": 540
+      "gw": 34,
+      "total": 574
     },
     {
-      "rank": 28,
-      "lastRank": 26,
-      "entry": 5974302,
-      "team": "MATuniTed",
-      "manager": "Mthoe Mlonyeni",
-      "gw": 0,
-      "total": 540
+      "rank": 25,
+      "lastRank": 25,
+      "entry": 2620114,
+      "team": "Ballon D'or Bhengs",
+      "manager": "Nsika Bhengu",
+      "gw": 34,
+      "total": 574
     },
     {
-      "rank": 29,
-      "lastRank": 31,
-      "entry": 6822432,
-      "team": "Sakadelics",
-      "manager": "Themba Zotwane",
-      "gw": 18,
-      "total": 539
-    },
-    {
-      "rank": 30,
-      "lastRank": 28,
-      "entry": 4515134,
-      "team": "K-Man FC",
-      "manager": "Kutloano Tshiafhula",
-      "gw": 2,
-      "total": 535
-    },
-    {
-      "rank": 31,
+      "rank": 26,
       "lastRank": 30,
       "entry": 5758628,
       "team": "rayfc",
       "manager": "Urlly Ray",
-      "gw": 0,
-      "total": 532
+      "gw": 37,
+      "total": 569
     },
     {
-      "rank": 32,
+      "rank": 27,
+      "lastRank": 21,
+      "entry": 6847405,
+      "team": "1 Season Wonders",
+      "manager": "Katlego Ledwaba",
+      "gw": 22,
+      "total": 568
+    },
+    {
+      "rank": 28,
+      "lastRank": 31,
+      "entry": 6822432,
+      "team": "Sakadelics",
+      "manager": "Themba Zotwane",
+      "gw": 43,
+      "total": 564
+    },
+    {
+      "rank": 29,
+      "lastRank": 26,
+      "entry": 5974302,
+      "team": "MATuniTed",
+      "manager": "Mthoe Mlonyeni",
+      "gw": 19,
+      "total": 559
+    },
+    {
+      "rank": 30,
+      "lastRank": 29,
+      "entry": 4031988,
+      "team": "DOLOLO FC",
+      "manager": "Gavin Kamberipa",
+      "gw": 26,
+      "total": 558
+    },
+    {
+      "rank": 31,
       "lastRank": 32,
       "entry": 7584076,
       "team": "Wirtz Case Scenario",
       "manager": "Stanley  Marsberg",
-      "gw": 0,
-      "total": 521
+      "gw": 34,
+      "total": 555
+    },
+    {
+      "rank": 32,
+      "lastRank": 28,
+      "entry": 4515134,
+      "team": "K-Man FC",
+      "manager": "Kutloano Tshiafhula",
+      "gw": 17,
+      "total": 550
     },
     {
       "rank": 33,
+      "lastRank": 35,
+      "entry": 7064748,
+      "team": "Bruno Marsenal",
+      "manager": "Chris Smoothe",
+      "gw": 31,
+      "total": 546
+    },
+    {
+      "rank": 34,
       "lastRank": 33,
       "entry": 5926860,
       "team": "Frezco FC",
       "manager": "Colin Essi",
-      "gw": 0,
-      "total": 519
-    },
-    {
-      "rank": 34,
-      "lastRank": 34,
-      "entry": 2334569,
-      "team": "Impossible",
-      "manager": "Katleho Babedi",
-      "gw": 3,
-      "total": 519
+      "gw": 26,
+      "total": 545
     },
     {
       "rank": 35,
@@ -315,89 +315,89 @@
       "entry": 5013265,
       "team": "Sagie's Team",
       "manager": "Sagie Chetty",
-      "gw": 4,
-      "total": 517
+      "gw": 32,
+      "total": 545
     },
     {
       "rank": 36,
-      "lastRank": 35,
-      "entry": 7064748,
-      "team": "Bruno Marsenal",
-      "manager": "Chris Smoothe",
-      "gw": 0,
-      "total": 515
-    },
-    {
-      "rank": 37,
-      "lastRank": 37,
-      "entry": 5042302,
-      "team": "WHYESEL",
-      "manager": "Sphiwe Lekhuleni",
-      "gw": 9,
-      "total": 510
-    },
-    {
-      "rank": 38,
       "lastRank": 41,
       "entry": 20992,
       "team": "The Boogeyman",
       "manager": "Luto Sibotoboto",
-      "gw": 16,
-      "total": 504
+      "gw": 55,
+      "total": 543
     },
     {
-      "rank": 39,
+      "rank": 37,
       "lastRank": 37,
       "entry": 5691503,
       "team": "Wa lala wa Saka",
       "manager": "Tshepang Ramatsoma",
-      "gw": 0,
-      "total": 501
+      "gw": 39,
+      "total": 540
+    },
+    {
+      "rank": 38,
+      "lastRank": 37,
+      "entry": 5042302,
+      "team": "WHYESEL",
+      "manager": "Sphiwe Lekhuleni",
+      "gw": 29,
+      "total": 530
+    },
+    {
+      "rank": 39,
+      "lastRank": 34,
+      "entry": 2334569,
+      "team": "Impossible",
+      "manager": "Katleho Babedi",
+      "gw": 14,
+      "total": 530
     },
     {
       "rank": 40,
-      "lastRank": 39,
-      "entry": 6270966,
-      "team": "Mtilikwe Giants",
-      "manager": "Solomon Ndhlovu",
-      "gw": 0,
-      "total": 495
-    },
-    {
-      "rank": 41,
-      "lastRank": 40,
-      "entry": 6290638,
-      "team": "OCG",
-      "manager": "Norbeth Jnr",
-      "gw": 2,
-      "total": 491
-    },
-    {
-      "rank": 42,
       "lastRank": 42,
       "entry": 6517490,
       "team": "mbuzi fc",
       "manager": "Thando Mpfumadi",
-      "gw": 3,
-      "total": 483
+      "gw": 28,
+      "total": 508
+    },
+    {
+      "rank": 41,
+      "lastRank": 39,
+      "entry": 6270966,
+      "team": "Mtilikwe Giants",
+      "manager": "Solomon Ndhlovu",
+      "gw": 9,
+      "total": 504
+    },
+    {
+      "rank": 42,
+      "lastRank": 40,
+      "entry": 6290638,
+      "team": "OCG",
+      "manager": "Norbeth Jnr",
+      "gw": 12,
+      "total": 501
     },
     {
       "rank": 43,
-      "lastRank": 43,
-      "entry": 3140607,
-      "team": "Shuga and Spice",
-      "manager": "Tshwanelo Mokoene",
-      "gw": 3,
-      "total": 472
-    },
-    {
-      "rank": 44,
       "lastRank": 44,
       "entry": 7840183,
       "team": "False 9",
       "manager": "Thato Magagane",
-      "gw": 0,
-      "total": 465
+      "gw": 34,
+      "total": 499
+    },
+    {
+      "rank": 44,
+      "lastRank": 46,
+      "entry": 4212838,
+      "team": "Derbyshire City",
+      "manager": "Rito Baloyi",
+      "gw": 34,
+      "total": 496
     },
     {
       "rank": 45,
@@ -405,17 +405,17 @@
       "entry": 3981932,
       "team": "Stark28 FC",
       "manager": "Anthony Mashigo",
-      "gw": 0,
-      "total": 465
+      "gw": 29,
+      "total": 494
     },
     {
       "rank": 46,
-      "lastRank": 46,
-      "entry": 4212838,
-      "team": "Derbyshire City",
-      "manager": "Rito Baloyi",
-      "gw": 0,
-      "total": 462
+      "lastRank": 43,
+      "entry": 3140607,
+      "team": "Shuga and Spice",
+      "manager": "Tshwanelo Mokoene",
+      "gw": 11,
+      "total": 480
     },
     {
       "rank": 47,
@@ -423,8 +423,8 @@
       "entry": 3202326,
       "team": "Shashalaza FC",
       "manager": "Osego Khomo",
-      "gw": 0,
-      "total": 460
+      "gw": 13,
+      "total": 473
     },
     {
       "rank": 48,
@@ -432,8 +432,8 @@
       "entry": 784667,
       "team": "Maninji FC",
       "manager": "Idriss Maninji",
-      "gw": 9,
-      "total": 438
+      "gw": 44,
+      "total": 473
     },
     {
       "rank": 49,
@@ -441,8 +441,8 @@
       "entry": 10686893,
       "team": "327 FC",
       "manager": "Snakhokonke Xulu",
-      "gw": 35,
-      "total": 425
+      "gw": 53,
+      "total": 443
     },
     {
       "rank": 50,
@@ -450,8 +450,8 @@
       "entry": 9084675,
       "team": "bhilaz",
       "manager": "Kardishah Mabhena",
-      "gw": 3,
-      "total": 390
+      "gw": 28,
+      "total": 415
     }
   ],
   "history": {
@@ -521,8 +521,8 @@
       },
       {
         "event": 10,
-        "points": 16,
-        "bench": 0,
+        "points": 55,
+        "bench": 12,
         "hit": 0,
         "transfers": 0
       }
@@ -593,8 +593,8 @@
       },
       {
         "event": 10,
-        "points": 2,
-        "bench": 0,
+        "points": 24,
+        "bench": 13,
         "hit": 0,
         "transfers": 0
       }
@@ -665,8 +665,8 @@
       },
       {
         "event": 10,
-        "points": 20,
-        "bench": 0,
+        "points": 34,
+        "bench": 5,
         "hit": 4,
         "transfers": 2
       }
@@ -737,7 +737,7 @@
       },
       {
         "event": 10,
-        "points": 9,
+        "points": 44,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -809,8 +809,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 18,
+        "bench": 2,
         "hit": 0,
         "transfers": 1
       }
@@ -881,8 +881,8 @@
       },
       {
         "event": 10,
-        "points": 16,
-        "bench": 0,
+        "points": 32,
+        "bench": 9,
         "hit": 0,
         "transfers": 0
       }
@@ -953,8 +953,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 1,
+        "points": 22,
+        "bench": 12,
         "hit": 0,
         "transfers": 1
       }
@@ -1025,8 +1025,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 26,
+        "bench": 8,
         "hit": 0,
         "transfers": 0
       }
@@ -1097,8 +1097,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 20,
+        "bench": 6,
         "hit": 0,
         "transfers": 1
       }
@@ -1169,8 +1169,8 @@
       },
       {
         "event": 10,
-        "points": 11,
-        "bench": 0,
+        "points": 44,
+        "bench": 11,
         "hit": 0,
         "transfers": 0
       }
@@ -1241,7 +1241,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 41,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -1313,8 +1313,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 23,
+        "bench": 6,
         "hit": 0,
         "transfers": 0
       }
@@ -1385,8 +1385,8 @@
       },
       {
         "event": 10,
-        "points": 3,
-        "bench": 2,
+        "points": 14,
+        "bench": 4,
         "hit": 0,
         "transfers": 0
       }
@@ -1457,8 +1457,8 @@
       },
       {
         "event": 10,
-        "points": 16,
-        "bench": 0,
+        "points": 34,
+        "bench": 3,
         "hit": 0,
         "transfers": 0
       }
@@ -1529,8 +1529,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 25,
+        "bench": 18,
         "hit": 0,
         "transfers": 0
       }
@@ -1601,8 +1601,8 @@
       },
       {
         "event": 10,
-        "points": 3,
-        "bench": 0,
+        "points": 11,
+        "bench": 2,
         "hit": 0,
         "transfers": 1
       }
@@ -1673,8 +1673,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 13,
+        "bench": 1,
         "hit": 0,
         "transfers": 0
       }
@@ -1745,8 +1745,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 29,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -1817,8 +1817,8 @@
       },
       {
         "event": 10,
-        "points": 14,
-        "bench": 0,
+        "points": 26,
+        "bench": 6,
         "hit": 0,
         "transfers": 0
       }
@@ -1889,8 +1889,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 2,
+        "points": 34,
+        "bench": 3,
         "hit": 0,
         "transfers": 4
       }
@@ -1961,8 +1961,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 23,
+        "bench": 6,
         "hit": 0,
         "transfers": 0
       }
@@ -2033,8 +2033,8 @@
       },
       {
         "event": 10,
-        "points": 2,
-        "bench": 0,
+        "points": 17,
+        "bench": 13,
         "hit": 0,
         "transfers": 0
       }
@@ -2105,8 +2105,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 23,
+        "bench": 15,
         "hit": 0,
         "transfers": 0
       }
@@ -2177,8 +2177,8 @@
       },
       {
         "event": 10,
-        "points": 4,
-        "bench": 0,
+        "points": 32,
+        "bench": 8,
         "hit": 0,
         "transfers": 0
       }
@@ -2249,8 +2249,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 8,
+        "bench": 4,
         "hit": 0,
         "transfers": 0
       }
@@ -2321,8 +2321,8 @@
       },
       {
         "event": 10,
-        "points": 9,
-        "bench": 0,
+        "points": 29,
+        "bench": 5,
         "hit": 0,
         "transfers": 1
       }
@@ -2393,8 +2393,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 16,
+        "bench": 14,
         "hit": 0,
         "transfers": 1
       }
@@ -2465,8 +2465,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 39,
+        "bench": 4,
         "hit": 0,
         "transfers": 0
       }
@@ -2537,7 +2537,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 37,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -2609,8 +2609,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 26,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -2681,8 +2681,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 19,
+        "bench": 6,
         "hit": 0,
         "transfers": 1
       }
@@ -2753,8 +2753,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 9,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -2825,7 +2825,7 @@
       },
       {
         "event": 10,
-        "points": 2,
+        "points": 12,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -2897,8 +2897,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 8,
+        "points": 36,
+        "bench": 11,
         "hit": 0,
         "transfers": 0
       }
@@ -2969,8 +2969,8 @@
       },
       {
         "event": 10,
-        "points": 3,
-        "bench": 0,
+        "points": 28,
+        "bench": 11,
         "hit": 0,
         "transfers": 0
       }
@@ -3041,8 +3041,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 31,
+        "bench": 8,
         "hit": 0,
         "transfers": 1
       }
@@ -3113,8 +3113,8 @@
       },
       {
         "event": 10,
-        "points": 18,
-        "bench": 0,
+        "points": 43,
+        "bench": 7,
         "hit": 0,
         "transfers": 1
       }
@@ -3185,8 +3185,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 22,
+        "bench": 9,
         "hit": 4,
         "transfers": 2
       }
@@ -3257,8 +3257,8 @@
       },
       {
         "event": 10,
-        "points": 2,
-        "bench": 0,
+        "points": 12,
+        "bench": 2,
         "hit": 0,
         "transfers": 1
       }
@@ -3329,8 +3329,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 24,
+        "bench": 6,
         "hit": 0,
         "transfers": 0
       }
@@ -3401,8 +3401,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 31,
+        "bench": 8,
         "hit": 0,
         "transfers": 0
       }
@@ -3473,8 +3473,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 1,
+        "points": 34,
+        "bench": 2,
         "hit": 0,
         "transfers": 2
       }
@@ -3545,8 +3545,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 1,
+        "points": 34,
+        "bench": 7,
         "hit": 0,
         "transfers": 0
       }
@@ -3617,8 +3617,8 @@
       },
       {
         "event": 10,
-        "points": 16,
-        "bench": 1,
+        "points": 48,
+        "bench": 4,
         "hit": 0,
         "transfers": 1
       }
@@ -3689,7 +3689,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 34,
         "bench": 1,
         "hit": 0,
         "transfers": 0
@@ -3761,7 +3761,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 25,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -3833,8 +3833,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 30,
+        "bench": 1,
         "hit": 0,
         "transfers": 0
       }
@@ -3905,8 +3905,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 1,
+        "points": 27,
+        "bench": 7,
         "hit": 0,
         "transfers": 1
       }
@@ -3970,8 +3970,8 @@
       },
       {
         "event": 10,
-        "points": 3,
-        "bench": 0,
+        "points": 28,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -4021,8 +4021,8 @@
       },
       {
         "event": 10,
-        "points": 35,
-        "bench": 0,
+        "points": 53,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -4040,22 +4040,22 @@
       "name": "Gameweek 11"
     },
     "gw": 10,
-    "team": "327 FC",
-    "manager": "Snakhokonke Xulu",
-    "points": 35,
-    "bench": 0,
+    "team": "The Boogeyman",
+    "manager": "Luto Sibotoboto",
+    "points": 55,
+    "bench": 12,
     "hit": 0,
-    "chip": null,
+    "chip": "3xc",
     "players": [
       {
         "name": "Raya",
         "club": "ARS",
         "position": "GKP",
-        "points": 0,
-        "raw": 0,
+        "points": 6,
+        "raw": 6,
         "multiplier": 1,
         "captain": false,
-        "viceCaptain": true,
+        "viceCaptain": false,
         "bench": false,
         "order": 1
       },
@@ -4063,20 +4063,20 @@
         "name": "Gabriel",
         "club": "ARS",
         "position": "DEF",
-        "points": 0,
-        "raw": 0,
-        "multiplier": 1,
-        "captain": false,
+        "points": 24,
+        "raw": 8,
+        "multiplier": 3,
+        "captain": true,
         "viceCaptain": false,
         "bench": false,
         "order": 2
       },
       {
-        "name": "Branthwaite",
-        "club": "EVE",
+        "name": "Silva",
+        "club": "BOU",
         "position": "DEF",
-        "points": 3,
-        "raw": 3,
+        "points": 0,
+        "raw": 0,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -4084,11 +4084,11 @@
         "order": 3
       },
       {
-        "name": "Davis",
-        "club": "IPS",
+        "name": "Van Hecke",
+        "club": "TOT",
         "position": "DEF",
-        "points": 0,
-        "raw": 0,
+        "points": 4,
+        "raw": 4,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -4108,11 +4108,11 @@
         "order": 5
       },
       {
-        "name": "Palmer",
-        "club": "CHE",
+        "name": "Gibbs-White",
+        "club": "NFO",
         "position": "MID",
-        "points": 0,
-        "raw": 0,
+        "points": 5,
+        "raw": 5,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
@@ -4120,8 +4120,8 @@
         "order": 6
       },
       {
-        "name": "Gomez",
-        "club": "BHA",
+        "name": "B.Fernandes",
+        "club": "MUN",
         "position": "MID",
         "points": 0,
         "raw": 0,
@@ -4132,8 +4132,8 @@
         "order": 7
       },
       {
-        "name": "Barnes",
-        "club": "NEW",
+        "name": "Mbeumo",
+        "club": "MUN",
         "position": "MID",
         "points": 0,
         "raw": 0,
@@ -4151,25 +4151,13 @@
         "raw": 0,
         "multiplier": 1,
         "captain": false,
-        "viceCaptain": false,
+        "viceCaptain": true,
         "bench": false,
         "order": 9
       },
       {
-        "name": "Barry",
-        "club": "EVE",
-        "position": "FWD",
-        "points": 32,
-        "raw": 16,
-        "multiplier": 2,
-        "captain": true,
-        "viceCaptain": false,
-        "bench": false,
-        "order": 10
-      },
-      {
-        "name": "Haaland",
-        "club": "MCI",
+        "name": "Isak",
+        "club": "LIV",
         "position": "FWD",
         "points": 0,
         "raw": 0,
@@ -4177,14 +4165,26 @@
         "captain": false,
         "viceCaptain": false,
         "bench": false,
+        "order": 10
+      },
+      {
+        "name": "Barry",
+        "club": "EVE",
+        "position": "FWD",
+        "points": 16,
+        "raw": 16,
+        "multiplier": 1,
+        "captain": false,
+        "viceCaptain": false,
+        "bench": false,
         "order": 11
       },
       {
-        "name": "Lammens",
-        "club": "MUN",
+        "name": "Trafford",
+        "club": "LEE",
         "position": "GKP",
-        "points": 0,
-        "raw": 0,
+        "points": 10,
+        "raw": 10,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
@@ -4192,9 +4192,9 @@
         "order": 12
       },
       {
-        "name": "Kayode",
-        "club": "BRE",
-        "position": "DEF",
+        "name": "Groß",
+        "club": "BHA",
+        "position": "MID",
         "points": 0,
         "raw": 0,
         "multiplier": 0,
@@ -4204,11 +4204,11 @@
         "order": 13
       },
       {
-        "name": "Mbeumo",
-        "club": "MUN",
-        "position": "MID",
-        "points": 0,
-        "raw": 0,
+        "name": "Murillo",
+        "club": "NFO",
+        "position": "DEF",
+        "points": 2,
+        "raw": 2,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
@@ -4216,8 +4216,8 @@
         "order": 14
       },
       {
-        "name": "Wissa",
-        "club": "NEW",
+        "name": "Kusi-Asare",
+        "club": "FUL",
         "position": "FWD",
         "points": 0,
         "raw": 0,
