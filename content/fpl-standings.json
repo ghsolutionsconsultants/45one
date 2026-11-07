@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-06T22:39:50.989Z",
+  "updatedAt": "2026-11-07T04:27:09.004Z",
   "standings": [
     {
       "rank": 1,
@@ -521,7 +521,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 16,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -593,7 +593,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 2,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -665,7 +665,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 20,
         "bench": 0,
         "hit": 4,
         "transfers": 2
@@ -737,7 +737,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 9,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -881,7 +881,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 16,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -954,7 +954,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 1,
         "hit": 0,
         "transfers": 1
       }
@@ -1169,7 +1169,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 11,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -1385,8 +1385,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 3,
+        "bench": 2,
         "hit": 0,
         "transfers": 0
       }
@@ -1457,7 +1457,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 16,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -1601,7 +1601,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 3,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -1817,7 +1817,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 14,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -1890,7 +1890,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 2,
         "hit": 0,
         "transfers": 4
       }
@@ -2033,7 +2033,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 2,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -2177,7 +2177,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 4,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -2321,7 +2321,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 9,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -2825,7 +2825,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 2,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -2898,7 +2898,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 8,
         "hit": 0,
         "transfers": 0
       }
@@ -2969,7 +2969,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 3,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -3113,7 +3113,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 18,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -3257,7 +3257,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 2,
         "bench": 0,
         "hit": 0,
         "transfers": 1
@@ -3474,7 +3474,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 1,
         "hit": 0,
         "transfers": 2
       }
@@ -3546,7 +3546,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 1,
         "hit": 0,
         "transfers": 0
       }
@@ -3617,8 +3617,8 @@
       },
       {
         "event": 10,
-        "points": 0,
-        "bench": 0,
+        "points": 16,
+        "bench": 1,
         "hit": 0,
         "transfers": 1
       }
@@ -3690,7 +3690,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 1,
         "hit": 0,
         "transfers": 0
       }
@@ -3906,7 +3906,7 @@
       {
         "event": 10,
         "points": 0,
-        "bench": 0,
+        "bench": 1,
         "hit": 0,
         "transfers": 1
       }
@@ -3970,7 +3970,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 3,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -4021,7 +4021,7 @@
       },
       {
         "event": 10,
-        "points": 0,
+        "points": 35,
         "bench": 0,
         "hit": 0,
         "transfers": 0
@@ -4042,7 +4042,7 @@
     "gw": 10,
     "team": "327 FC",
     "manager": "Snakhokonke Xulu",
-    "points": 0,
+    "points": 35,
     "bench": 0,
     "hit": 0,
     "chip": null,
