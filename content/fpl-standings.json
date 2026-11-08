@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-07T21:23:19.322Z",
+  "updatedAt": "2026-11-08T04:11:16.483Z",
   "standings": [
     {
       "rank": 1,
@@ -4207,8 +4207,8 @@
         "name": "Murillo",
         "club": "NFO",
         "position": "DEF",
-        "points": 2,
-        "raw": 2,
+        "points": 4,
+        "raw": 4,
         "multiplier": 0,
         "captain": false,
         "viceCaptain": false,
