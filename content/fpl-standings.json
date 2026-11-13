@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-13T13:51:28.381Z",
+  "updatedAt": "2026-11-13T23:11:47.493Z",
   "standings": [
     {
       "rank": 1,
@@ -248,20 +248,20 @@
     },
     {
       "rank": 28,
-      "lastRank": 35,
-      "entry": 7064748,
-      "team": "Bruno Marsenal",
-      "manager": "Chris Smoothe",
-      "gw": 78,
-      "total": 593
-    },
-    {
-      "rank": 28,
       "lastRank": 31,
       "entry": 6822432,
       "team": "Sakadelics",
       "manager": "Themba Zotwane",
       "gw": 72,
+      "total": 593
+    },
+    {
+      "rank": 28,
+      "lastRank": 35,
+      "entry": 7064748,
+      "team": "Bruno Marsenal",
+      "manager": "Chris Smoothe",
+      "gw": 78,
       "total": 593
     },
     {
