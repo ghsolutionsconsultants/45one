@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-21T22:43:44.599Z",
+  "updatedAt": "2026-11-22T04:52:16.397Z",
   "standings": [
     {
       "rank": 1,
@@ -41,20 +41,20 @@
     },
     {
       "rank": 5,
-      "lastRank": 5,
-      "entry": 8382938,
-      "team": "Change Name",
-      "manager": "Saleboga Ledwaba",
-      "gw": 17,
-      "total": 680
-    },
-    {
-      "rank": 5,
       "lastRank": 6,
       "entry": 4478709,
       "team": "TheRealGOAT FC �",
       "manager": "Mbongeni Golide",
       "gw": 26,
+      "total": 680
+    },
+    {
+      "rank": 5,
+      "lastRank": 5,
+      "entry": 8382938,
+      "team": "Change Name",
+      "manager": "Saleboga Ledwaba",
+      "gw": 17,
       "total": 680
     },
     {
@@ -212,21 +212,21 @@
     },
     {
       "rank": 24,
+      "lastRank": 26,
+      "entry": 7231936,
+      "team": "LeroySane",
+      "manager": "Leeroy Magudze",
+      "gw": 30,
+      "total": 628
+    },
+    {
+      "rank": 25,
       "lastRank": 24,
       "entry": 1621185,
       "team": "Smurk FC",
       "manager": "Lethabo Smurk",
       "gw": 25,
       "total": 628
-    },
-    {
-      "rank": 25,
-      "lastRank": 26,
-      "entry": 7231936,
-      "team": "LeroySane",
-      "manager": "Leeroy Magudze",
-      "gw": 28,
-      "total": 626
     },
     {
       "rank": 26,
@@ -239,6 +239,15 @@
     },
     {
       "rank": 27,
+      "lastRank": 30,
+      "entry": 4515134,
+      "team": "K-Man FC",
+      "manager": "Kutloano Tshiafhula",
+      "gw": 29,
+      "total": 615
+    },
+    {
+      "rank": 28,
       "lastRank": 25,
       "entry": 7927994,
       "team": "Koto Amatsukami",
@@ -247,22 +256,13 @@
       "total": 614
     },
     {
-      "rank": 28,
+      "rank": 29,
       "lastRank": 33,
       "entry": 7584076,
       "team": "Wirtz Case Scenario",
       "manager": "Stanley Marsberg",
       "gw": 30,
       "total": 614
-    },
-    {
-      "rank": 29,
-      "lastRank": 30,
-      "entry": 4515134,
-      "team": "K-Man FC",
-      "manager": "Kutloano Tshiafhula",
-      "gw": 27,
-      "total": 613
     },
     {
       "rank": 30,
@@ -347,21 +347,21 @@
     },
     {
       "rank": 39,
+      "lastRank": 39,
+      "entry": 2334569,
+      "team": "Impossible",
+      "manager": "Katleho Babedi",
+      "gw": 23,
+      "total": 575
+    },
+    {
+      "rank": 40,
       "lastRank": 40,
       "entry": 6270966,
       "team": "Mtilikwe Giants",
       "manager": "Solomon Ndhlovu",
       "gw": 30,
       "total": 574
-    },
-    {
-      "rank": 40,
-      "lastRank": 39,
-      "entry": 2334569,
-      "team": "Impossible",
-      "manager": "Katleho Babedi",
-      "gw": 21,
-      "total": 573
     },
     {
       "rank": 41,
