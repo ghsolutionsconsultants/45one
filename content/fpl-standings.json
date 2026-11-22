@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-22T04:52:16.397Z",
+  "updatedAt": "2026-11-22T13:58:30.233Z",
   "standings": [
     {
       "rank": 1,
@@ -41,20 +41,20 @@
     },
     {
       "rank": 5,
-      "lastRank": 6,
-      "entry": 4478709,
-      "team": "TheRealGOAT FC �",
-      "manager": "Mbongeni Golide",
-      "gw": 26,
-      "total": 680
-    },
-    {
-      "rank": 5,
       "lastRank": 5,
       "entry": 8382938,
       "team": "Change Name",
       "manager": "Saleboga Ledwaba",
       "gw": 17,
+      "total": 680
+    },
+    {
+      "rank": 5,
+      "lastRank": 6,
+      "entry": 4478709,
+      "team": "TheRealGOAT FC �",
+      "manager": "Mbongeni Golide",
+      "gw": 26,
       "total": 680
     },
     {
