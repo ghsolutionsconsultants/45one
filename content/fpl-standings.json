@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-23T05:32:35.785Z",
+  "updatedAt": "2026-11-23T17:15:32.318Z",
   "standings": [
     {
       "rank": 1,
@@ -306,8 +306,8 @@
       "entry": 5042302,
       "team": "WHYESEL",
       "manager": "Sphiwe Lekhuleni",
-      "gw": 56,
-      "total": 616
+      "gw": 55,
+      "total": 615
     },
     {
       "rank": 35,
@@ -333,8 +333,8 @@
       "entry": 5926860,
       "team": "Frezco FC",
       "manager": "Colin Essi",
-      "gw": 31,
-      "total": 600
+      "gw": 30,
+      "total": 599
     },
     {
       "rank": 38,
@@ -423,8 +423,8 @@
       "entry": 4212838,
       "team": "Derbyshire City",
       "manager": "Rito Baloyi",
-      "gw": 29,
-      "total": 534
+      "gw": 28,
+      "total": 533
     },
     {
       "rank": 48,
@@ -4425,8 +4425,8 @@
         "name": "Pedro Porro",
         "club": "TOT",
         "position": "DEF",
-        "points": 12,
-        "raw": 12,
+        "points": 11,
+        "raw": 11,
         "multiplier": 1,
         "captain": false,
         "viceCaptain": false,
