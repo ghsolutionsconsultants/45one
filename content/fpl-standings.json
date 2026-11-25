@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-25T01:52:24.432Z",
+  "updatedAt": "2026-11-25T16:43:50.513Z",
   "standings": [
     {
       "rank": 1,
@@ -275,20 +275,20 @@
     },
     {
       "rank": 31,
-      "lastRank": 33,
-      "entry": 7584076,
-      "team": "Wirtz Case Scenario",
-      "manager": "Stanley Marsberg",
-      "gw": 34,
-      "total": 618
-    },
-    {
-      "rank": 31,
       "lastRank": 28,
       "entry": 7064748,
       "team": "Bruno Marsenal",
       "manager": "Chris Smoothe",
       "gw": 25,
+      "total": 618
+    },
+    {
+      "rank": 31,
+      "lastRank": 33,
+      "entry": 7584076,
+      "team": "Wirtz Case Scenario",
+      "manager": "Stanley Marsberg",
+      "gw": 34,
       "total": 618
     },
     {
