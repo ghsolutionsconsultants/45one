@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-26T01:29:24.303Z",
+  "updatedAt": "2026-11-26T16:18:04.080Z",
   "standings": [
     {
       "rank": 1,
@@ -86,20 +86,20 @@
     },
     {
       "rank": 10,
-      "lastRank": 10,
-      "entry": 7000934,
-      "team": "Bruno Penandes",
-      "manager": "Chris Thomas",
-      "gw": 33,
-      "total": 685
-    },
-    {
-      "rank": 10,
       "lastRank": 8,
       "entry": 6574790,
       "team": "FC Russclat",
       "manager": "Russel M",
       "gw": 32,
+      "total": 685
+    },
+    {
+      "rank": 10,
+      "lastRank": 10,
+      "entry": 7000934,
+      "team": "Bruno Penandes",
+      "manager": "Chris Thomas",
+      "gw": 33,
       "total": 685
     },
     {
