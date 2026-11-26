@@ -1,7 +1,7 @@
 {
   "league": "45one Premier League",
   "leagueId": 1306638,
-  "updatedAt": "2026-11-25T16:43:50.513Z",
+  "updatedAt": "2026-11-26T01:29:24.303Z",
   "standings": [
     {
       "rank": 1,
@@ -86,20 +86,20 @@
     },
     {
       "rank": 10,
-      "lastRank": 8,
-      "entry": 6574790,
-      "team": "FC Russclat",
-      "manager": "Russel M",
-      "gw": 32,
-      "total": 685
-    },
-    {
-      "rank": 10,
       "lastRank": 10,
       "entry": 7000934,
       "team": "Bruno Penandes",
       "manager": "Chris Thomas",
       "gw": 33,
+      "total": 685
+    },
+    {
+      "rank": 10,
+      "lastRank": 8,
+      "entry": 6574790,
+      "team": "FC Russclat",
+      "manager": "Russel M",
+      "gw": 32,
       "total": 685
     },
     {
@@ -275,6 +275,15 @@
     },
     {
       "rank": 31,
+      "lastRank": 38,
+      "entry": 5042302,
+      "team": "WHYESEL",
+      "manager": "Sphiwe Lekhuleni",
+      "gw": 58,
+      "total": 618
+    },
+    {
+      "rank": 31,
       "lastRank": 28,
       "entry": 7064748,
       "team": "Bruno Marsenal",
@@ -289,15 +298,6 @@
       "team": "Wirtz Case Scenario",
       "manager": "Stanley Marsberg",
       "gw": 34,
-      "total": 618
-    },
-    {
-      "rank": 31,
-      "lastRank": 38,
-      "entry": 5042302,
-      "team": "WHYESEL",
-      "manager": "Sphiwe Lekhuleni",
-      "gw": 58,
       "total": 618
     },
     {
